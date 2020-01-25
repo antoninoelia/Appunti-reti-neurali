@@ -1,0 +1,393 @@
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[oneside,italian]{book}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{babel}
+\begin{document}
+\title{Artificial Neural Networks and Deep Learning}
+\author{Antonino Elia Mandri}
+\date{A.A. 2019-2020}
+\maketitle
+
+\chapter{Introduzione}
+
+\section{Apprendimento automatico}
+
+Il machine learning è una branca dell'intelligenza artificiale che
+raccoglie un insieme di metodi quali: statistica computazionale, riconoscimento
+di pattern, reti neurali artificiali, filtraggio adattivo, teoria
+dei sistemi dinamici, elaborazione delle immagini, data mining, algoritmi
+adattivi, ecc; che utilizza metodi statistici per migliorare progressivamente
+la performance di un algoritmo nell'identificare pattern nei dati.
+Nell'ambito dell'informativa, l'apprendimento automatico è una variante
+alla programmazione tradizionale nella quale si predispone in una
+macchina l'abilità di apprendere qualcosa dai dati in maniera autonoma,
+senza ricevere istruzioni esplicite a riguardo. $D=$
+
+Immaginiamo di possedere un insieme di una certa esperienza E, per
+esempio dei dati, che chiameremo $D=x_{1},x_{2},...,x_{N}$, definiamo
+quindi i seguenti paradigmi di apprendimento:
+\begin{itemize}
+\item apprendimento supervisionato (supervised learning): in cui al modello
+vengono forniti degli output desiderati $t_{1},t_{2},...,t_{N}$ e
+l'obiettivo è quello di estrarre una regola generale che associ l'input
+$D$ all'output corretto;
+\item apprendimento non supervisionato (unsupervised learning): è una tecnica
+di apprendimento automatico che consiste nel fornire al sistema informatico
+una serie di input (esperienza del sistema), $D$ nel nostro caso,
+che egli riclassificherà ed organizzerà sulla base di caratteristiche
+comuni per cercare di effettuare ragionamenti e previsioni sugli input
+successivi; 
+\item L'apprendimento per rinforzo (reinforcement learning): è una tecnica
+di apprendimento automatico che punta ad attuare sistemi in grado
+di apprendere ed adattarsi alle mutazioni dell'ambiente in cui sono
+immersi, attraverso la distribuzione di una \textquotedbl ricompensa\textquotedbl{}
+detta rinforzo che consiste nella valutazione delle loro prestazioni.
+Il modello produce una serie di azioni $a_{1},a_{2},...,a_{N}$ che
+interagiscono con l'ambiente e ricevendo una serie di ricompense $r_{1},r_{2},...,r_{N}$
+impara a produrre azioni che massimizzino le ricompense nel lungo
+periodo.
+\end{itemize}
+
+\section{Percettrone}
+
+Nell'apprendimento automatico, il percettrone è un tipo di classificatore
+binario che mappa i suoi ingressi $\boldsymbol{x}$ (un vettore di
+tipo reale) in un valore di output $\boldsymbol{f\left(x\right)}$
+(uno scalare di tipo reale) calcolato con 
+\begin{equation}
+\boldsymbol{f(x)}=\chi(\left\langle \boldsymbol{w},\boldsymbol{x}\right\rangle +b)
+\end{equation}
+dove $\boldsymbol{w}$ è un vettore di pesi con valori reali, l'operatore
+$\left\langle \cdot,\cdot\right\rangle $ è il prodotto scalare (che
+calcola una somma pesata degli input), \textit{b}\textbf{ }è il bias,
+un termine costante che non dipende da alcun valore in input e $\chi(y)$
+è la funzione di output. Le scelte più comuni per la funzione $\chi(y)$
+sono:
+\begin{enumerate}
+\item $\chi(y)=sign(y)$
+\item $\chi(y)=y\Theta(y)$
+\item $\chi(y)=y$
+\end{enumerate}
+dove $\Theta(y)$ è la funzione di Heaviside.
+
+\begin{figure}[h]
+\includegraphics{percettrone}
+
+\caption{percettrone}
+\end{figure}
+
+\begin{equation}
+h_{j}\left(\boldsymbol{x}|\boldsymbol{w},b\right)=h_{j}\left(\sum_{i=1}^{I}w_{i}\cdot x_{i}-b\right)=h_{j}\left(\sum_{i=0}^{I}w_{i}\cdot x_{i}\right)=h_{j}\left(\boldsymbol{w}^{T}\boldsymbol{x}\right)
+\end{equation}
+Il precettrone simula uNon tutti i problemi di classificazione sono
+affrontabili con strumenti lineari come il percettrone. Sorgono spontanee
+alcune domande, come inizializziamo e modifichiamo il vettore di pesi
+$\boldsymbol{w}$ del percettrone? Quale funzione di attivazione scegliamo? 
+
+\subsection{Apprendimento Hebbiano}
+\begin{quotation}
+<<The strength of a synapse increases according to the simultaneous
+activation of the relative input and the desired target>> (Donald
+Hebb, The Organization of Behavior, 1949). 
+\end{quotation}
+La regola di Hebb è la seguente: l'efficacia di una particolare sinapsi
+cambia se e solo se c'è un'intensa attività simultanea dei due neuroni,
+con un'alta trasmissione di input nella sinapsi in questione. L'apprendimento
+Hebbiano può essere riassunto come segue: 
+\begin{equation}
+\begin{cases}
+w_{i}^{k+1}=w_{i}^{k}+\Delta w_{i}^{k}\\
+\Delta w_{i}^{k}=\eta\cdot x_{i}^{k}\cdot t^{k}
+\end{cases}
+\end{equation}
+
+dove:
+\begin{itemize}
+\item $\eta$: rateo di apprendimento;
+\item $x_{i}^{k}$: l'i-esimo input al tempo $k$;
+\item $t^{k}$: l'output desiderato al tempo $k$.
+\end{itemize}
+L'inizializzazione dei pesi parte con dei valori casuali. La soluzione
+può non esistere e se esiste non essere unica, ma ugualmente corrette.
+Questo algoritmo può non convergere alla soluzione per due motivi:
+\begin{enumerate}
+\item La soluzione non esiste;
+\item $\eta$ è troppo grande, continuiamo a modificare i pesi con passo
+elevato, viceversa un valore di $\eta$ troppo piccolo aumenta sensibilmente
+il tempo di convergenza.
+\end{enumerate}
+
+\subsection{Feed Forward Neural Networks}
+
+Una rete neurale feed-forward (\textquotedbl rete neurale con flusso
+in avanti\textquotedbl ) o rete feed-forward è una rete neurale artificiale
+dove le connessioni tra le unità non formano cicli, differenziandosi
+dalle reti neurali ricorrenti. Questo tipo di rete neurale fu la prima
+e più semplice tra quelle messe a punto. In questa rete neurale le
+informazioni si muovono solo in una direzione, avanti, rispetto a
+nodi d'ingresso, attraverso nodi nascosti (se esistenti) fino ai nodi
+d'uscita. Nella rete non ci sono cicli. Le reti feed-forward non hanno
+memoria di input avvenuti a tempi precedenti, per cui l'output è determinato
+solamente dall'attuale input. 
+
+\subsubsection{Percettrone a singolo strato}
+
+La più semplice rete feed-forward è il percettrone a singolo strato
+(SLP dall'inglese single layer perceptron), utilizzato verso la fine
+degli anni '60. Un SLP è costituito da un strato in ingresso, seguito
+direttamente dall'uscita. Ogni unità di ingresso è collegata ad ogni
+unità di uscita. In pratica questo tipo di rete neurale ha un solo
+strato che effettua l'elaborazione dei dati, e non presenta nodi nascosti,
+da cui il nome. Gli SLP sono molto limitati a causa del piccolo numero
+di connessioni e dell'assenza di gerarchia nelle caratteristiche che
+la rete può estrarre dai dati (questo significa che è capace di combinare
+i dati in ingresso una sola volta). Famosa fu la dimostrazione, che
+un SLP non riesce neanche a rappresentare la funzione XOR.
+
+\begin{figure}
+\includegraphics[scale=0.5]{XOR_percettrone}
+
+\caption{Problema XOR percettrone}
+\end{figure}
+
+
+\subsubsection{Percettrone multistrato}
+
+Il Percettrone multistrato (in acronimo MLP dall'inglese Multilayer
+perceptron) è un modello di rete neurale artificiale che mappa insiemi
+di dati in ingresso in un insieme di dati in uscita appropriati. È
+fatta di strati multipli di nodi in un grafo diretto, con ogni strato
+completamente connesso al successivo. Eccetto che per i nodi in ingresso,
+ogni nodo è un neurone (elemento elaborante) con una funzione di attivazione
+non lineare. Il Percettrone multistrato usa una tecnica di apprendimento
+supervisionato chiamata backpropagation per l'allenamento della rete.
+La MLP è una modifica del Percettrone lineare standard e può distinguere
+i dati che non sono separabili linearmente.
+
+Prima di addentrasi in metodologie di setup delle reti neurali è utile
+introdurre alcuni concetti.
+
+\subsection{Funzioni di attivazione}
+
+Vediamo brevemente diversi tipi di funzioni di attivazione:
+
+\textbf{ReLU. }The Rectified Linear Unit è una funzione di attivazione
+definita come la parte positiva del suo argomento:\textbf{ 
+\begin{equation}
+f(x)=x^{+}=max(0,x)
+\end{equation}
+}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Grafico_relu}
+
+\caption{grafico ReLU}
+
+\end{figure}
+
+dove $x$ è l'input a un neurone.\textbf{ }
+
+\textbf{Sigmoid. }La funzione sigmoidea è una funzione matematica
+che produce una curva sigmoide; una curva avente un andamento ad \textquotedbl S\textquotedbl .
+Spesso, la funzione sigmoide si riferisce ad uno speciale caso di
+funzione logistica mostrata a destra e definita dalla formula:
+\begin{equation}
+f(x)=\frac{1}{1+e^{-x}}
+\end{equation}
+
+Generalmente, una funzione sigmoidea è una funzione continua e derivabile,
+che ha una derivata prima non negativa e dotata di un minimo locale
+ed un massimo locale. Le funzioni sigmoidee sono spesso usate nelle
+reti neurali per introdurre la non linearità nel modello e/o per assicurarsi
+che determinati segnali rimangano all'interno di specifici intervalli.
+Un motivo per la relativa popolarità nelle reti neurali è perché la
+funzione sigmoidea soddisfa questa proprietà:
+\begin{equation}
+\frac{d}{dx}sig(x)=sig(x)(1-sig(x))
+\end{equation}
+Questa relazione polinomiale semplice fra la derivata e la funzione
+stessa è, dal punto di vista informatico, semplice da implementare.
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{grafico_sig}
+
+\caption{grafico sigmoide}
+\end{figure}
+
+\textbf{Tangente iperbolica: }
+\begin{equation}
+tanh(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
+\end{equation}
+
+\begin{figure}
+\includegraphics[scale=0.5]{tangente-iperbolica}
+
+\caption{grafico tanh}
+
+\end{figure}
+Queste e altre funzioni verranno esaminate più attentamente dopo aver
+introdotto tecniche di ottimizzazione delle reti neurali. Prima però
+vediamo delle applicazioni pratiche.
+
+\chapter{Classificazioni di immagini}
+
+La visione artificiale (nota anche come computer vision) è l'insieme
+dei processi che mirano a creare un modello approssimato del mondo
+reale (3D) partendo da immagini bidimensionali (2D). Vedere è inteso
+non solo come l'acquisizione di una fotografia bidimensionale di un'area
+ma soprattutto come l'interpretazione del contenuto di quell'area.
+L'informazione è intesa in questo caso come qualcosa che implica una
+decisione automatica. Un problema classico nella visione artificiale
+è quello di determinare se l'immagine contiene o no determinati oggetti
+(Object recognition) o attività. Il problema può essere risolto efficacemente
+e senza difficoltà per oggetti specifici in situazioni specifiche
+per esempio il riconoscimento di specifici oggetti geometrici come
+poliedri, riconoscimento di volti o caratteri scritti a mano. Le cose
+si complicano nel caso di oggetti arbitrari in situazioni arbitrarie. 
+
+Nella letteratura troviamo differenti varietà del problema:
+\begin{itemize}
+\item Recognition (riconoscimento): uno o più oggetti prespecificati o memorizzati
+possono essere ricondotti a classi generiche usalmente insieme alla
+loro posizione 2D o 3D nella scena.
+\item Identification (identificazione): viene individuata un'istanza specifica
+di una classe. Es. Identificazione di un volto, impronta digitale
+o veicolo specifico.
+\item Detection (rilevamento): l'immagine è scandita fino all'individuazione
+di una condizione specifica. Es. Individuazione di possibili cellule
+anormali o tessuti nelle immagini mediche.
+\end{itemize}
+Altro compito tipico è la ricostruzione dello scenario: dati 2 o più
+immagini 2D si tenta di ricostruire un modello 3D dello scenario.
+Nel caso più semplice si parla di un insieme di singoli punti in uno
+spazio 3D o intere superfici. Generalmente è importante trovare la
+matrice fondamentale che rappresenta i punti comuni provenienti da
+immagini differenti.
+
+Il problema della \textbf{classificazione di immagini} è il compito
+di assegnare ad un'immagine di input una e una sola etichetta proveniente
+da un insieme fissato di output.
+\begin{figure}
+\includegraphics[scale=0.5]{esempio_classificazione}
+
+\caption{Classificazione di un'immagine}
+\end{figure}
+La classificazione presenta alcuni problemi:
+\begin{itemize}
+\item Variazione punto di vista (Viewpoint variation): una singola istanza
+di un oggetto può essere orientata in modi diversi rispetto alla camera,
+producendo immagini diverse;
+\item Variazione scala (Scale variation): oggetti diversi appartenenti alla
+medesima classe possono differire nelle loro dimensioni reali;
+\item Deformazione (Deformation): alcuni oggetti non sono corpi rigidi e
+possono apparire deformati in modi diversi;
+\item Occlusione (Occlusion): parti dell'oggetto da riconoscere è nascosto
+e non visibile;
+\item Condizioni di illuminazione (Illumination conditions): l'illuminazione
+ha un ruolo decisivo nell'informazione codificata all'interno dei
+pixel che compongono l'immagine;
+\item Disordine di sfondo (Background clutter): gli oggetti di interesse
+possono mescolarsi e confondersi nell'ambiente circostante, rendendo
+difficile l'identificazione;
+\item Variazione intra-classe (Intra-class variation): oggetti appartenti
+alla stessa classe possono differire significativamente l'uno dall'altro.
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=0.3]{Problem_image_class}
+
+\caption{Problemi nella classificazione di immagini}
+\end{figure}
+
+
+\section{Dataset CIFAR-10}
+
+In queste note si farà riferimento al dataset CIFAR-10 che consiste
+in 60000 immagini di dimensione $32\times32$ pixels, ogni pixel ha
+associato 3 numeri, uno per ogni colore (RGB). Ogni immagine è etichettata
+con una di 10 classi, Queste 60000 immagini sono partizionate in \textit{training
+set} di 50000 immagini e \textit{test set} di 10000 immagini. Ogni
+immagine può quindi essere vista come un vettore appartenente allo
+spazio $\mathbb{R}^{32\times32\times3}$.
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{cifar10}
+
+\caption{CIFAR-10 daset}
+
+\end{figure}
+
+
+\section{Nearest Neihbor Classifier}
+
+Questo classificatore non ha nulla a che fare con le reti neurali
+e non viene quasi mai usato nella pratica, ma ci permetterà di avere
+un'idea dell'approccio di base a un problema di classificazione delle
+immagini. L'idea di questo classificatore è molto semplice, la fase
+di training consiste nel memorizzare tutte le immagini del training
+set, la classificazione avviene confrontando l'immagine di test con
+ogni immagine del training set, quindi si etichetta l'immagine in
+accordo con l'etichetta dell'immagine che più assomiglia. Cosa intendiamo
+quando diciamo \textquotedbl\textit{che più assomiglia}\textquotedbl ?
+Occorre quindi formalizzare questo concetto secondo una qualche metrica.
+Ogni immagine può essere vista come una matrice in cui ogni elemento
+è un valore numerico che rappresenta l'intensità di un colore appartenente
+allo spazio RGB di un singolo pixel. Definiamo quindi tre distanze:
+\begin{enumerate}
+\item \textbf{L1 distance: 
+\[
+d_{1}\left(I_{1},I_{2}\right)=\sum_{p}\mid I_{1}^{p}-I_{2}^{p}\mid
+\]
+}la distanza è calcolata sommando il modulo delle differenze elemento
+per elemento. è anche nota come distanza di Manhattan.
+\begin{figure}
+\includegraphics[scale=0.3]{L1Distance}
+
+\caption{L1 distance}
+
+\end{figure}
+\item \textbf{L2 distance:}
+\[
+d_{2}\left(I_{1},I_{2}\right)=\sqrt{\sum_{p}\left(I_{1}^{p}-I_{2}^{p}\right)^{2}}
+\]
+ è la distanza euclidea classica.
+\item \textbf{L$_{k}$ distance:}
+\[
+d_{k}\left(I_{1},I_{2}\right)=\left(\sum_{p}\left(\mid I_{1}-I_{2}\mid\right)^{k}\right)^{\frac{1}{k}}
+\]
+con $k\in[1,+\infty).$ E' una generalizzazione delle precedenti.
+\end{enumerate}
+Le distanze comunemente usate sono le prime due, L1 e L2. In altre
+parole Nearest Neihbor Classifier è ricondotto ad un problema di minimizzazione
+riformulando il problema di classificazione come segue:
+\begin{itemize}
+\item chiamiamo $\boldsymbol{x}_{i}$ l'i-esima immagine di test (da etichettare);
+\item chiamiamo $\boldsymbol{x}_{j}$ la j-esima immagine del training set
+(già etichettata);
+\item chiamiamo $y_{j}$ l'etichetta della j-esima immagine del training
+set;
+\item poniamo $y_{i}=y_{j^{*}}$ con $j^{*}=\mathrm{argmin}\left(d(\boldsymbol{x}_{i},\boldsymbol{x}_{j})\right)$.
+\end{itemize}
+Da test effettuati risulta che Nearest Neihbor Classifier, usando
+la distanza L1, ha classificato correttamente il 38,6\% delle immagini
+del dataset CIFAR-10. Un risultato ragguardevole se comparato alla
+probabilità di una corretta classificazione asseggnando casualmente
+un'etichetta (10\% nel nostro caso) ma ben lontano dalle prestazioni
+umane e dalle migliori reti neurali convuluzionali. Utilizzando la
+distanza L2 invece si è ottenuto un'accuratezza del 35,4\%. 
+
+\section{K-Nearest Neihbor Classifier}
+
+Questo classificatore è un estensione del precedente e si basa su
+un'idea molto semplice: invece di assegnare l'etichetta dell'immagine
+più vicina (rispetto ad una definita distanza), troviamo le \textit{k}
+immagini più vicine e assegnamo l'etichetta che compare maggiormente
+nelle \textit{k} etichette. 
+\end{document}
