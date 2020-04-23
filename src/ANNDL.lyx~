@@ -514,7 +514,7 @@ Una rete neurale feed-forward ("rete neurale con flusso in avanti") o rete
  avanti, rispetto a nodi d'ingresso, attraverso nodi nascosti (se esistenti)
  fino ai nodi d'uscita.
  Nella rete non ci sono cicli.
- Le reti feed-forward non hanno memoria di input avvenuti a tempi precedenti,
+ Le reti feed-forward non hanno memoria di input avvenuti in tempi precedenti,
  per cui l'output è determinato solamente dall'attuale input.
  
 \end_layout
@@ -527,7 +527,7 @@ Percettrone a singolo strato
 La più semplice rete feed-forward è il percettrone a singolo strato (SLP
  dall'inglese single layer perceptron), utilizzato verso la fine degli anni
  '60.
- Un SLP è costituito da un strato in ingresso, seguito direttamente dall'uscita.
+ Un SLP è costituito da uno strato in ingresso, seguito direttamente dall'uscita.
  Ogni unità di ingresso è collegata ad ogni unità di uscita.
  In pratica questo tipo di rete neurale ha un solo strato che effettua l'elabora
 zione dei dati, e non presenta nodi nascosti, da cui il nome.
@@ -535,7 +535,7 @@ zione dei dati, e non presenta nodi nascosti, da cui il nome.
  dell'assenza di gerarchia nelle caratteristiche che la rete può estrarre
  dai dati (questo significa che è capace di combinare i dati in ingresso
  una sola volta).
- Famosa fu la dimostrazione, che un SLP non riesce neanche a rappresentare
+ Famosa fu la dimostrazione, che un SLP non è in grado di rappresentare
  la funzione XOR.
 \end_layout
 
@@ -591,8 +591,8 @@ Il Percettrone multistrato (in acronimo MLP dall'inglese Multilayer perceptron)
 \end_layout
 
 \begin_layout Standard
-Prima di addentrasi in metodologie di setup delle reti neurali è utile introdurr
-e alcuni concetti.
+Prima di addentrasi in metodologie di progettazioni delle reti neurali è
+ utile introdurre alcuni concetti.
 \end_layout
 
 \begin_layout Subsection
@@ -5924,7 +5924,7 @@ poniamo
 Da test effettuati risulta che Nearest Neihbor Classifier, usando la distanza
  L1, ha classificato correttamente il 38,6% delle immagini del dataset CIFAR-10.
  Un risultato ragguardevole se comparato alla probabilità di una corretta
- classificazione asseggnando casualmente un'etichetta (10% nel nostro caso)
+ classificazione assegnando casualmente un'etichetta (10% nel nostro caso)
  ma ben lontano dalle prestazioni umane e dalle migliori reti neurali convuluzio
 nali.
  Utilizzando la distanza L2 invece si è ottenuto un'accuratezza del 35,4%.
@@ -6431,8 +6431,8 @@ Bias trick
 \end_layout
 
 \begin_layout Standard
-Modifichiamo ora la score function allegerendo la notazione eliminando il
- termine 
+Modifichiamo ora la score function alleggerendo la notazione eliminando
+ il termine 
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
@@ -6716,8 +6716,9 @@ sotto
 
  esprime tramite il segno se siamo nella regione di accettazione o no, e
  tramite il modulo quanto siamo lontani dal confine, quindi un alto punteggio
- positivo indica un'alta confidenza che quella immagine apartenga alla classe
- i-esima, viceversa un alto punteggio negativo indica una bassissima confidenza.
+ positivo indica un'alta confidenza che quella immagine appartenga alla
+ classe i-esima, viceversa un alto punteggio negativo indica una bassissima
+ confidenza.
 \end_layout
 
 \begin_layout Standard
@@ -6815,8 +6816,7 @@ Le reti neurali convoluzionali (Convolutional Neural Networks, CNN) sono
  di fatto delle reti neurali artificiali.
  Esattamente come queste ultime infatti, anche le reti neurali convoluzionali
  sono costituite da neuroni collegati fra loro tramite dei rami pesati (weight);
- i parametri allenabili delle reti sono sempre quindi i weight ed i bias
- allenabili.
+ i parametri allenabili delle reti sono sempre quindi i weight ed i bias.
  Tutto quanto detto in precedenza sull’allenamento di una rete neurale,
  cioè forward/backward propagation e aggiornamento dei pesi, vale anche
  in questo contesto; inoltre un’intera rete neurale convoluzionale utilizza
@@ -6872,8 +6872,8 @@ Come visto nel capitolo precedente, le reti neurali tradizionali ricevono
  di tre fondamentali proprietà: l'interazione sparsa (sparse interaction),
  l'invarianza rispetto a traslazioni (invariant to translation), e la condivisio
 ne dei parametri (weight sharing).
- Il risultato è una rete più ecace e allo stesso tempo parsimoniosa in termini
- di parametri.
+ Il risultato è una rete più effcace e allo stesso tempo parsimoniosa in
+ termini di parametri.
 \end_layout
 
 \begin_layout Section
@@ -6908,7 +6908,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Operazione di convoluzione nel caso bidimensionale: un ltro di dimensione
+Operazione di convoluzione nel caso bidimensionale: un filtro di dimensione
  2 × 2 viene moltiplicato elemento per elemento per una porzione dell'input
  di uguali dimensioni.
  L'output dell'operazione è costituito dalla somma di tali prodotti.
@@ -6946,7 +6946,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Operazione di convoluzione di due dierenti ltri (W0 e W1) di dimensione
+Operazione di convoluzione di due differenti filtri (W0 e W1) di dimensione
  
 \begin_inset Formula $3\times3\times3$
 \end_inset
@@ -7099,8 +7099,8 @@ Output dello strato
 \end_layout
 
 \begin_layout Standard
-Fin qui si è parlato della connettività di ciascun neurone di un layer con-
- voluzionale rispetto al volume di input.
+Fin qui si è parlato della connettività di ciascun neurone di un layer convoluzi
+onale rispetto al volume di input.
  In questa sottosezione si parlerà invece della quantità di neuroni presenti
  nel volume di output di un layer convoluzionale e di come essi sono organizzati.
  In questo caso vi sono 3 iperparametri:
@@ -7118,17 +7118,17 @@ Profondità (depth): corrisponde al numero di filtri
 \end_layout
 
 \begin_layout Itemize
-Stride: specica il numero di pixel di cui si vuole traslare il filtro ad
- ogni spostamento.
+Stride: specifica il numero di pixel di cui si vuole traslare il filtro
+ ad ogni spostamento.
  Poiché come detto eseguendo la convoluzione tra filtro e parte dell'input
  otteniamo un singolo scalare, questo parametro permette di specificare
  in che maniera allocare le depth column in tutto lo spazio, cioè larghezza
  e altezza, dell’input.
- Quando lo stride è pari ad uno signica che stiamo muovendo il ltro un pixel
- alla volta, e di conseguenza viene scannerizzata ogni possibile posizione
- dell'input.
- Valori più alti muovono il ltro con salti maggiori, e pertanto viene generato
- un output di dimensioni minori.
+ Quando lo stride è pari ad uno significa che stiamo muovendo il filtro
+ un pixel alla volta, e di conseguenza viene scannerizzata ogni possibile
+ posizione dell'input.
+ Valori più alti muovono il filtro con salti maggiori, e pertanto viene
+ generato un output di dimensioni minori.
 \end_layout
 
 \begin_layout Itemize
@@ -7370,7 +7370,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Set di 96 ltri 11 × 11 × 3 appresi dall'architettura di Krizhevsky et al.
+Set di 96 filtri 11 × 11 × 3 appresi dall'architettura di Krizhevsky et
+ al.
  (2012) in un problema di classicazione di immagini.
  L'assunzione di weight sharing è ragionevole dal momento che individuare
  una linea o uno spigolo è importante in qualsiasi posizione dell'immagine,

@@ -514,7 +514,7 @@ Una rete neurale feed-forward ("rete neurale con flusso in avanti") o rete
  avanti, rispetto a nodi d'ingresso, attraverso nodi nascosti (se esistenti)
  fino ai nodi d'uscita.
  Nella rete non ci sono cicli.
- Le reti feed-forward non hanno memoria di input avvenuti a tempi precedenti,
+ Le reti feed-forward non hanno memoria di input avvenuti in tempi precedenti,
  per cui l'output è determinato solamente dall'attuale input.
  
 \end_layout
@@ -527,7 +527,7 @@ Percettrone a singolo strato
 La più semplice rete feed-forward è il percettrone a singolo strato (SLP
  dall'inglese single layer perceptron), utilizzato verso la fine degli anni
  '60.
- Un SLP è costituito da un strato in ingresso, seguito direttamente dall'uscita.
+ Un SLP è costituito da uno strato in ingresso, seguito direttamente dall'uscita.
  Ogni unità di ingresso è collegata ad ogni unità di uscita.
  In pratica questo tipo di rete neurale ha un solo strato che effettua l'elabora
 zione dei dati, e non presenta nodi nascosti, da cui il nome.
@@ -535,7 +535,7 @@ zione dei dati, e non presenta nodi nascosti, da cui il nome.
  dell'assenza di gerarchia nelle caratteristiche che la rete può estrarre
  dai dati (questo significa che è capace di combinare i dati in ingresso
  una sola volta).
- Famosa fu la dimostrazione, che un SLP non riesce neanche a rappresentare
+ Famosa fu la dimostrazione, che un SLP non è in grado di rappresentare
  la funzione XOR.
 \end_layout
 
@@ -591,8 +591,8 @@ Il Percettrone multistrato (in acronimo MLP dall'inglese Multilayer perceptron)
 \end_layout
 
 \begin_layout Standard
-Prima di addentrasi in metodologie di setup delle reti neurali è utile introdurr
-e alcuni concetti.
+Prima di addentrasi in metodologie di progettazioni delle reti neurali è
+ utile introdurre alcuni concetti.
 \end_layout
 
 \begin_layout Subsection
@@ -865,8 +865,8 @@ L'utilità dei modelli di rete neurale sta nel fatto che queste possono essere
 \end_layout
 
 \begin_layout Standard
-I compiti a cui le reti neurali sono applicate possono essere classificate
- nelle seguenti grandi categorie di applicazioni:
+I compiti in cui le reti neurali sono applicate possono essere classificate
+ nelle seguenti categorie:
 \end_layout
 
 \begin_layout Itemize
