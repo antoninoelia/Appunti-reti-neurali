@@ -2688,7 +2688,7 @@ Sfide.
 
 \begin_layout Standard
 Mini-batch gradient descent non garantisce ancora ottime proprietà di convergenz
-a, ma fornisce delle sfide che devono essere affrontate:
+a, ma offre delle sfide che devono essere affrontate:
 \end_layout
 
 \begin_layout Itemize
