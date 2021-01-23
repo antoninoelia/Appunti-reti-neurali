@@ -7,6 +7,8 @@
 \textclass book
 \begin_preamble
 \usepackage{algorithm,algpseudocode}
+
+\usepackage[]{hyperref}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false

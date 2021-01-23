@@ -144,6 +144,18 @@ vspace{1.5cm}
 
 \begin_layout Plain Layout
 
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+Large
+\end_layout
+
+\begin_layout Plain Layout
+
         
 \end_layout
 
@@ -177,7 +189,7 @@ textbf{Antonino Elia Mandri
 
 		
 \backslash
-vspace{0.8cm}      
+vspace{1.5cm}      
 \end_layout
 
 \begin_layout Plain Layout
@@ -189,7 +201,7 @@ vspace{0.8cm}
 
 		
 \backslash
-includegraphics[width=0.6
+includegraphics[width=0.8
 \backslash
 textwidth]{polimi.png}
 \end_layout
@@ -208,7 +220,7 @@ vspace{1.5cm}
 
 \begin_layout Plain Layout
 
-		AA 2020/2021                
+		Anno Accademico 2020/2021                
 \end_layout
 
 \begin_layout Plain Layout
