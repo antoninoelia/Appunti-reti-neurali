@@ -12085,6 +12085,198 @@ Un processo tipico di apprendimento ML-smoothing effettua una levigazione
 \end_layout
 
 \begin_layout Paragraph
+Autoencoder
+\end_layout
+
+\begin_layout Standard
+Un' autoencoder è un tipo di rete neurale che nella sua formulazione più
+ semplice cerca di apprendere la funzione identità.
+ In altre parole impara a produrre una copia dell'input.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Autoencoder_schema.png
+	scale 110
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema generale di un autoencoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+È composto principalmente da due parti.
+\end_layout
+
+\begin_layout Enumerate
+Encoder, la cui funzione è mappare l'input in una rappresentazione latente
+ di dimensione minore ed eventualmente con altri vincoli.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Decoder che mappa la rappresentazione latente nell'output.
+\end_layout
+
+\begin_layout Standard
+Formalmente possiamo descrivere un autoencoder attraverso tre funzioni matematic
+he:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \phi:{\mathcal{X}}\rightarrow{\mathcal{F}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \psi:{\mathcal{F}}\rightarrow{\mathcal{X}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \phi,\psi={\underset{\phi,\psi}{\operatorname{arg\,min}}}\,\|X-(\psi\circ\phi)X\|^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename autoencoder.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Autoencoder feedforward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Una rete autoencoder è usata quindi principalmente come algoritmo di riduzione
+ dimensionale (o compressione) con determinate proprietà:
+\end_layout
+
+\begin_layout Itemize
+Data specificità: l'autoencoder è adatta a comprimere solo dati simili a
+ quelli su cui è allenata, o addirittura solo questi ultimi.
+ Apprende features specifiche, quindi un' autoencoder allenata a comprimere
+ immagini di caratteri scritti a mano non sarà adatta a comprimere foto
+ generiche.
+\end_layout
+
+\begin_layout Itemize
+Lossy: l'output non sarà esattamente identico all'input, si ha quindi una
+ degradazione.
+\end_layout
+
+\begin_layout Itemize
+Non supervisionato.
+\end_layout
+
+\begin_layout Standard
+Lo schema di un modello di autoencoder è abbastanza generale ed è quindi
+ implementabile tramite varie architetture come 
+\shape italic
+feedforward, convoluzionali, ricorrenti.
+\end_layout
+
+\begin_layout Standard
+Una caratteristica spesso cercata nella rappresentazione latente è la 
+\series bold
+sparsità.
+ 
+\series default
+Questa proprietà può essere raggiunta aggiungendo un termine di penalità
+ proporzionale alla rappresentazione latente.
+ Tipicamente viene utilizzata la norma L1.
+ Riprendendo la notazione formale precedente la loss function diventa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L=\|X-(\psi\circ\phi)X\|^{2}+\lambda\mathop{\sum_{i}|h_{i}|}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Minimizzando il secondo termine imponiamo che la rappresentazione latente
+ abbia la somma dei valori assoluti delle singole componenti minima ma contempor
+aneamente minimizzando il primo termine imponiamo che la rappresentazione
+ latente sia in grado di separare significativamente le features.
+ Idealmente, se non considerirassimo la dimensionalità, una rappresentazione
+ efficacie a minimizzare questa loss function sarebbe la 
+\shape italic
+one-hot encode.
+
+\shape default
+ Questa considerazione suggerisce che la rete tenderà comunque ad una rappresent
+azione in cui la maggior parte delle componenti 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ siano tendenti a zero e solo il minimo necessario di componenti siano con
+ modulo significativamente diversi da zero.
+\end_layout
+
+\begin_layout Paragraph
 Neural Net Language Model
 \end_layout
 
