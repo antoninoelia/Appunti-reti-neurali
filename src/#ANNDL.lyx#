@@ -81,17 +81,165 @@
 
 \begin_body
 
-\begin_layout Title
-Artificial Neural Networks and Deep Learning
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}    
 \end_layout
 
-\begin_layout Author
-Antonino Elia Mandri
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{center}
 \end_layout
 
-\begin_layout Date
-A.A.
- 2019-2020
+\begin_layout Plain Layout
+
+       
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace*{1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+Huge
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+textbf{Articial Neural Networks and Deep Learning}
+\end_layout
+
+\begin_layout Plain Layout
+
+                          
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{1.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+Large
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Antonino Elia Mandri 
+\backslash
+
+\backslash
+ Stefano d'Angelo}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+                           		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{1.5cm}      
+\end_layout
+
+\begin_layout Plain Layout
+
+       		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+includegraphics[width=0.8
+\backslash
+textwidth]{polimi.png}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{1.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+                          
+\end_layout
+
+\begin_layout Plain Layout
+
+		Anno Accademico 2020/2021                
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -126,6 +274,7 @@ Il machine learning è una branca dell'intelligenza artificiale che raccoglie
 \end_layout
 
 \begin_layout Standard
+\noindent
 Immaginiamo di possedere un insieme di una certa esperienza E, per esempio
  dei dati, che chiameremo 
 \begin_inset Formula $D=x_{1},x_{2},...,x_{N}$
@@ -650,7 +799,7 @@ The Rectified Linear Unit è una funzione di attivazione definita come la
  
 \begin_inset Formula 
 \begin{equation}
-f(x)=x^{+}=max(0,x)
+f(x)=x^{+}=ReLU(x)=max(0,x)
 \end{equation}
 
 \end_inset
@@ -6824,44 +6973,6 @@ Un'altra possibile interpretazione per i pesi
  il grado di somiglianza tra l'immagine test e il template.
 \end_layout
 
-\begin_layout Subsubsection
-Coming Soon
-\end_layout
-
-\begin_layout Standard
-Fino ad ora non ci siamo posti il problema di come trovare il giusto set
- di pesi 
-\begin_inset Formula $W$
-\end_inset
-
-, è stato evitato di trattare questo argomento perchè rientra in un discorso
- più generale che riguarda le reti neurali in generale, non solo applicate
- al riconoscimento di immagini.
- Tratteremo approfonditamente Loss Function, error funcion e tecniche di
- ottimizzazione, infine torneremo al problema di classificazione delle immagini
- con questi nuovi strumenti e ne vedremo un'applicazione.
-\begin_inset Marginal
-status open
-
-\begin_layout Plain Layout
-SVM
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-SVM
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 Reti Convoluzionali
 \end_layout
@@ -7453,6 +7564,7 @@ E' importante notare che in determinati contesti l'assunzione di weight
 \end_layout
 
 \begin_layout Standard
+\noindent
 Riassumendo, un layer convoluzionale:
 \end_layout
 
@@ -7545,6 +7657,74 @@ nel volume di output l’i-esimo depth slice (di taglia
 ) è il risultato dell’operazione di convoluzione dell’i-esimo kernel sul
  volume di input con uno stride S e con la successiva aggiunta dell’i-esimo
  bias.
+\end_layout
+
+\begin_layout Paragraph
+Campo recettivo
+\end_layout
+
+\begin_layout Standard
+\noindent
+Un concetto base nelle CNN è il campo recettivo.
+ A causa della connettività sparsa, in una CNN l'output dipende solo dalla
+ regione dell'input, a differenza delle reti FC dove il valore di ogni output
+ dipende da tutto l'input.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Questa regione dell'input è il campo recettivo per quell'output.
+ Più si va in profondità, più largo è il campo recettivo.
+ Di solito il campo recettivo si riferisce all'unità di output finale della
+ rete in relazione all'input della rete, ma la stessa definizione vale per
+ volumi intermedi.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+
+\size small
+\begin_inset Graphics
+	filename receptiveFieldFC.png
+	lyxscale 50
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+
+\size small
+\begin_inset Graphics
+	filename receptiveFieldCNN.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Campi recettivi di FCN (in alto) e CNN (in basso)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -7774,14 +7954,594 @@ Esempi architetture CNN
 \end_layout
 
 \begin_layout Standard
-to-do
+Architetture note di CNN sono:
+\end_layout
+
+\begin_layout Enumerate
+LeNet-5: sviluppato nel 1998 per identificare cifre scritte a mano per il
+ riconoscimento dello zip code nel servizio postale (60000 parametri).
+ L'idea era quella di usare una sequenza di 3 layers: convoluzione, pooling,
+ non-linearità.
+ I pixel in un'immagine sono altamente correlati, la convoluzione può essere
+ usata come modo di estrarre le features spaziali e per avere connessioni
+ sparse, mentre il subsample viene fatto usando la media spaziale delle
+ mappe (average pooling).
+ Le non-linearità usate in questa rete sono Tanh o sigmoidi.
+ Infine, l'ultimo layer ha un MLP come classificatore.
+\end_layout
+
+\begin_layout Enumerate
+AlexNet: sviluppata nel 2012, è simile a LeNet-5 (60 milioni di parametri,
+ conv.: 3.7 milioni, FC: 58.6 milioni).
+ La dimensione dell'input è di 224x224x3, mentre i layer sono:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+5 layer convoluzionali
+\end_layout
+
+\begin_layout Itemize
+3 MLP
+\end_layout
+
+\begin_layout Standard
+Per evitare l'overfitting la rete usa ReLU, Dropout (0.5), weight decay e
+ maxpooling.
+ Il primo layer convoluzionale ha 96 filtri 11x11 con stride=4.
+ L'output è costituito da 2 volumi da 55x55x48.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+VGG16: introdotta nel 2014 come variante della AlexNet (138 milioni di parametri
+, conv.:11%, FC:89%).
+ La dimensione dell'input è di 224x224x3.
+ L'idea è quella di usare convoluzioni multiple 3x3 in sequenza per ottenere
+ campi recettivi più larghi con meno parametri e più non-liearità anzichè
+ con filtri più larghi in un layer singolo.
+\end_layout
+
+\begin_layout Enumerate
+GoogleNet: rete con alta efficienza computazionale (5 milioni di parametri,
+ 22 layers di moduli Inception).
+ Questa rete è basata su moduli Inception, ovvero una sorta di 
+\begin_inset Quotes fld
+\end_inset
+
+rete nella rete
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+moduli locali
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Scegliere la giusta dimensione del kernel per le operazioni di convoluzione
+ è difficile, dato che l'immagine potrebbe mostrare features rilevanti a
+ scalature diverse.
+ Le reti troppo dense tendono inoltre a overfittare e a diventare computazionalm
+ente molto costose.
+ La soluzione è quella di sfruttare dimensioni multiple del filtro allo
+ stesso livello e poi fare un merge tramite concatenazione delle mappe di
+ attivazione dell'output (con zero padding).
+\end_layout
+
+\begin_layout Enumerate
+Inception Module: per ridurre il carico computazionale della rete, il numero
+ dei canali di input è ridotto aggiungendo un layer convoluzionale 1x1 prima
+ delle convoluzioni 3x3 e 5x5.
+ Il volume dell'output ha dimensione simile, ma il numero di operazioni
+ richieste è ridotto significativamente grazie alla convoluzione 1x1 (che
+ incrementa quindi il numero di non-linearità).
+ Tale layer convoluzionale è anche chiamato ''bottleneck layer''.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename lenet.png
+	lyxscale 80
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LeNet-5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename alexnet.png
+	lyxscale 130
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+AlexNet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename vgg16.png
+	lyxscale 70
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+VGG16
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GoogleNet.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GoogleNet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Inception.png
+	lyxscale 60
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Inception module (with dimension reductions)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Fully-Convolutional Networks per la segmentazione di immagini
+Data Augmentation
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+La Data Augmentation è tipicamente performata tramite:
+\end_layout
+
+\begin_layout Itemize
+trasformazioni geometriche
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+shift/rotazioni/distorsioni
+\end_layout
+
+\begin_layout Itemize
+shear
+\end_layout
+
+\begin_layout Itemize
+scaling
+\end_layout
+
+\begin_layout Itemize
+flip
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+trasformazioni fotometriche
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+aggiunta di rumore
+\end_layout
+
+\begin_layout Itemize
+modifica dell'intensità media
+\end_layout
+
+\begin_layout Itemize
+superimposizione di altre immagini
+\end_layout
+
+\begin_layout Itemize
+modificazione del contrasto
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Test Time Augmentation
+\end_layout
+
+\begin_layout Standard
+\noindent
+Anche se la CNN è allenata usando Data Augmentation, non raggiungerà un'invarian
+za perfetta rispetto alle trasformazioni considerate.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La Test Time Augmentation (TTA) può essere performata a test time per migliorare
+ la precisione delle predizioni.
+ TTA è particolarmente utile per le immagini di test in cui il modello è
+ parecchio insicuro.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Gli step della TTA sono:
+\end_layout
+
+\begin_layout Enumerate
+performare un'augmentation randomica su ogni immagine di test 
+\emph on
+I
+\end_layout
+
+\begin_layout Enumerate
+fare una media delle predizioni per ogni 
+\emph on
+I
+\end_layout
+
+\begin_layout Enumerate
+prendere il vettore delle medie per la definizione della predizione finale
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Confusion matrix
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'idea della confusion matrix sta nel fatto che l'elemento 
+\emph on
+C(i, j) 
+\emph default
+della matrice corrisponda alla percentuale degli elementi appartenenti alla
+ classe 
+\emph on
+i 
+\emph default
+classificati come elementi della classe 
+\emph on
+j
+\emph default
+.
+ Quindi la confusion matrix ideale ha tutti 1 sulla diagonale principale.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename confusion matrix.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di confusion matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Classificazione a due classi
+\end_layout
+
+\begin_layout Standard
+\noindent
+La performance della classificazione nel caso di classificatori binari può
+ anche essere misurata in termini della ROC (Receiver Operating Characteristic)
+ curve.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il classificatore ideale raggiungerebbe: 
+\end_layout
+
+\begin_layout Itemize
+FPR = 0%
+\end_layout
+
+\begin_layout Itemize
+TPR = 100%
+\end_layout
+
+\begin_layout Standard
+Quindi, più larga è l'Area Under Curve (AUC), meglio è.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename roc.png
+	lyxscale 50
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ROC (ogni punto rosso è specifico per un parametro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Transfer Learning
+\end_layout
+
+\begin_layout Standard
+L'output del fully connected layer ha la stessa dimensione del numero di
+ classi L, e ogni componente fornisce un punteggio di appartenenza a una
+ certa classe per l'immagine in input.
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'input del fully connected layer può essere visto come un descrittore dell'imma
+gine in input, cioè un vettore di features, le quali sono definite per massimizz
+are la performance di classificazione e sono allenate con backpropagation.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Come sappiamo, più ci muoviamo in profondità, più la risoluzione spaziale
+ è ridotta e il numero di mappe (relativo al campo percettivo) aumenta,
+ quindi cerchiamo dei pattern di alto livello senza preoccparci troppo della
+ loro posizione esatta nell'immagine.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+La parte convoluzionale può quindi essere vista come un estrattore di feature
+ molto generale, mentre i FC layers sono molto personalizzati, dato che
+ sono pensati per risolvere obiettivi di classificazione specifici.
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'idea alla base del transfer learning è quindi quella di:
+\end_layout
+
+\begin_layout Itemize
+\noindent
+prendere un modello pre-allenato (es.: VGG)
+\end_layout
+
+\begin_layout Itemize
+rimuovere e modificare i FC layers 
+\end_layout
+
+\begin_layout Itemize
+congelare i pesi nella CNN
+\end_layout
+
+\begin_layout Itemize
+allenare l'intera rete sui nuovi dati di training
+\end_layout
+
+\begin_layout Standard
+Ci sono due opzioni di congelamento della CNN:
+\end_layout
+
+\begin_layout Itemize
+Trensfer Learning: solo i layers della FCN vengono allenati (una buona opzione
+ quando si hanno pochi dati di training e ci si aspetta che la CNN pre-allenata
+ sia compatibile col problema)
+\end_layout
+
+\begin_layout Itemize
+Fine tuning: l'intera CNN è riallenata, ma i layer convoluzionali sono inizializ
+zati al modello pre-allenato (una buona opzione quando si hanno abbastanza
+ dati di training o quando non ci si aspetta che la CNN pre-allenata sia
+ compatibile col problema)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename transf1.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architettura tipica di una CNN (verde: estrattore feature, giallo: classificator
+e feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Segmentazione di immagini
 \end_layout
 
@@ -7798,7 +8558,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Segmentazione.png
-	scale 50
+	scale 43
 
 \end_inset
 
@@ -7825,6 +8585,7 @@ In figura 4.9 viene mostrato un esempio di segmentazione, ogni etichetta
 \end_layout
 
 \begin_layout Standard
+\noindent
 Data un'immagine 
 \shape italic
 I, 
@@ -7839,29 +8600,3867 @@ associamo ad ogni pixel identificato dalle sue coordinate (r,c) dove r e
 \end_layout
 
 \begin_layout Subsection
-Fully-Convolutional Networks
+Fully-Convolutional Neural Networks per la segmentazione semantica
 \end_layout
 
 \begin_layout Standard
-Questa tipologia di reti 
+Le CNN sono pensate per processare imput di dimensione fissata.
+ I layer convoluzionali e di subsampling operano in maniera scorrevole sull'imma
+gine, mentre i FC layers vincolano l'input a una dimensione fissata.
+ Dando in pasto un'immagine di dimensione più larga alla rete, quindi, non
+ si possono calcolare i punteggi delle varie classi, ma si possono comunque
+ estrarre le features.
 \end_layout
 
-\begin_layout Section
-Network in network
+\begin_layout Standard
+\noindent
+Ad ogni modo, dato che la FCN è lineare, può essere rappresentata come una
+ convoluzione, i cui pesi sono associati al neurone di output 
+\begin_inset Formula $o_{i}$
+\end_inset
+
+.
+ Si ha che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+o_{i}\mathrel{=\mathop{\left(\boldsymbol{w_{i}}\mathbin{\odot}s\right)(0,0)}+}b_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
+\begin_inset Formula $\boldsymbol{w_{i}}=$
+\end_inset
+
+{
+\emph on
+w
+\begin_inset Formula $_{i,j}\}_{i=j:N}$
+\end_inset
+
+
+\emph default
+ sono i pesi associati a 
+\emph on
+
+\begin_inset Formula $o_{i}$
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Quindi, dato che la FCN è lineare, può essere rappresentata come una convoluzion
+e di L filtri di dimensione 1x1xN.
+ Ognuno di questi filtri convoluzionali contiene i pesi della FCN per il
+ corrispondente neurone in output.
+ Per ogni classe in output, otteniamo quindi un'immagine avente una risoluzione
+ più bassa rispetto a quella dell'immagine in input e probabilità delle
+ classi per il campo recettivo di ogni pixel.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In un'immagine più grande, ogni pixel nella heatmap corrisponde a un campo
+ recettivo nell'immagine in input.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename heatmap.png
+	lyxscale 70
+	scale 95
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename heatmap_explan.png
+	lyxscale 60
+	scale 52
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di heatmap (sopra), Direct Heatmap Predictions (sotto)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Le Fully-Convolutional Neural Networks sono dunque un mezzo per effettuare
+ predizioni su immagini di dimensione arbitraria.
+ Ci sono varie soluzioni per segmentare le immagini tramite FCNN:
+\end_layout
+
+\begin_layout Enumerate
+Direct Heatmap Predictions: possiamo assegnare l'etichetta predetta nella
+ heatmap all'intero campo recettivo, nonostante questa sarebbe una stima
+ molto grossolana
+\end_layout
+
+\begin_layout Enumerate
+Shift and Stich: assumiamo che ci sia un ratio 
+\emph on
+f
+\emph default
+ tra la dimensione dell'input e la dimensione della heatmap in output.
+ Compiamo i seguenti step:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+calcoliamo le heatmap per tutti i possibili shift 
+\emph on
+
+\begin_inset Formula $f^{2}$
+\end_inset
+
+
+\emph default
+dell'input (
+\begin_inset Formula $0\leq r,c<f$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+mappiamo le predizioni dalle 
+\emph on
+
+\begin_inset Formula $f^{2}$
+\end_inset
+
+ 
+\emph default
+heatmap all'immagine (ogni pixel della heatmap fornisce la predizione del
+ pixel centrale del campo recettivo)
+\end_layout
+
+\begin_layout Itemize
+frapponiamo le heatmap per formare un immagine larga quanto l'input
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+solo convoluzioni: campo recettivo piccolo e metodo molto inefficiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename shift_and_stich.png
+	lyxscale 70
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Shift and Stich
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La segmentazione semantica affronta una tensione tra semantica e locazione,
+ ovvero si pone l'obiettivo di fare predizioni locali rispetto alla struttura
+ globale.
+ Un modo per fare ciò è rappresentato nella figura seguente.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename semant_segment.png
+	lyxscale 70
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rete con convoluzione e upsampling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Come possiamo notare, la prima parte della rete è una normale CNN (convoluzioni
+ + pooling/downsampling), mentre la seconda metà è pensata per fare un upsamplin
+g delle predizioni per coprire ogni pixel dell'immagine (convoluzioni +
+ upsampling).
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per fare l'upsampling possiamo usare 2 metodi:
+\end_layout
+
+\begin_layout Itemize
+Nearest Neighbor: si riempiono tutti i pixel del layer di output col valore
+ del corrispettivo pixel del layer di input
+\end_layout
+
+\begin_layout Itemize
+Bed of Nails: si riempiono tutti i pixel del layer di output con degli 0,
+ eccetto un pixel che avrà il valore del corrispettivo pixel del layer in
+ input
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename upsampling.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+UpSampling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per mantenere anche le informazioni delle posizioni dei pixel, usiamo un
+ meccanismo chiamato Max Unpooling (l'inverso del Max Pooling, vedi figura
+ sotto).
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename maxUnpooling.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Max Unpooling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Inoltre possiamo anche fare una convoluzione trasposta, che è esattamente
+ l'operazione reciproca della convoluzione.
+ L'unico problema sta nei pixel che overlappano, ma la soluzione consiste
+ nel fare una somma pesata tra i pixel in input e la parte di filtro compresa
+ nella regione di overlap.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename transpose_conv.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename transpose_conv(1).png
+	lyxscale 150
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Convoluzione trasposta (stride = 2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+I filtri di upsampling possono essere appresi durante il training con un'inizial
+izzazione uguale all'interpolazione bilineare.
+ Le predizioni derivate dall'upsampling sono comunque troppo grossolane.
+ La soluzione a questo problema è quella di usare delle Skip Connections.
+ Queste integrano una tradizionale rete di contrazione dove la convoluzione
+ è rimpiazzata dalla convoluzione trasposta.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename skip_connections.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Skip connections
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Come allenare una FCNN
+\end_layout
+
+\begin_layout Enumerate
+modo Patch-Based: eseguiamo i seguenti step:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+prepariamo un set di training per una rete di classificazione
+\end_layout
+
+\begin_layout Itemize
+ritagliamo delle patch 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ dalle immagini e assegnamo a ogni patch l'etichetta corrispondente al punto
+ centrale della patch
+\end_layout
+
+\begin_layout Itemize
+alleniamo una CNN per la classificazione da zero o facciamo fine-tuning
+ di un modello pre-allenato sulle classi di segmentazione
+\end_layout
+
+\begin_layout Itemize
+spostiamo i FC layers nelle convoluzioni 1x1
+\end_layout
+
+\begin_layout Itemize
+disegnamo la parte di upsampling della rete e ne alleniamo i filtri
+\end_layout
+
+\begin_layout Itemize
+la rete di classificazione è allenata per minimizzare l'errore di classificazion
+e 
+\emph on
+l
+\emph default
+ su un mini-batch
+\begin_inset Formula 
+\begin{equation}
+\hat{\theta}=min_{\theta}\sum_{x_{j}}l(\boldsymbol{x_{j}},\theta)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+i batch sono poi randomicamente assemblati durante il training
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+modo Full-Image: è possibile allenare direttamente una FCNN che include
+ i layer di upsampling, quindi il learning diventa la seguente minimizzazione
+ 
+\begin_inset Formula 
+\begin{equation}
+min_{x_{j}\in I}\sum_{x_{j}}l(\boldsymbol{x_{j}},\theta)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+dove 
+\emph on
+
+\begin_inset Formula $\boldsymbol{x_{j}}$
+\end_inset
+
+
+\emph default
+sono i pizel in una regione dell'immagine di input e la funzione di errore
+ è valutata sulle etichette corrispondenti nell'annotazione.
+ Tale metodo è chiamato anche ''metodo end-to-end'' ed è più efficiente
+ del Patch-Based.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+U-Net
+\end_layout
+
+\begin_layout Standard
+La U-Net è formata da una parte contrattiva e una parte espansiva e non
+ ha FC layers (è simmetrica).
+ Essa usa un gran numero di feature maps nella parte di downsampling e usa
+ molta data augmentation.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename UNet.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nella parte di contrazione, la rete ripete blocchi aventi:
+\end_layout
+
+\begin_layout Itemize
+2 layer convoluzionali 3x3 + ReLU (opzione 'valid', no padding)
+\end_layout
+
+\begin_layout Itemize
+maxpooling 2x2
+\end_layout
+
+\begin_layout Standard
+A ogni downsampling, inoltre, il numero di feature maps è raddoppiato.
+ La particolarità di questa rete è che implementa le skip connections, tramite
+ le quali aggrega tramite concatenazione l'ultimo layer convoluzionale,
+ per ogni blocco nella rete di contrazione, col primo layer convoluzionale
+ del corrispettivo blocco della rete di espansione.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nella parte di espansione, la rete ripete blocchi aventi:
+\end_layout
+
+\begin_layout Itemize
+convoluzione trasposta 2x2, dimezzando il numero di feature maps (ma raddoppiand
+o la risoluzione spaziale)
+\end_layout
+
+\begin_layout Itemize
+concatenazione delle cropped features corrispondenti
+\end_layout
+
+\begin_layout Itemize
+2 layer convoluzionali 3x3 + ReLU
+\end_layout
+
+\begin_layout Standard
+Il risultato è un'immagine in outputpiù piccola di quella in input.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La U-Net usa il metodo di training Full-Image con una funzione di errore
+ pesata
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\theta}=min_{\theta}\sum_{x_{j}}w(\boldsymbol{x_{j}})l(\boldsymbol{x_{j}},\theta)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove il peso è dato dalla relazione
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w(\boldsymbol{x})=w_{c}(\boldsymbol{x})+w_{0}e^{-\frac{(d_{1}(\boldsymbol{x})+d_{2}(\boldsymbol{x}))^{2}}{2\sigma^{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In quest'ultima relazione, 
+\begin_inset Formula $w_{c}$
+\end_inset
+
+è usato per bilanciare le proporzioni delle classi, 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+è la distanza tra il bordo e la cella più vicina, mentre 
+\begin_inset Formula $d_{2}$
+\end_inset
+
+è la distanza tra il bordo e la seconda cella più vicina (i pesi sono più
+ grandi quando la distanza dalle due celle più vicine al bordo è piccola).
+ Inoltre, il primo termine dell'equazione tiene conto dello sbilanciamento
+ delle classi nel training set, mentre il secondo migliora la performance
+ della classificazione ai bordi di oggetti diversi tra loro.
+\end_layout
+
+\begin_layout Subsection
+Global Averaging Pooling
+\end_layout
+
+\begin_layout Standard
+L'idea principale consiste nell'usare, anzichè le convoluzioni tradizionali,
+ uno stack di convoluzioni 1x1 + ReLU, che corrisponde alle reti di MLP
+ usate in maniera scorrevole su tutta l'immagine.
+ Viene quindi introdotto il Global Averaging Pooling layer, che calcola
+ la media di ogni feature map al posto del FC layer alla fine della rete
+ e predire usando una semplice softmax.
+ L'importante è che il numero di feature maps sia uguale al numero di classi
+ in output.
+ Tra i vantaggi di questo layer vi è quello di riuscire a classificare immagini
+ di dimensioni diverse.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In pratica è come se avessimo una rete nella rete (NiN) composta da:
+\end_layout
+
+\begin_layout Itemize
+MLP convolutional layers + ReLU + dropout
+\end_layout
+
+\begin_layout Itemize
+maxpooling
+\end_layout
+
+\begin_layout Itemize
+GAP layer
+\end_layout
+
+\begin_layout Itemize
+softmax
+\end_layout
+
+\begin_layout Standard
+Delle semplici NiN raggiungono la miglior performance su piccoli dataset
+ grazie al fatto che il GAP riduce efficacemente l'overfitting rispetto
+ al FC.
+ Possiamo quindi affermare che il GAP agisce come un regolarizzatore strutturale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GAP.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Network in Network
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Weakly-Supervised Localization
+\end_layout
+
+\begin_layout Standard
+\noindent
+La Weakly-Supervised Localization effettua una localizzazione su un'immagine
+ senza box di contorno annotati.
+ Il training set è fornito come per la classificazione con coppie <immagine,
+ etichetta> (
+\emph on
+I
+\emph default
+, 
+\emph on
+l
+\emph default
+) dove non è fornita alcun'informazione sulla localizzazione.
+\end_layout
+
+\begin_layout Paragraph
+CAM
+\end_layout
+
+\begin_layout Standard
+\noindent
+I vantaggi del GAP layer vanno oltre al semplice agire come regolarizzatore
+ che previene l'overfitting.
+ Infatti, la rete può conservare una notevole abilità di localizzazione
+ fino al layer finale.
+ Una CNN allenata sulla categorizzazione di un oggetto è quindi capace di
+ localizzare con successo le regioni discriminative per la classificazione
+ contenenti gli oggetti con cui gli umani interagiscono piuttosto che gli
+ umani stessi.
+ Ciò viene fatto tramite una tecnica chiamata Class Activation Mapping (CAM),
+ che permette di identificare quali regioni di un'immagine verranno usare
+ per la discriminazione.
+ Essa richiede solo un FC layer dopo il GAP e una piccola regolarizzazione.
+ Tale layer calcola lo score 
+\begin_inset Formula $S_{c}$
+\end_inset
+
+ per ogni classe 
+\emph on
+c
+\emph default
+ come 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{c}=\sum_{k}w_{k}^{c}F_{k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
+\begin_inset Formula 
+\begin{equation}
+F_{k}=\sum_{(x,y)}f_{k}(x,y)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename CAM(1).png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dopodichè, calcola la probabilità 
+\emph on
+
+\begin_inset Formula $P_{c}$
+\end_inset
+
+ 
+\emph default
+della classe 
+\emph on
+c 
+\emph default
+come
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c}=\frac{e^{S_{c}}}{\sum_{i}e^{S_{i}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ad ogni modo, unendo la (128) e la (129), e sapendo che il CAM è definito
+ come
+\begin_inset Formula 
+\begin{equation}
+M_{c}(x,y)=\sum_{k}w_{k}^{c}f_{k}(x,y)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+otteniamo che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{c}=\sum_{(x,y)}M_{c}(x,y)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
+\begin_inset Formula $M_{c}(x,y)$
+\end_inset
+
+ indica direttamente l'importanza delle attivazioni a (x,y) per la classe
+ 
+\emph on
+c
+\emph default
+.
+ Inoltre, grazie alla softmax, la profondità dell'ultimo layer convoluzionale
+ può essere diversa dal numero di classi.
+ Potrebbe anche essere necessario un upsampling per poter matchare l'immagine
+ in input (vedi figura sotto).
+ I pesi rappresentano quindi l'importanza di ogni feature map per portare
+ alla predizione finale.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename CAM.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Class Activation Mapping
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Grad-CAM
+\end_layout
+
+\begin_layout Standard
+\noindent
+CAM ha il grande svantaggio di dover modificare la rete per poter predire
+ un'altra classe.
+ Una tecnica che risolve questo problema è la Grad-CAM, la quale usa il
+ gradiente per calcolare la heatmap a bassa risoluzione 
+\begin_inset Formula $\boldsymbol{g^{c}}$
+\end_inset
+
+, dove 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{g^{c}=}RELU\left(\sum_{k}w_{k}^{c}\boldsymbol{a_{k}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{k}^{c}=\frac{1}{nm}\sum_{i}\sum_{j}\frac{\partial y_{c}}{\partial\boldsymbol{a_{k}}(\boldsymbol{i},\boldsymbol{j})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Grad-CAM.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grad-CAM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Augmented Grad-CAM
+\end_layout
+
+\begin_layout Standard
+\noindent
+Consideriamo l'operatore di augmentation 
+\begin_inset Formula $\mathcal{A_{\mathit{l}}}:\mathbb{R^{\mathrm{N\mathbin{x}M}}\rightarrow\mathbb{R^{\mathrm{N\mathbin{x}M}}}}$
+\end_inset
+
+, che include rotazioni e traslazioni randomiche dell'immagine di input
+ 
+\series bold
+x
+\series default
+.
+ L'Augmented Grad-CAM incrementa la risoluzione delle heatmap tramite image
+ augmentation.
+ Tutte le risposte generate dalla CNN alle versioni multiple augmentate
+ della stessa immagine di input hanno molte informazioni per la ricostruzione
+ della heatmap 
+\series bold
+h
+\series default
+ ad alta risoluzione.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename aug-grad-cam.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Augmented Grad-CAM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Viene fatta la cosiddetta Super-Resolution (SR) della heatmap sfruttando
+ le informazioni condivise nelle heatmap a bassa risoluzione calcolate dallo
+ stess input sotto diverse, ma note, trasformazioni.
+ Le CNN sono in generale invarianti alle rototraslazioni, in termini di
+ predizioni, ma ogni heatmap a bassa risoluzione
+\series bold
+
+\begin_inset Formula $\boldsymbol{g_{l}}$
+\end_inset
+
+
+\series default
+contiene di fatto diverse informazioni.
+ Modelliamo le heatmap calcolate col Grad-CAM come risultato di un operatore
+ di downsampling sconosciuto 
+\begin_inset Formula $\mathcal{\boldsymbol{D}}:\mathbb{R}^{\mathrm{N\mathbin{x}M}}\rightarrow\mathbb{R^{\mathrm{N\mathbin{x}M}}}$
+\end_inset
+
+.
+ L'alta risoluzione della heatmap 
+\series bold
+h
+\series default
+ è recuperata risolvendo un problema inverso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+argmin_{h}\frac{1}{2}\sum_{l=1}^{L}\bigparallel\mathcal{DA\mathit{_{l}}\mathrm{\boldsymbol{h}-g_{\mathit{l}}\bigparallel}_{\mathrm{2}}^{\mathrm{2}}}+\lambda TV_{l_{1}}(\boldsymbol{h})+\frac{\mu}{2}\bigparallel\boldsymbol{h}\bigparallel{}_{\mathrm{2}}^{\mathrm{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
+\begin_inset Formula 
+\begin{equation}
+TV_{l_{1}}(\boldsymbol{h})=\sum_{i,j}\bigparallel\partial_{x}\boldsymbol{h}(i,j)\bigparallel+\bigparallel\partial_{y}\boldsymbol{h}(i,j)\bigparallel
+\end{equation}
+
+\end_inset
+
+è la regolarizzazione Anistropic Total Variation usata per preservare i
+ bordi della heatmap target ad alta risoluzione.
+ Questo viene risolto tramite Subgradient Descent dato che la funzione è
+ convessa e non-smooth (non differenziabile e discontinua).
 \end_layout
 
 \begin_layout Chapter
 Reti Ricorrenti
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
+Modellazione sequenziale
+\end_layout
 
+\begin_layout Standard
+Finora abbiamo considerato solo dataset 
+\begin_inset Quotes fld
+\end_inset
+
+statici
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Ora invece ci concentreremo su dataset 
+\begin_inset Quotes fld
+\end_inset
+
+dinamici
+\begin_inset Quotes frd
+\end_inset
+
+ in due modi:
+\end_layout
+
+\begin_layout Itemize
+modelli senza memoria 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+modelli autoregressivi: predicono il prossimo input a partire dal precedente
+ sfruttando dei 
+\begin_inset Quotes fld
+\end_inset
+
+ritardi
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Feed Forward Neural Networks: generalizzano i modelli autoregressivi usando
+ layer nascosti non-lineari
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename autoregressive.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello autoregressivo (sopra), FFNN (sotto)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+modelli con memoria (sistemi dinamici lineari, Hidden Markov models, Recurrent
+ Neural Networks)
+\end_layout
+
+\begin_layout Standard
+I sistemi dinamici sono modelli generativi con uno stato nascosto che non
+ può essere osservato direttamente.
+ Tale stato ha delle dinamiche che possono essere affette da rumore e produce
+ l'output.
+\end_layout
+
+\begin_layout Subsection
+Sistemi dinamici lineari
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nei sistemi dinamici lineari ciò si traduce nell'avere uno stato continuo
+ con incertezza Gaussiana che può essere stimato usando il Kalman filtering.
+ Le trasformazioni sono assunte essere lineari.
+\end_layout
+
+\begin_layout Subsection
+Hidden Markov models
+\end_layout
+
+\begin_layout Standard
+Negli HMM lo stato è assunto come discreto e può essere stimato tramite
+ l'algoritmo di Viterbi, mentre le transizioni sono stocastiche (si usa
+ la cosiddetta ''matrice di transizione'').
+ L'output è una funzione stocastica degli stati nascosti.
+\end_layout
+
+\begin_layout Subsection
+Recurrent Neural Networks
+\end_layout
+
+\begin_layout Standard
+Le reti neurali ricorrenti usano la memoria tramite delle connessioni chiamate
+ connessioni ricorrenti.
+ Inoltre, gli stati distribuiti consentono di salvare efficentemente le
+ informazioni, mentre le dinamiche non-lineari consentono di aggiornare
+ stati nascosti complessi.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\emph on
+''Con abbastanza neuroni e tempo, le RNN possono calcolare qualsiasi cosa
+ che possa essere calcolata da un computer.'' 
+\emph default
+(Computation Beyond the Turing Limit, Hava T.
+ Siegelmann, 1995)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RNN(1).png
+	lyxscale 120
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rete neurale ricorrente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nella figura sopra sono raffigurati due tipi di neuroni: quelli grigi, che
+ dipendono dall'input corrente, e quelli blu, che dipendono dalla storia
+ della rete.
+ Inoltre abbiamo dei parametri nuovi chiamati:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ rappresenta i pesi tra neuroni blu e neuroni grigi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{B}$
+\end_inset
+
+ rappresenta i pesi tra i neuroni blu
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W$
+\end_inset
+
+ rappresenta i pesi tra neuroni grigi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{B}$
+\end_inset
+
+ rappresenta i pesi tra neuroni grigi e neuroni blu
+\end_layout
+
+\begin_layout Standard
+Le funzioni di output dei neuroni sono
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+h_{j}^{t}(\cdot)=h_{j}^{t}\left(\sum_{j=0}^{J}w_{ji}^{(1)}\cdot x_{i,n}+\sum_{b=0}^{B}v_{jb}^{(1)}\cdot c_{b}^{t-1}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\begin{equation}
+c_{b}^{t}(\cdot)=c_{b}^{t}\left(\sum_{j=0}^{J}w_{bi}^{(1)}\cdot x_{i,n}+\sum_{b'=0}^{B}v_{bb'}^{(1)}\cdot c_{b'}^{t-1}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+mentre la funzione di output della rete è
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+g^{t}(x_{n}|w)=g\left(\sum_{j=0}^{J}w_{1j}^{(2)}\cdot h_{j}^{t}(\cdot)+\sum_{b=0}^{B}v_{1b}^{(2)}\cdot c_{b}^{t}(\cdot)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La rete nascosta è chiamata context network e contiene 
+\emph on
+B
+\emph default
+ neuroni, mentre la rete ''visibile'' ne ha 
+\emph on
+J
+\emph default
+.
+ La context network è la parte più difficile da allenare in quanto non è
+ una FFNN.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+La tecnica usata per allenarla è chiamata Backpropagation Through Time.
+ Gli step che la compongono sono:
+\end_layout
+
+\begin_layout Enumerate
+dispiegare (unfold) la RNN per 
+\emph on
+U
+\emph default
+ step temporali, ottenendo una FFNN: sia 
+\emph on
+N 
+\emph default
+una RNN che deve apprendere un task temporale a partire dal tempo 
+\emph on
+t-u 
+\emph default
+fino al tempo 
+\emph on
+t
+\emph default
+, e sia 
+\emph on
+N* 
+\emph default
+la FFNN che risulta dall'unfold della rete 
+\emph on
+N:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+per ogni istante di tempo nell'intervallo 
+\begin_inset Formula $(t-u,t]$
+\end_inset
+
+ la rete 
+\emph on
+N* 
+\emph default
+ha un layer contenente 
+\emph on
+k
+\emph default
+ neuroni, dove 
+\emph on
+k
+\emph default
+ è il numero di neuroni di 
+\emph on
+N
+\end_layout
+
+\begin_layout Itemize
+per ogni layer di 
+\emph on
+N*
+\emph default
+ c'è una copia di ogni neurone in 
+\emph on
+N
+\end_layout
+
+\begin_layout Itemize
+per ogni istante di tempo 
+\begin_inset Formula $\tau\in(t-u,t]$
+\end_inset
+
+ il peso sinaptico dal neurone 
+\emph on
+i 
+\emph default
+nel layer 
+\emph on
+
+\begin_inset Formula $\tau$
+\end_inset
+
+ 
+\emph default
+al neurone 
+\emph on
+j 
+\emph default
+nel layer 
+\emph on
+
+\begin_inset Formula $\tau+1$
+\end_inset
+
+ 
+\emph default
+di 
+\emph on
+N* 
+\emph default
+è una copia della connessione sinaptica dal neurone 
+\emph on
+i 
+\emph default
+al neurone 
+\emph on
+j
+\emph default
+ in 
+\emph on
+N
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename backprop_through_time.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Unfolding della rete
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+inizializzare le repliche di 
+\begin_inset Formula $W_{B}$
+\end_inset
+
+e 
+\begin_inset Formula $V_{B}$
+\end_inset
+
+in modo da renderle uguali
+\end_layout
+
+\begin_layout Enumerate
+fare una backpropagation su tutta la nuova rete: tutti i pesi sono allenati
+ col gradient descent, cioè considerando un istante di tempo generico 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ Applicando il solito metodo di aggiornamento, avremo valori diversi per
+ gli stessi pesi in diversi istanti di tempo.
+ Ciò non è conveniente perchè di fatto sono gli stessi pesi, quindi poi
+ se ne fa la media dopo averli aggiornati sulla base del gradient descent.
+ Una tecnica alternativa possibile è quella di aggiornare i pesi con la
+ media del gradiente, ottenendo quindi gli stessi risultati ma il processo
+ sarà più efficiente.
+ La formula di aggiornamento per i pesi da fornire alla context network
+ è:
+\begin_inset Formula 
+\begin{equation}
+W_{B}=W_{B}-\eta\cdot\frac{1}{U}\sum_{0}^{U-1}\frac{\partial E}{\partial W_{B}^{t-u}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Mentre per mantenere la memoria del contesto si usa:
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{B}=V_{B}-\eta\cdot\frac{1}{U}\sum_{0}^{U-1}\frac{\partial E^{t}}{\partial V_{B}^{t-u}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Vanishing Gradient
+\end_layout
+
+\begin_layout Standard
+Le RNN non riescono ad andare indietro nel passato per più di 10 step a
+ causa del cosiddetto effetto del Vanishing Gradient.
+ Per spiegarlo proviamo a semplificare la RNN come nella figura sotto.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename RNN_simple.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La backpropagation su un'intera sequenza 
+\emph on
+S
+\emph default
+ è calcolata come 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial E}{\partial w}=\sum_{t=1}^{S}\frac{\partial E^{t}}{\partial w}=\sum_{t=1}^{S}\frac{\partial E^{t}}{\partial y^{t}}\frac{\partial y^{t}}{\partial h^{t}}\frac{\partial h^{t}}{\partial h^{k}}\frac{\partial h^{k}}{\partial w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial h^{t}}{\partial h^{k}}=\prod_{i=k+1}^{t}\frac{\partial h_{i}}{\partial h_{i-1}}=\prod_{i=k+1}^{t}v^{(1)}g'\left(h^{i-1}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Considerando la norma di questi termini
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Vert\frac{\partial h_{i}}{\partial h_{i-1}}\Vert=\parallel v^{(1)}\Vert\Vert g'\left(h^{i-1}\right)\Vert
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+otteniamo che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Vert\frac{\partial h^{t}}{\partial h^{k}}\Vert\leq\left(\gamma_{v}\gamma_{g}^{'}\right)^{t-k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove se 
+\begin_inset Formula $\left(\gamma_{v}\gamma_{g}^{'}\right)<1$
+\end_inset
+
+ allora la norma converge a 0.
+ In particolare 
+\begin_inset Formula $\gamma_{v}$
+\end_inset
+
+ è la norma dei pesi e 
+\begin_inset Formula $\gamma_{g}^{'}$
+\end_inset
+
+ è la norma della derivata 
+\begin_inset Formula $g^{'}$
+\end_inset
+
+ e vale 1 se usiamo una ReLU.
+ Usando sigmoide o Tanh otteniamo il cosiddetto Vanishing Gradient, che
+ dimostra che più si va indietro nel passato, più il gradiente tenderà a
+ 0 indipendentemente dall'errore.
+ Basandosi sullo stesso principio, se 
+\begin_inset Formula $v^{(1)}>1$
+\end_inset
+
+ il gradiente incrementerà drammaticamente fino a risultare in un'
+\begin_inset Quotes fld
+\end_inset
+
+esplosione
+\begin_inset Quotes frd
+\end_inset
+
+ che colpirà la capacità di apprendimento della rete.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per risolvere questo problema si può usare la ReLu, che forza tutti i gradienti
+ ad essere 0 o 1.
+ Derivando la (4) otteniamo infatti che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f'(x)=1_{x>0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il trick sta quindi nel costruire la RNN usando piccoli moduli fatti apposta
+ per ricordare valori per tanto tempo.
+\end_layout
+
+\begin_layout Section
+Long Short-Term Memories
+\end_layout
+
+\begin_layout Standard
+Nel 1997, Hochreiter&Schmidhuber hanno risolto il problema del vanishing
+ gradient disegnando una cella di memoria che usa unità logistiche e lineari
+ con interazioni moltiplicative.
+ L'informazione entra nella cella quando il suo gate di 
+\emph on
+''write''
+\emph default
+ è on, rimane nella cella fintantochè il suo gate di 
+\emph on
+''keep'' 
+\emph default
+è on, e viene infine letta dalla cella mettendo a on il suo gate
+\emph on
+ 
+\emph default
+di 
+\emph on
+''read''
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il problema viene quindi risolto poichè il loop ha un peso fissato, cioè
+ non vanno imparati i pesi della parte di rete ''unfoldata'' dato che valgono
+ 1.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename LSTM.png
+	lyxscale 80
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LSTM
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La LSTM è composta da:
+\end_layout
+
+\begin_layout Itemize
+un input gate (ci dice quanto teniamo in memoria)
+\begin_inset Formula 
+\begin{equation}
+i_{t}=\sigma\left(W_{i}\cdot\left[h_{t-1},x_{t}\right]+b_{i}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\tilde{C}_{t}=tanh\left(W_{C}\cdot\left[h_{t-1},x_{t}\right]+b_{C}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename input_gate.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Input gate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+un forget gate (se 
+\begin_inset Formula $x_{t}=0\rightarrow$
+\end_inset
+
+ forget, altrimenti manteniamo in memoria)
+\begin_inset Formula 
+\begin{equation}
+f_{t}=\sigma\left(W_{f}\cdot\left[h_{t-1},x_{t}\right]+b_{f}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename forget_gate.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Forget gate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+un memory gate
+\begin_inset Formula 
+\begin{equation}
+C_{t}=f_{t}\ast C_{t-1}+i_{t}\ast\tilde{C_{t}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename memory_gate.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Memory gate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+un output gate
+\begin_inset Formula 
+\begin{equation}
+o_{t}=\sigma\left(W_{o}\cdot\left[h_{t-1},x_{t}\right]+b_{o}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+h_{t}=o_{t}\ast tanh(C_{t})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output_gate.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Output gate
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Possiamo quindi costruire un grafo computazionale con trasformazioni continue
+ come nella figura sotto.
+ In pratica le LSTM funzionano come i layer convoluzionali nelle CNN perchè
+ sono una sorta di estrattori di features.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename LSTM(1).png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LSTM in sequenza (le parti nei riquadri neri sono i layer nascosti)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Un altro approccio possibile consiste nell'usare reti LSTM bidirezionali
+ che sfruttano l'intera sequenza in input.
+ Sono composte da una RNN che attraversa l'intera sequenza da sinistra a
+ destra e da una RNN che attraversa l'intera sequenza da destra a sinistra.
+ Queste due RNN vengono poi concatenate per essere usate come rappresentazione
+ delle features.
+ Per inizializzarle bisogna specificare lo stato iniziale trattandolo come
+ parametro da apprendere.
+ L'inizializzazione può essere fatta a 0 oppure a con valori randomici.
+ Dopodichè si inizia a predirre randomicamente i valori dello stato iniziale,
+ si backpropaga l'errore di predizione nel tempo fino allo stato iniziale
+ e si calcola il gradiente dell'errore rispetto ai nuovi valori dello stato
+ iniziale.
+\end_layout
+
+\begin_layout Paragraph
+Gated Recurrent Unit
+\end_layout
+
+\begin_layout Standard
+La GRU combina i gate di input e forget in un unico ''update gate'' e fa
+ un merge tra lo stato della cella e lo stato nascosto (più altri cambiamenti).
+ Le parti che caratterizzano tale unità sono:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+z_{t}=\sigma\left(W_{z}\cdot\left[h_{t-1},x_{t}\right]\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+r_{t}=\sigma\left(W_{r}\cdot\left[h_{t-1},x_{t}\right]\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{h_{t}}=tanh\left(W\cdot\left[r_{t}\ast h_{t-1},x_{t}\right]\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+h_{t}=(1-z_{t})\ast h_{t-1}+z_{t}\ast\tilde{h_{t}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GRU.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+GRU
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La GRU può essere usata in alternativa alla LSTM.
+\end_layout
+
+\begin_layout Section
+Modellazione Sequence to Sequence
+\end_layout
+
+\begin_layout Standard
+Il sequence modeling risolve vari problemi in base all'architettura usata.
+ Le architetture possibili sono:
+\end_layout
+
+\begin_layout Itemize
+uno a uno: un input di dimensione fissa viene trasformato in un output di
+ dimensione fissata (es.: image classification)
+\end_layout
+
+\begin_layout Itemize
+uno a molti: output sequenziale (es.: captioning delle immagini che prende
+ un'immafine in input e produce in output una sequenza di parole)
+\end_layout
+
+\begin_layout Itemize
+molti a uno: input sequenziale (es.: analisi dei sentimenti dove una data
+ frase viene classificata sulla base della positività o negatività dei sentiment
+i che esprime)
+\end_layout
+
+\begin_layout Itemize
+molti a molti:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+input e output sequenziali (es.: traduttori, cioè una RNN che legge una frase
+ in inglese e ne produce in output la traduzione francese)
+\end_layout
+
+\begin_layout Itemize
+input e output sequenziali sincronizzati (es.: classificazione dei video,
+ dei quali vogliamo etichettare ogni frame)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename seq2seq_architectures.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architetture seq2seq
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il modello seq2seq segue la classica architettura encoder-decoder, in cui
+ durante la fase di inferenza (e non durante il training) il decoder dà
+ in pasto l'output di ogni istante di tempo all'input successivo.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename enc-dec.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architettura Encoder-Decoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il processo di training è caratterizzato da una trasformazione delle parole
+ a identificativi e da una fase di embedding.
+ Il processo di inferenza (testing) è caratterizzato da una prima fase di
+ embedding e da una trasformazione di identificativi in parole.
+ La fase di embedding consiste nella rappresentazione delle parole usando
+ un vettore di parole (vocabolario) denso.
+ L'encoder può essere una RNN così come una CNN, ad esempio nel caso di
+ image captioning.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Vi sono inoltre dei caratteri speciali che vengono dati in input al decoder:
+\end_layout
+
+\begin_layout Itemize
+<PAD>: durante il training gli esempi sono dati in pasto alla rete in batch,
+ i cui input devono essere della stessa larghezza.
+ Questo carattere viene usato per ''gonfiare'' input più corti rendendoli
+ della stessa dimensione del batch
+\end_layout
+
+\begin_layout Itemize
+<EOS>: necessario per il batching nel decoder, ovvero indica al decoder
+ dove finisce la frase e gli consente di indicare la stessa cosa nel suo
+ output
+\end_layout
+
+\begin_layout Itemize
+<UNK>: su dati reali può ampiamente migliorare l'efficienza delle risorse
+ per ignorare le parole che non si presentano abbastanza spesso nel vocabolario
+ (rimpiazzandole quindi con questo carattere)
+\end_layout
+
+\begin_layout Itemize
+<SOS>/<GO>: questo è l'input del decoder nel primo istante di tempo per
+ consentirgli di capire quando iniziare a generare l'output
+\end_layout
+
+\begin_layout Standard
+La preparazione dei batch si compone dei seguenti step:
+\end_layout
+
+\begin_layout Enumerate
+prendere un campione di coppie <source_sequence, target_sequence> di dimensione
+ batch_size
+\end_layout
+
+\begin_layout Enumerate
+appendere <EOS> a source_sequence
+\end_layout
+
+\begin_layout Enumerate
+prependere <SOS> a target_sequence per ottenere la target_input_sequence
+ e appendere <EOS> per ottenere la target_output_sequence
+\end_layout
+
+\begin_layout Enumerate
+''gonfiare'' le frasi fino alla max_input_length (o max_target_length) all'inter
+no dello stesso batch usando il token <PAD>
+\end_layout
+
+\begin_layout Enumerate
+codificare i token basandosi sul vocabolario (embedding)
+\end_layout
+
+\begin_layout Enumerate
+sostituire i token OOV (out of vocabulary) con <UNK> e calcolare la lunghezza
+ di ogni sequenza di input e target nel batch
+\end_layout
+
+\begin_layout Standard
+Il modello seq2seq ci dice quindi che, data una coppia <S,T>, legge S e
+ restituisce in output T' che corrisponda a T.
+ In pratica il problema riguarda la probabilità di ottenere una sequenza
+ in output data una sequenza in input:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p(y_{1},...,y_{T^{'}}|x_{1},...,x_{T})=\prod_{t=1}^{T^{'}}p(y_{t}|v,y_{1},...,y_{t-1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
+\emph on
+v 
+\emph default
+è lo stato nascosto.
+ Quindi, tale problema si riconduce alla massimizzazione della crossentropy
+ media:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{|S|}\sum_{(T,S)\in\mathcal{S}}\mathrm{log}p(T|S)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Macchine neurali di Turing
+\end_layout
+
+\begin_layout Standard
+Le Neural Turing Machines combinano una RNN con una banca di memoria esterna,
+ cioè un array di vettori.
+ La rete principale scrive su e legge da questa memoria a ogni step.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename neural_turing_machine.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neural Turing Machine
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La sfida è quella di imparare cosa scrivere/leggere e dove scrivere/leggere.
+ La soluzione è quella di, a ogni step, leggere e scrivere ovunque ma con
+ diversa misura.
+ Tale meccanismo è chiamato attention mechanism e si basa sul porre l'attenzione
+ su una specifica parte della memoria per produrre l'output.
+ In pratica la RNN dà una distribuzione di attenzione (dettata dalla softmax)
+ che descrive come distribuiamo in memoria ciò che ci interessa (vedi figura
+ sotto).
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename attention.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Attention mechanism in lettura
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il risultato della lettura è una somma pesata differenziabile:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+r\leftarrow\sum_{i}a_{i}M_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In fase di scrittura, invece, anzichè scrivere in una posizione specifica,
+ scriviamo ovunque ma con diversa misura.
+ La RNN dà una distribuzione di attenzione, descrivendo quanto dovremmo
+ cambiare ogni posizione della memoria nella direzione del valore di scrittura.
+ Sotto vi è una figura che spiega questo passaggio.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename attention_write.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Attention mechanism in scrittura
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'aggiornamento della memoria si basa sulla formula seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{i}\leftarrow a_{i}w+(1-a_{i})M_{i}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Meccanismo di attenzione
+\end_layout
+
+\begin_layout Standard
+\noindent
+Vi sono due componenti principali in una Neural Turing Machine: l'attention
+ mechanism e il RNN controller.
+ L'architettura è inoltre divisa in due parti: 
+\end_layout
+
+\begin_layout Itemize
+content-based attention: cerca in memoria e si concentra su posti che corrispond
+ono a ciò che si sta cercando
+\end_layout
+
+\begin_layout Itemize
+location-based attention: consente il movimento relativo nella memoria,
+ abilitando la NTM a ciclare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ntm_attention.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Attention in una NMT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Innanzitutto, il controller dà un query vector (output della RNN, usato
+ come meccanismo di indirizzamento) all'attention mechanism e a ogni entry
+ in memoria viene assegnato un punteggio basandosi sulla similarità con
+ il vettore.
+ I punteggi vengono quindi convertiti in una distribuzione usando la softmax.
+ Poi si interpola il risultato della softmax con l'attention generata dallo
+ step precedente, tenendo conto di un interpolation amount che rappresenta
+ la velocità di interpolazione, che è un parametro predetto dalla RNN (vedi
+ figura 5.17: se è 0 si prende solo A, se è 1 si prende solo B).
+ Fatto ciò, viene effettuata una convoluzione tra l'attenzione e un filtro
+ di shift, che consente al controller di spostare il focus dell'attention
+ mechanism su una particolare zona.
+ Infine, si affina la distribuzione dell'attention, che viene poi data in
+ pasto all'operazione di read o write.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Consideriamo il seguente dataset sequenziale:
+\begin_inset Formula $\left\{ \left(\left(x_{1},...,x_{n}\right),\left(y_{1},...,y_{n}\right)\right)\right\} _{i=1}^{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il ruolo del decoder è quello di modellare la probabilità generativa 
+\begin_inset Formula $P(y_{1},$
+\end_inset
+
+...,y
+\begin_inset Formula $_{m}|x)$
+\end_inset
+
+.
+ Nei modelli seq2seq ''vanilla'' (convenzionali), il decoder viene condizionato
+ inizializzando lo stato iniziale con l'ultimo stato dell'encoder.
+ Ciò funziona bene per frasi medio-corte, mentre per frasi lunghe ciò diventa
+ un bottleneck.
+\end_layout
+
+\begin_layout Standard
+\noindent
+La funzione di attention mappa il query vector e l'insieme di coppie chiave-valo
+re a un output, che è calcolato come la somma pesata dei valori, dove il
+ peso assegnato a ogni valore è calcolato da una funzione di compatibilità.
+ Tale funzione:
+\end_layout
+
+\begin_layout Enumerate
+compara lo stato nascosto corrente 
+\begin_inset Formula $h_{t},$
+\end_inset
+
+con stati di origine h
+\begin_inset Formula $_{s}$
+\end_inset
+
+ per derivare l'attention usando una funzione di scoring tra le due seguenti:
+ 
+\begin_inset Formula 
+\begin{equation}
+score(\boldsymbol{h_{t}},\boldsymbol{\bar{h_{s}}})=\begin{cases}
+\boldsymbol{h_{t}^{T}}\boldsymbol{W\bar{h_{s}}}\\
+\boldsymbol{v_{a}^{T}}tanh\left(\boldsymbol{W_{1}h_{t}}+\boldsymbol{W_{2}\bar{h_{s}}}\right)
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+applica la softmax sugli score e calcola i pesi dell'attention, uno per
+ ogni token dell'encoder, nel modo seguente:
+\begin_inset Formula 
+\begin{equation}
+\alpha_{ts}=\frac{e^{score(\boldsymbol{h_{t}},\boldsymbol{\bar{h_{s}}})}}{\sum_{s'=1}^{S}e^{score(\boldsymbol{h_{t}},\boldsymbol{\bar{h_{s'}}})}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+calcola il context vector come media pesata degli stati di origine:
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{c_{t}=}\sum_{s}\alpha_{ts}\boldsymbol{\bar{h_{s}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+combina il context vector con lo stato nascosto target corrente per produrre
+ il vettore di attention finale:
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{a_{i}=}f\left(c_{t},\boldsymbol{h_{i}}\right)=tanh\left(\boldsymbol{W_{c}}[\boldsymbol{c_{t}};\boldsymbol{h_{t}}]\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename attention_function.png
+	lyxscale 70
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di funzione di compatibilità
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per visualizzare i pesi dell'attention tra le frasi di 
+\color red
+source
+\color inherit
+ e 
+\color blue
+target 
+\color inherit
+si può usare la cosiddetta alignment matrix.
+ Per ogni passo di decodifica (cioè per ogni token target generato) descrive
+ quali sono i token di origine che sono più presenti nella somma pesata
+ e che hanno quindi condizionato la decodifica.
+ L'attention è quindi uno strumento che, durante la decodifica, consente
+ alla rete di prestare più attenzione a varie parti della frase originale.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename attention_visual.png
+	lyxscale 50
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di alignment matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tra le possibili applicazioni del meccanismo di attention, oltre alle traduzioni
+, troviamo il riconoscimento vocale, l'image captioning e la generazione
+ automatica di risposte (es.: chatbot).
+\end_layout
+
+\begin_layout Paragraph
+Chatbot
+\end_layout
+
+\begin_layout Standard
+I chatbot possono essere definiti lungo due dimensioni:
+\end_layout
+
+\begin_layout Itemize
+l'algoritmo core:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+generativo: codifica la domanda in un context vector e genera la risposta
+ parola per parola usando la distribuzione della probabilità condizionata
+ sul vocabolario della risposta (modello encoder-decoder) 
+\end_layout
+
+\begin_layout Itemize
+retrieval: si basa sulla conoscenza di base delle coppie domanda-risposta,
+ cioè quando viene fatta una nuova domanda, la fase di inferenza la codifica
+ in un context vector e recupera, usando misure di similarità, i top-k nearest
+ neighbours basandosi sulla conoscenza di base posseduta
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+la gestione del contesto:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+single-turn: costruisce il vettore di input considerando la domanda in arrivo
+ (può perdere informazioni importanti riguardanti la storia della conversazione
+ e generare, quindi, risposte irrilevanti, ma è più facile da implementare
+ e allenare)
+\begin_inset Formula 
+\[
+\left\{ \left(\boldsymbol{q}_{i},\boldsymbol{a}_{i}\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+multi-turn: costruisce il vettore di input considerando un contesto di conversaz
+ione ''multi-turn'', cioè basandosi sulla domanda in arrivo ma anche sulle
+ domande precedenti
+\begin_inset Formula 
+\[
+\left\{ \left(\left[\boldsymbol{q}_{i-2};\boldsymbol{a}_{i-2};\boldsymbol{q}_{i-1};\boldsymbol{a}_{i-1};\boldsymbol{q}_{i}\right],\boldsymbol{a}_{i}\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+I chatbot generativi, in particolare, usano una RNN e la trainano per mappare
+ ciò che viene detto dalla prima persona a ciò che viene risposto dal bot
+ basandosi sempre sull'attention mechanism.
+ Tale meccanismo di risposta single-turn è stato esteso nel 2017 in un attention
+ mechanism gerarchico.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename hier_gen_chatbot.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Chatbot gerarchico multi-turn generativo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In tale modello si usano le seguenti formule:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{U}=\left(u_{1},...,u_{m}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{u}_{i}=\left(w_{i,1},...,w_{i,T_{i}}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{h}_{i,k}=concat\left(\overrightarrow{\boldsymbol{h}_{i,k}},...,\overleftarrow{\boldsymbol{h}_{i,k}}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{r}_{i,t}=\sum_{j=1}^{T_{i}}\boldsymbol{\alpha}_{i,t,j}\boldsymbol{h}_{i,j}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+e_{i,t,j}=\eta\left(\boldsymbol{s}_{t-1},\boldsymbol{1}_{i+1,t},\boldsymbol{h}_{i,j}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\alpha}_{i,y,j}=\frac{exp\left(e_{i,t,j}\right)}{\sum_{k=1}^{T_{i}}exp\left(e_{i,t,j}\right)}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left(\boldsymbol{1}_{i,t},...,\boldsymbol{1}_{m,t}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{c}_{t}=\sum_{i=1}^{m}\beta_{i,t}\boldsymbol{1}_{i,t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
+\begin_inset Formula $\boldsymbol{\alpha}_{i,y,j}$
+\end_inset
+
+ è la softmax.
+ Le reti di attenzione gerarchiche sono state usate anche per la classificazione
+ degli argomenti (es.: dataset di Yahoo Answers), così come per l'analisi
+ dei sentimenti.
+ 
+\end_layout
+
+\begin_layout Section
+Trasformatore
+\end_layout
+
+\begin_layout Standard
+Un modello trasformatore è caratterizzato da uno stack di encoder che codificano
+ la sequenza in input e da uno stack di decoder che producono l'output.
+ Ogni encoder e decoder hanno una struttura interna che consente di non
+ usare un modello ricorrente.
+ Ciò consente di allenare il modello con una quantità molto vasta di parole.
+ L'elemento più importante che li caratterizza è la self-attention, che
+ presta attenzione a una parola basandosi sulle parole che sono connesse
+ ad essa.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename enc-dec_transformer.png
+	lyxscale 70
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Encoder e decoder di un transformer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Andando più nel dettaglio, gli elementi che compongono un trasformatore
+ sono:
+\end_layout
+
+\begin_layout Itemize
+dot-product attention scalata
+\end_layout
+
+\begin_layout Itemize
+multi-head attention
+\end_layout
+
+\begin_layout Itemize
+FFNN posizionale
+\end_layout
+
+\begin_layout Itemize
+embedding e softmax
+\end_layout
+
+\begin_layout Itemize
+codifica posizionale
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename transformer.png
+	lyxscale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architettura del Transformer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'attention qui è definita come
+\begin_inset Formula 
+\begin{equation}
+Attention(Q,K,V)=softmax\left(\frac{QK^{T}}{\sqrt{d_{k}}}\right)V
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In particolare, Q, K e V sono delle matrici che indicano rispettivamente
+ l'encoding delle parole in input (query), la trasformazione delle query
+ in chiavi (key) e il valore di queste parole trasformate in chiavi (value).
+ Nella dot-product attention scalata, a ogni step viene paragonato ogni
+ valore di query 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ con ogni altro valore chiave 
+\begin_inset Formula $k_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per quanto riguarda la multi-head attention, si cerca di calcolare la dot-produc
+t attention più volte in parallelo e poi concatenare i risultati.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dopodichè si ha una FFNN che, per ogni parola in input, calcola la multi-head
+ attention per quella parola e poi calcola una funzione non-lineare (sempre
+ per la stessa parola):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+FFNN\left(x\right)=max\left(0,xW_{1}+b_{1}\right)W_{2}+b_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Vengono quindi ripetute le stesse operazioni sul decoder in modo tale da
+ ottenere in output, per ogni parola in input, la probabilità di generare
+ la 'giusta' parola (ad esempio, se in input ho ''A B C'' e in output voglio
+ avere ''D E F'', il decoder mi calcolerà qual è la probabilità di generare
+ D al primo step, E al secondo e F al terzo).
+\end_layout
+
+\begin_layout Standard
+\noindent
+Infine, per tenere traccia della posizione delle parole in input si aggiunge
+ un encoding posizionale, che attacca una sorta di timestamp alle parole.
+ Ci sono due tipi di encoding posizionale, cioè il learned positional embedding
+ e la sinusoide.
+ Quest'ultima può essere:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+PE_{(pos,2i)}=sin\left(\frac{pos}{1000^{2i/d_{model}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+oppure:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+PE_{(pos,2i+1)}=cos\left(\frac{pos}{1000^{2i/d_{model}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Word embedding
+\end_layout
+
+\begin_layout Standard
+La performance di un'applicazione nel mondo reale (es.: chatbot, classificatori
+ di documenti, sistemi di recupero delle informazioni) dipende dalla codifica
+ dell'input, che può essere basata su:
+\end_layout
+
+\begin_layout Itemize
+rappresentazioni locali
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+N-grammi
+\end_layout
+
+\begin_layout Itemize
+bag-of-words
+\end_layout
+
+\begin_layout Itemize
+codifica 1-di-N 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+rappresentazioni continue
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Latent Semantic Analysis
+\end_layout
+
+\begin_layout Itemize
+Latent Dirichlet Allocation
+\end_layout
+
+\begin_layout Itemize
+rappresentazioni distribuite
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+In particolare nella rappresentazione a N-grammi si cerca di determinare
+ la probabilità 
+\begin_inset Formula $P(s=w_{1},...,w_{k})$
+\end_inset
+
+ di una frase per capire qual è il modello sottostante di un certo documento.
+ Questo viene ottenuto tramite il calcolo della probabilità congiunta
+\begin_inset Formula 
+\begin{equation}
+P(s_{k})=\prod_{i}^{k}P(w_{i}|w_{1},...,w_{i-1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dal momento che nei modelli di lingua tradizionali a n-grammi ''la probabilità
+ di una parola dipende solo dal contesto delle n-1 parole precedenti'',
+ la probabilità diventa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{P}(s_{k})=\prod_{i}^{k}P(w_{i}|w_{i-n+1},...,w_{i-1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Un processo tipico di apprendimento ML-smoothing effettua una levigazione
+ della probabilità per evitare di avere probabilità pari a 0.
+ Per fare ciò calcola la probabilità
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{P}(w_{i}|w_{i-n+1},...,w_{i-1})=\frac{\#w_{i-n+1},...,w_{i-1},w_{i}}{\#w_{i-n+1},...,w_{i-1}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Neural Net Language Model
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si definisce embedding una tecnica che mappa una parola (o frase) dal suo
+ spazio di input alto-dimensionale (il corpo di tutte le parole) a uno spazio
+ vettoriale numerico di dimensione inferiore.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename embedding_esempi.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempi di embedding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ogni parola unica 
+\series bold
+\emph on
+w
+\series default
+\emph default
+ in un vocabolario V (con dimensione tipicamente nell'ordine di
+\begin_inset Formula $10^{6}$
+\end_inset
+
+) viene quindi mappata in uno spazio m-dimensionale continuo (con dimensione
+ tipicamente compresa nel range 100 < m < 500).
+ Un modello tipico per il word embedding è il Neural Net Language Model.
+ Per ogni sequenza di training, si ha che l'input è costituito da una coppia
+ <contesto, target> fatta così: <
+\begin_inset Formula $w_{t-n+1}...w_{t-1},w_{t}$
+\end_inset
+
+>.
+ L'obiettivo, inoltre, è quello di minimizzare la funzione di errore
+\begin_inset Formula 
+\begin{equation}
+E=-log\hat{P}\left(w_{t}|w_{t-n+1}...w_{t-1}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename neural_net_language_model.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Neural Net Language Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il layer di proiezione contiene i vettori in 
+\begin_inset Formula $C_{|V|,m}$
+\end_inset
+
+.
+ La softmax è usata per produrre in output una distribuzione multinomiale
+ con probabilità
+\begin_inset Formula 
+\begin{equation}
+\hat{P}(w_{i}=w_{t}|w_{t-n+1}...w_{t-1})=\frac{e^{y_{w_{i}}}}{\sum_{i'}^{|V|}e^{y_{w_{i'}}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y=b+U\cdot tanh(d+Hx)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+x
+\emph default
+ è la concatenazione 
+\emph on
+C(w) 
+\emph default
+del contesto dei vettori dei pesi
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+d
+\emph default
+ e 
+\emph on
+b
+\emph default
+ sono dei bias, rispettivamente degli elementi 
+\emph on
+h
+\emph default
+ e 
+\emph on
+|V|
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+U 
+\emph default
+è la matrice di dimensione 
+\begin_inset Formula $|V|\times h$
+\end_inset
+
+ dei pesi tra il layer nascosto e il layer di output
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+H
+\emph default
+ è la matrice di dimensione 
+\begin_inset Formula $h\times(n-1)\cdot m$
+\end_inset
+
+ dei pesi tra il layer di proiezione e il layer nascosto
+\end_layout
+
+\begin_layout Paragraph
+Word2vec di Google
+\end_layout
+
+\begin_layout Standard
+L'idea è quella di ottenere una performance che consente il training di
+ un modello meno profondo su una quantità di dati più grande.
+ In questo modello non ci sono layer nascosti, il layer di proiezione è
+ condiviso (non solo la matrice dei pesi) e il contesto contiene le parole
+ provenienti sia dalla storia che dal futuro.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Le due architetture possibili sono l'architettura skip-gram e l'architettura
+ bag-of-words continua (vedi figura sotto).
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename word2vec.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Architettura skip-gram (a sinistra) e architettura bag-of-words (a destra)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In particolare, nell'architettura bag-of-words continua (CBOW), per ogni
+ sequenza di training, si ha che l'input è costituito da una coppia <contesto,
+ target> fatta così: <
+\begin_inset Formula $w_{t-n+1}...w_{t-1}w_{t+1}...w_{t+\frac{n}{2}},w_{t}$
+\end_inset
+
+>.
+ L'obiettivo, inoltre, è quello di minimizzare la funzione di errore
+\begin_inset Formula 
+\begin{equation}
+E=-log\hat{P}\left(w_{t}|w_{t-n+1}...w_{t-1}w_{t+1}...w_{t+\frac{n}{2}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cbow.png
+	lyxscale 125
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+CBOW
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In pratica, per ogni coppia <contesto, target> solo le parole di contesto
+ vengono aggiornate.
+ Se la probabilità 
+\begin_inset Formula $\hat{P}(w_{i}=w_{t}|context)$
+\end_inset
+
+ è sovrastimata, una certa porzione di 
+\begin_inset Formula $C'(w_{i})$
+\end_inset
+
+ viene sottratta dai vettori delle parole contestuali in 
+\begin_inset Formula $C_{|V|,m}$
+\end_inset
+
+; se invece è sottostimata, la porzione viene aggiunta ai vettori delle
+ parole contestuali in 
+\begin_inset Formula $C_{|V|,m}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Applicazioni di word2vec riguardano la classificazione di documenti e l'analisi
+ sentimentale.
+\end_layout
+
+\begin_layout Paragraph
+GloVe
+\end_layout
+
+\begin_layout Standard
+GloVe fa esplicitamente ciò che word2vec fa implicitamente, ovvero codifica
+ il significato come vettore di offset in uno spazio di embedding.
+ Tale significato viene codificato da dei rapporti di probabilità di co-occorren
+za.
+ L'allenamento avviene con una least squares pesata
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+J=\sum_{i,j=1}^{V}f\left(X_{ij}\right)\left(w_{i}^{T}\tilde{w_{j}}+b_{i}+\tilde{b_{j}}-logX_{ij}\right)^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In pratica questo metodo si basa sull'individuazione dei nearest neighbours
+ di una certa parola.
 \end_layout
 
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-1"
+literal "false"
 
 \end_inset
 
@@ -7869,6 +12468,28 @@ Lu, Z., Pu, H., Wang, F., Hu, Z., & Wang, L.
  (2017).
  The Expressive Power of Neural Networks: A View from the Width.
  Neural Information Processing Systems, 6231-6239.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+literal "false"
+
+\end_inset
+
+Slides delle lezioni
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+literal "false"
+
+\end_inset
+
+Appunti di PoliMI Data Scientists del corso di Soft Computing
 \end_layout
 
 \end_body

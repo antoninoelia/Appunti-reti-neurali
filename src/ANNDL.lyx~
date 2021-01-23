@@ -81,52 +81,153 @@
 
 \begin_body
 
-\begin_layout Title
-Artificial Neural Networks and Deep Learning
-\end_layout
-
-\begin_layout Author
-Antonino Elia Mandri
-\end_layout
-
 \begin_layout Standard
-\align center
-
-\size large
-Stefano D'Angelo
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-\align center
-
-\size tiny
-\begin_inset Graphics
-	filename polimi.png
-	lyxscale 50
-
-\end_inset
 
 
+\backslash
+begin{titlepage}    
 \end_layout
 
 \begin_layout Plain Layout
 
+	
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace*{1cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+Huge
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+textbf{Articial Neural Networks and Deep Learning}
+\end_layout
+
+\begin_layout Plain Layout
+
+                          
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{1.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+textbf{Antonino Elia Mandri 
+\backslash
+
+\backslash
+ Stefano d'Angelo}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+                           		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{0.8cm}      
+\end_layout
+
+\begin_layout Plain Layout
+
+       		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+includegraphics[width=0.6
+\backslash
+textwidth]{polimi.png}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+vspace{1.5cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+                          
+\end_layout
+
+\begin_layout Plain Layout
+
+		AA 2020/2021                
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{center} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Date
-A.A.
- 2020-2021
 \end_layout
 
 \begin_layout Standard
@@ -161,6 +262,7 @@ Il machine learning è una branca dell'intelligenza artificiale che raccoglie
 \end_layout
 
 \begin_layout Standard
+\noindent
 Immaginiamo di possedere un insieme di una certa esperienza E, per esempio
  dei dati, che chiameremo 
 \begin_inset Formula $D=x_{1},x_{2},...,x_{N}$
@@ -268,7 +370,11 @@ oria del Machine Learning e indica quella branca dell’Intelligenza Artificiale
 
 \begin_layout Itemize
 usano vari livelli di unità non lineari a cascata per svolgere compiti di
- estrazione di caratteristiche e di trasformazione.
+ 
+\shape italic
+estrazione di caratteristiche e di trasformazione
+\shape default
+.
  Ciascun livello successivo utilizza l’uscita del livello precedente come
  input.
  Gli algoritmi possono essere sia di tipo supervisionato sia non supervisionato
@@ -282,11 +388,42 @@ apprendono multipli livelli di rappresentazione che corrispondono a differenti
 \end_layout
 
 \begin_layout Standard
-\begin_inset Marginal
+La differenza principale consiste in come vengono estratte le caretteristiche
+ utili alla risoluzione del problema.
+ Tali caratteristiche vengono estratte manualmente nel machine learning
+ , mentre vengono estratte autonomamente negli algoritmi di deep learning.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Da completare
+\begin_inset Graphics
+	filename ml_vs_dl.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Differenze tra machine learning e deep learning.
+ I riquadri evidenziati indicano le parti apprese dai dati
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -4165,13 +4302,16 @@ K-fold cross validation
 
 \begin_layout Standard
 Il data set viene suddiviso in k sotto insiemi di egual dimensione (escluso
- al più l'ultimo), ad ogni epoca uno dei k sottoinsiemi viene usato come
- validation set e gli altri k-1 come training set.
- Inoltre ad ogni epoca il sottoinsieme scelto per la validazione cambia,
- e si ripeterà ogni k epoche.
+ al più l'ultimo), il training del modello viene ripetuto k volte ed ogni
+ volta viene usato un sotto insieme come validation set, ogni volta ripartendo
+ dallo stato iniziale.
+ Alla fine delle k iterazione i risultati delle validazioni vengono mediati
+ per ottenere il risultato finale.
  Il vantaggio di questo metodo è che importa meno come i dati vengono divisi
  in quanto dopo k iterazioni tutto il dataset è stato usato almeno una volta
- come validation set.
+ come validation set (meno varianza).
+ Lo svantaggio è l'enorme peso computazionale (training ripetuto k volte)
+ per questo è quasi mai usato.
 \end_layout
 
 \begin_layout Standard
@@ -4287,6 +4427,23 @@ sfruttare le conoscienze acquisite da altri nella risoluzione di compiti
 
 \begin_layout Itemize
 usare la creatività!
+\end_layout
+
+\begin_layout Standard
+Anche per la scelta degli iperparametri del modello è di aiuto la cross
+ validation.
+ Infatti possiamo usare (ed è altamente consigliato) la validazione per
+ monitorare l'andamento della loss function e determinare la bontà del modello
+ al variare degli iperparametri.
+ È utile usare i dati di validazione al posto di quelli di test per evitare
+ che le nostre scelte degli iperparametri siano condizionate e sovra adattate
+ al test set, perdendo generalità.
+ Modifichiamo gli iperparametri in base ai risultati sul validation set,
+ se questi sono confermati anche dal test set possiamo ragionevolmente affermare
+ che il modello funzioni.
+ Se il test set non conferma allora abbiamo sovra adattato gli iperparametri
+ al validation set (una qualche forma di overfitting manuale).
+ 
 \end_layout
 
 \begin_layout Section
@@ -7884,6 +8041,7 @@ status open
 \begin_inset Graphics
 	filename lenet.png
 	lyxscale 80
+	scale 85
 
 \end_inset
 
@@ -7914,6 +8072,7 @@ status open
 \begin_inset Graphics
 	filename alexnet.png
 	lyxscale 130
+	scale 85
 
 \end_inset
 
@@ -7944,6 +8103,7 @@ status open
 \begin_inset Graphics
 	filename vgg16.png
 	lyxscale 70
+	scale 85
 
 \end_inset
 
@@ -7977,6 +8137,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename GoogleNet.png
+	scale 50
 
 \end_inset
 
@@ -8011,6 +8172,7 @@ status open
 \begin_inset Graphics
 	filename Inception.png
 	lyxscale 60
+	scale 85
 
 \end_inset
 
@@ -8231,6 +8393,7 @@ status open
 \begin_inset Graphics
 	filename roc.png
 	lyxscale 50
+	scale 85
 
 \end_inset
 
@@ -8337,6 +8500,7 @@ status open
 \begin_inset Graphics
 	filename transf1.png
 	lyxscale 50
+	scale 30
 
 \end_inset
 
@@ -8382,7 +8546,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Segmentazione.png
-	scale 50
+	scale 43
 
 \end_inset
 
@@ -8511,6 +8675,7 @@ status open
 \begin_inset Graphics
 	filename heatmap.png
 	lyxscale 70
+	scale 95
 
 \end_inset
 
@@ -8521,6 +8686,7 @@ status open
 \begin_inset Graphics
 	filename heatmap_explan.png
 	lyxscale 60
+	scale 52
 
 \end_inset
 
@@ -8615,6 +8781,7 @@ status open
 \begin_inset Graphics
 	filename shift_and_stich.png
 	lyxscale 70
+	scale 80
 
 \end_inset
 
@@ -8657,6 +8824,7 @@ status open
 \begin_inset Graphics
 	filename semant_segment.png
 	lyxscale 70
+	scale 85
 
 \end_inset
 
@@ -8717,6 +8885,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename upsampling.png
+	scale 85
 
 \end_inset
 
@@ -8761,6 +8930,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename maxUnpooling.png
+	scale 85
 
 \end_inset
 
@@ -8856,6 +9026,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename skip_connections.png
+	scale 85
 
 \end_inset
 
@@ -8988,6 +9159,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename UNet.png
+	scale 85
 
 \end_inset
 
@@ -9163,6 +9335,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename GAP.png
+	scale 55
 
 \end_inset
 
@@ -9268,6 +9441,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename CAM(1).png
+	scale 85
 
 \end_inset
 
@@ -9383,6 +9557,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename CAM.png
+	scale 85
 
 \end_inset
 
@@ -9454,6 +9629,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Grad-CAM.png
+	scale 60
 
 \end_inset
 
@@ -9514,6 +9690,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename aug-grad-cam.png
+	scale 60
 
 \end_inset
 
@@ -9524,7 +9701,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Augmented Grad-CAM
 \end_layout
 
 \end_inset
@@ -9655,6 +9832,7 @@ status open
 \begin_inset Graphics
 	filename autoregressive.png
 	lyxscale 50
+	scale 40
 
 \end_inset
 
@@ -9990,6 +10168,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename backprop_through_time.png
+	scale 85
 
 \end_inset
 
@@ -10093,6 +10272,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename RNN_simple.png
+	scale 85
 
 \end_inset
 
@@ -10292,6 +10472,7 @@ status open
 \begin_inset Graphics
 	filename LSTM.png
 	lyxscale 80
+	scale 45
 
 \end_inset
 
@@ -10350,6 +10531,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename input_gate.png
+	scale 90
 
 \end_inset
 
@@ -10360,7 +10542,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Input gate
 \end_layout
 
 \end_inset
@@ -10404,6 +10586,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename forget_gate.png
+	scale 90
 
 \end_inset
 
@@ -10414,7 +10597,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Forget gate
 \end_layout
 
 \end_inset
@@ -10454,6 +10637,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename memory_gate.png
+	scale 90
 
 \end_inset
 
@@ -10464,7 +10648,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Memory gate
 \end_layout
 
 \end_inset
@@ -10512,6 +10696,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename output_gate.png
+	scale 90
 
 \end_inset
 
@@ -10522,7 +10707,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Output gate
 \end_layout
 
 \end_inset
@@ -10669,7 +10854,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+GRU
 \end_layout
 
 \end_inset
@@ -10737,6 +10922,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename seq2seq_architectures.png
+	scale 85
 
 \end_inset
 
@@ -10747,7 +10933,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Architetture seq2seq
 \end_layout
 
 \end_inset
@@ -10781,6 +10967,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename enc-dec.png
+	scale 70
 
 \end_inset
 
@@ -10941,6 +11128,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename neural_turing_machine.png
+	scale 80
 
 \end_inset
 
@@ -10970,7 +11158,7 @@ Neural Turing Machine
 
 \begin_layout Standard
 \noindent
-La sfida è quella di imparare cosa scrivere/leggere e dove scriverlo.
+La sfida è quella di imparare cosa scrivere/leggere e dove scrivere/leggere.
  La soluzione è quella di, a ogni step, leggere e scrivere ovunque ma con
  diversa misura.
  Tale meccanismo è chiamato attention mechanism e si basa sul porre l'attenzione
@@ -11000,7 +11188,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Attention mechanism in lettura
 \end_layout
 
 \end_inset
@@ -11047,7 +11235,7 @@ In fase di scrittura, invece, anzichè scrivere in una posizione specifica,
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -11062,7 +11250,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Attention mechanism in scrittura
 \end_layout
 
 \end_inset
@@ -11270,12 +11458,13 @@ combina il context vector con lo stato nascosto target corrente per produrre
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename attention_function.png
 	lyxscale 70
+	scale 60
 
 \end_inset
 
@@ -11326,12 +11515,13 @@ si può usare la cosiddetta alignment matrix.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename attention_visual.png
 	lyxscale 50
+	scale 70
 
 \end_inset
 
@@ -11446,6 +11636,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename hier_gen_chatbot.png
+	scale 60
 
 \end_inset
 
@@ -11587,6 +11778,7 @@ status open
 \begin_inset Graphics
 	filename enc-dec_transformer.png
 	lyxscale 70
+	scale 60
 
 \end_inset
 
@@ -11899,6 +12091,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename embedding_esempi.png
+	scale 70
 
 \end_inset
 
@@ -11968,6 +12161,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename neural_net_language_model.png
+	scale 70
 
 \end_inset
 
@@ -12162,6 +12356,7 @@ status open
 \begin_inset Graphics
 	filename cbow.png
 	lyxscale 125
+	scale 70
 
 \end_inset
 
