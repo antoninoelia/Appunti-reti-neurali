@@ -169,7 +169,7 @@ textbf{Antonino Elia Mandri
 \backslash
 
 \backslash
- Stefano d'Angelo}
+ Stefano D'Angelo}
 \end_layout
 
 \begin_layout Plain Layout
@@ -262,12 +262,16 @@ Apprendimento automatico
 \end_layout
 
 \begin_layout Standard
-Il machine learning è una branca dell'intelligenza artificiale che raccoglie
- un insieme di metodi quali: statistica computazionale, riconoscimento di
- pattern, reti neurali artificiali, filtraggio adattivo, teoria dei sistemi
- dinamici, elaborazione delle immagini, data mining, algoritmi adattivi,
- ecc; che utilizza metodi statistici per migliorare progressivamente la
- performance di un algoritmo nell'identificare pattern nei dati.
+Il 
+\series bold
+machine learning
+\series default
+ è una branca dell'intelligenza artificiale che raccoglie un insieme di
+ metodi quali: statistica computazionale, riconoscimento di pattern, reti
+ neurali artificiali, filtraggio adattivo, teoria dei sistemi dinamici,
+ elaborazione delle immagini, data mining, algoritmi adattivi, ecc; che
+ utilizza metodi statistici per migliorare progressivamente la performance
+ di un algoritmo nell'identificare pattern nei dati.
  Nell'ambito dell'informatica, l'apprendimento automatico è una variante
  alla programmazione tradizionale nella quale si predispone in una macchina
  l'abilità di apprendere qualcosa dai dati in maniera autonoma, senza ricevere
@@ -286,8 +290,11 @@ Immaginiamo di possedere un insieme di una certa esperienza E, per esempio
 \end_layout
 
 \begin_layout Itemize
-apprendimento supervisionato (supervised learning): in cui al modello vengono
- forniti degli output desiderati 
+apprendimento supervisionato (
+\series bold
+supervised learning
+\series default
+): in cui al modello vengono forniti degli output desiderati 
 \begin_inset Formula $t_{1},t_{2},...,t_{N}$
 \end_inset
 
@@ -300,9 +307,12 @@ apprendimento supervisionato (supervised learning): in cui al modello vengono
 \end_layout
 
 \begin_layout Itemize
-apprendimento non supervisionato (unsupervised learning): è una tecnica
- di apprendimento automatico che consiste nel fornire al sistema informatico
- una serie di input (esperienza del sistema), 
+apprendimento non supervisionato (
+\series bold
+unsupervised learning
+\series default
+): è una tecnica di apprendimento automatico che consiste nel fornire al
+ sistema informatico una serie di input (esperienza del sistema), 
 \begin_inset Formula $D$
 \end_inset
 
@@ -312,11 +322,14 @@ apprendimento non supervisionato (unsupervised learning): è una tecnica
 \end_layout
 
 \begin_layout Itemize
-L'apprendimento per rinforzo (reinforcement learning): è una tecnica di
- apprendimento automatico che punta ad attuare sistemi in grado di apprendere
- ed adattarsi alle mutazioni dell'ambiente in cui sono immersi, attraverso
- la distribuzione di una "ricompensa" detta rinforzo che consiste nella
- valutazione delle loro prestazioni.
+L'apprendimento per rinforzo (
+\series bold
+reinforcement learning
+\series default
+): è una tecnica di apprendimento automatico che punta ad attuare sistemi
+ in grado di apprendere ed adattarsi alle mutazioni dell'ambiente in cui
+ sono immersi, attraverso la distribuzione di una "ricompensa" detta rinforzo
+ che consiste nella valutazione delle loro prestazioni.
  Il modello produce una serie di azioni 
 \begin_inset Formula $a_{1},a_{2},...,a_{N}$
 \end_inset
@@ -373,7 +386,11 @@ Deep Learning
 , la cui traduzione letterale significa apprendimento profondo, è una sottocateg
 oria del Machine Learning e indica quella branca dell’Intelligenza Artificiale
  che fa riferimento agli algoritmi ispirati alla struttura e alla funzione
- del cervello chiamate reti neurali artificiali.
+ del cervello chiamate 
+\series bold
+reti neurali artificiali
+\series default
+.
  Le architetture di Deep Learning (reti neurali artificiali) sono per esempio
  state applicate nella computer vision, nel riconoscimento automatico della
  lingua parlata, nell’elaborazione del linguaggio naturale, nel riconoscimento
@@ -450,8 +467,15 @@ Percettrone
 \end_layout
 
 \begin_layout Standard
-Nell'apprendimento automatico, il percettrone è un tipo di classificatore
- binario che mappa i suoi ingressi 
+Nell'apprendimento automatico, il 
+\series bold
+percettrone
+\series default
+ è un tipo di classificatore binario che mappa i suoi 
+\series bold
+ingressi
+\series default
+ 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
@@ -471,7 +495,11 @@ dove
 \begin_inset Formula $\boldsymbol{w}$
 \end_inset
 
- è un vettore di pesi con valori reali, l'operatore 
+ è un vettore di 
+\series bold
+pesi
+\series default
+ con valori reali, l'operatore 
 \begin_inset Formula $\left\langle \cdot,\cdot\right\rangle $
 \end_inset
 
@@ -482,8 +510,11 @@ b
 \shape default
  
 \series default
-è il bias, un termine costante che non dipende da alcun valore in input
- e 
+è il 
+\series bold
+bias
+\series default
+, un termine costante che non dipende da alcun valore in input e 
 \begin_inset Formula $\chi(y)$
 \end_inset
 
@@ -521,17 +552,11 @@ dove
 \begin_inset Formula $\Theta(y)$
 \end_inset
 
- è la funzione di Heaviside.
-\begin_inset Marginal
-status open
-
-\begin_layout Plain Layout
-Da rivedere
-\end_layout
-
-\end_inset
-
-
+ è la 
+\series bold
+funzione di Heaviside
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -593,8 +618,12 @@ Apprendimento Hebbiano
 \begin_inset Quotes fld
 \end_inset
 
+
+\shape italic
 The strength of a synapse increases according to the simultaneous activation
  of the relative input and the desired target
+\shape default
+
 \begin_inset Quotes frd
 \end_inset
 
@@ -603,10 +632,18 @@ The strength of a synapse increases according to the simultaneous activation
 \end_layout
 
 \begin_layout Standard
-La regola di Hebb è la seguente: l'efficacia di una particolare sinapsi
- cambia se e solo se c'è un'intensa attività simultanea dei due neuroni,
- con un'alta trasmissione di input nella sinapsi in questione.
- L'apprendimento Hebbiano può essere riassunto come segue: 
+La 
+\series bold
+regola di Hebb
+\series default
+ è la seguente: l'efficacia di una particolare sinapsi cambia se e solo
+ se c'è un'intensa attività simultanea dei due neuroni, con un'alta trasmissione
+ di input nella sinapsi in questione.
+ L'
+\series bold
+apprendimento Hebbiano
+\series default
+ può essere riassunto come segue: 
 \begin_inset Formula 
 \begin{equation}
 \begin{cases}
@@ -691,9 +728,13 @@ Feed Forward Neural Networks
 \end_layout
 
 \begin_layout Standard
-Una rete neurale feed-forward ("rete neurale con flusso in avanti") o rete
- feed-forward è una rete neurale artificiale dove le connessioni tra le
- unità non formano cicli, differenziandosi dalle reti neurali ricorrenti.
+Una 
+\series bold
+rete neurale feed-forward
+\series default
+ ("rete neurale con flusso in avanti") o rete feed-forward è una rete neurale
+ artificiale dove le connessioni tra le unità non formano cicli, differenziandos
+i dalle reti neurali ricorrenti.
  Questo tipo di rete neurale fu la prima e più semplice tra quelle messe
  a punto.
  In questa rete neurale le informazioni si muovono solo in una direzione,
@@ -710,9 +751,15 @@ Percettrone a singolo strato
 \end_layout
 
 \begin_layout Standard
-La più semplice rete feed-forward è il percettrone a singolo strato (SLP
- dall'inglese single layer perceptron), utilizzato verso la fine degli anni
- '60.
+La più semplice rete feed-forward è il 
+\series bold
+percettrone a singolo strato
+\series default
+ (SLP dall'inglese 
+\series bold
+single layer perceptron
+\series default
+), utilizzato verso la fine degli anni '60.
  Un SLP è costituito da uno strato in ingresso, seguito direttamente dall'uscita.
  Ogni unità di ingresso è collegata ad ogni unità di uscita.
  In pratica questo tipo di rete neurale ha un solo strato che effettua l'elabora
@@ -763,9 +810,13 @@ Percettrone multistrato
 \end_layout
 
 \begin_layout Standard
-Il Percettrone multistrato (in acronimo MLP dall'inglese Multilayer perceptron)
- è un modello di rete neurale artificiale che mappa insiemi di dati in ingresso
- in un insieme di dati in uscita appropriati.
+Il 
+\series bold
+Percettrone multistrato
+\series default
+ (in acronimo MLP dall'inglese Multilayer perceptron) è un modello di rete
+ neurale artificiale che mappa insiemi di dati in ingresso in un insieme
+ di dati in uscita appropriati.
  È fatta di strati multipli di nodi in un grafo diretto, con ogni strato
  completamente connesso al successivo.
  Eccetto che per i nodi in ingresso, ogni nodo è un neurone (elemento elaborante
@@ -994,8 +1045,11 @@ Softmax
 
 \begin_layout Standard
 In matematica, una funzione softmax, o funzione esponenziale normalizzata,
- è una generalizzazione di una funzione logistica che comprime un vettore
- 
+ è una generalizzazione di una 
+\series bold
+funzione logistica
+\series default
+ che comprime un vettore 
 \begin_inset Formula $\boldsymbol{z}\in\mathbb{R}^{k}$
 \end_inset
 
@@ -1056,18 +1110,29 @@ I compiti in cui le reti neurali sono applicate possono essere classificate
 \end_layout
 
 \begin_layout Itemize
-funzioni di approssimazione, o di regressione, tra cui la previsione di
- serie temporali e la modellazione;
+funzioni di approssimazione, o di 
+\series bold
+regressione
+\series default
+, tra cui la previsione di serie temporali e la modellazione;
 \end_layout
 
 \begin_layout Itemize
-classificazione, compresa la struttura e la sequenza di generici riconoscimenti,
- l'individuazione delle novità ed il processo decisionale;
+
+\series bold
+classificazione
+\series default
+, compresa la struttura e la sequenza di generici riconoscimenti, l'individuazio
+ne delle novità ed il processo decisionale;
 \end_layout
 
 \begin_layout Itemize
-l'elaborazione dei dati, compreso il "filtraggio" (eliminazione del rumore),
- il clustering, separazione di segnali e compressione.
+l'elaborazione dei dati, compreso il "
+\series bold
+filtraggio
+\series default
+" (eliminazione del rumore), il clustering, separazione di segnali e compression
+e.
 \end_layout
 
 \begin_layout Standard
@@ -1132,11 +1197,14 @@ Teorema di approssimazione universale
 \end_layout
 
 \begin_layout Standard
-Nella teoria matematica delle reti neurali artificiali, il teorema di approssima
-zione universale afferma che una feed-forward network con un singolo strato
- nascosto e contenente un numero finito di neuroni può approssimare una
- qualsiasi funzione misurabile secondo Lebesgue, con qualsiasi grado di
- accuratezza, su un sotto insieme compatto di 
+Nella teoria matematica delle reti neurali artificiali, il 
+\series bold
+teorema di approssimazione universale
+\series default
+ afferma che una feed-forward network con un singolo strato nascosto e contenent
+e un numero finito di neuroni può approssimare una qualsiasi funzione misurabile
+ secondo Lebesgue, con qualsiasi grado di accuratezza, su un sotto insieme
+ compatto di 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
 
@@ -1291,7 +1359,7 @@ per ogni
 \end_layout
 
 \begin_layout Paragraph
-Ampiezza limita: 
+Ampiezza limitata: 
 \end_layout
 
 \begin_layout Standard
@@ -1331,9 +1399,12 @@ Regressione
 \end_layout
 
 \begin_layout Standard
-L'analisi della regressione è una tecnica usata per analizzare una serie
- di dati che consistono in una variabile dipendente e una o più variabili
- indipendenti.
+L'analisi della 
+\series bold
+regressione
+\series default
+ è una tecnica usata per analizzare una serie di dati che consistono in
+ una variabile dipendente e una o più variabili indipendenti.
  Lo scopo è stimare un'eventuale relazione funzionale esistente tra la variabile
  dipendente e le variabili indipendenti.
  La variabile dipendente nell'equazione di regressione è una funzione delle
@@ -1342,7 +1413,11 @@ L'analisi della regressione è una tecnica usata per analizzare una serie
 bile e imprevedibile nella variabile dipendente.
  I parametri sono stimati in modo da descrivere al meglio i dati.
  Il metodo più comunemente utilizzato per ottenere le migliori stime è il
- metodo dei "minimi quadrati" (OLS), ma sono utilizzati anche altri metodi.
+ metodo dei "
+\series bold
+minimi quadrati
+\series default
+" (OLS), ma sono utilizzati anche altri metodi.
 \end_layout
 
 \begin_layout Subsection
@@ -1350,10 +1425,20 @@ Variabili casuali
 \end_layout
 
 \begin_layout Standard
-In matematica, e in particolare nella teoria della probabilità, una variabile
- casuale (detta anche variabile aleatoria o variabile stocastica) è una
- variabile che può assumere valori diversi in dipendenza da qualche fenomeno
- aleatorio.
+In matematica, e in particolare nella teoria della probabilità, una 
+\series bold
+variabile casuale
+\series default
+ (detta anche 
+\series bold
+variabile aleatoria
+\series default
+ o 
+\series bold
+variabile stocastica
+\series default
+) è una variabile che può assumere valori diversi in dipendenza da qualche
+ fenomeno aleatorio.
  Le variabili casuali sono per noi molto importanti perchè l'obiettivo di
  una rete neurale per regressione è quello di approssimare una funzione
  target 
@@ -1378,15 +1463,22 @@ Classificazione
 \end_layout
 
 \begin_layout Standard
-La classificazione statistica è quell'attività che si serve di un algoritmo
- statistico al fine di individuare una rappresentazione di alcune caratteristich
-e di un'entità da classificare (oggetto o nozione), associandole una etichetta
- classificatoria.
+La 
+\series bold
+classificazione statistica
+\series default
+ è quell'attività che si serve di un algoritmo statistico al fine di individuare
+ una rappresentazione di alcune caratteristiche di un'entità da classificare
+ (oggetto o nozione), associandole una etichetta classificatoria.
  La classificazione si divide in due tipologie:
 \end_layout
 
 \begin_layout Enumerate
-Classificazione in due classi 
+
+\series bold
+Classificazione in due classi
+\series default
+ 
 \begin_inset Formula $\{\Omega_{0},\varOmega_{1}\}$
 \end_inset
 
@@ -1419,7 +1511,11 @@ Sigmoid codificando le classi nel modo seguente
 
 \end_deeper
 \begin_layout Enumerate
-Classificazione in più di due classi 
+
+\series bold
+Classificazione in più di due classi
+\series default
+ 
 \begin_inset Formula $\{\Omega_{0},\varOmega_{1},...,\varOmega_{n}\}$
 \end_inset
 
@@ -1436,7 +1532,7 @@ Classificazione in più di due classi
 \end_layout
 
 \begin_layout Section
-Maximum Likelihood Estimation (stimatore di massima verosomiglianza)
+Maximum Likelihood Estimation (stimatore di massima verosimiglianza)
 \end_layout
 
 \begin_layout Standard
@@ -1446,8 +1542,12 @@ Supponiamo di avere
 
  campioni di una variabile aleatoria di cui conosciamo la distribuzione
  di probabilità ma non conosciamo tutti i parametri di tale distribuzione,
- MLE si pone l'obiettivo di trovare i parametri tali per cui è massima la
- probabilità che gli 
+ 
+\series bold
+MLE
+\series default
+ si pone l'obiettivo di trovare i parametri tali per cui è massima la probabilit
+à che gli 
 \begin_inset Formula $N$
 \end_inset
 
@@ -1921,9 +2021,13 @@ MLE per classificazione binaria
 \end_layout
 
 \begin_layout Standard
-Usiamo MLE per determinare la loss function adatta al problema di classificazion
-e binaria, la rete mostrata in figura utilizza la funzione sigmoide nell'ultimo
- neurone di conseguenza l'output varierà con continuità tra 0 e 1.
+Usiamo MLE per determinare la 
+\series bold
+loss function
+\series default
+ adatta al problema di classificazione binaria, la rete mostrata in figura
+ utilizza la funzione sigmoide nell'ultimo neurone di conseguenza l'output
+ varierà con continuità tra 0 e 1.
 \end_layout
 
 \begin_layout Standard
@@ -2114,7 +2218,11 @@ Ottimizzazione
 
 \begin_layout Standard
 Fino ad ora abbiamo solo accennato a come impostare i pesi di una rete neurale
- (hebbian learning) ma non siamo mai entrati nello specifico.
+ (
+\shape italic
+hebbian learning
+\shape default
+) ma non siamo mai entrati nello specifico.
  Ricordiamo brevemente come è composta una rete neurale e come valutiamo
  la sua bontà.
 \end_layout
@@ -2137,8 +2245,11 @@ Ogni rete deve essere validata tramite una error function (o loss function)
 \end_layout
 
 \begin_layout Standard
-Tale error function che ricordiamo essere funzione della rete e quindi dei
- suoi pesi 
+Tale 
+\shape italic
+error function
+\shape default
+ che ricordiamo essere funzione della rete e quindi dei suoi pesi 
 \begin_inset Formula $w$
 \end_inset
 
@@ -2156,7 +2267,10 @@ Tale error function che ricordiamo essere funzione della rete e quindi dei
  rete neurale di medio bassa complessità presenta al suo interno migliaia
  o milioni di pesi che rendono praticamente impossibile trovare una soluzione
  analitica.
- Quello che si riesce agilmente a fare è calcolare numericamente il gradiente
+ Quello che si riesce agilmente a fare è calcolare numericamente il 
+\series bold
+gradiente
+\series default
  (con un bassissimo tasso di errore) che ricordiamo fornisce la direzione
  di massima crescità della funzione.
  
@@ -2318,8 +2432,11 @@ minimizzare\,f(\boldsymbol{x}),\qquad x\in\mathbb{R}^{n}.
 
 \end_inset
 
-La tecnica di discesa del gradiente si basa sul fatto che, per una data
- funzione 
+La tecnica di 
+\series bold
+discesa del gradiente
+\series default
+ si basa sul fatto che, per una data funzione 
 \family roman
 \series medium
 \shape up
@@ -2878,7 +2995,11 @@ a, ma offre delle sfide che devono essere affrontate:
 \end_layout
 
 \begin_layout Itemize
-Scegliere l'adatto learning rate (l.r.) può essere difficile.
+Scegliere l'adatto 
+\series bold
+learning rate
+\series default
+ (l.r.) può essere difficile.
  Un l.r.
  troppo piccolo porta ad una convergenza dolorosamente lenta, mentre un
  l.r.
@@ -2889,7 +3010,11 @@ Scegliere l'adatto learning rate (l.r.) può essere difficile.
 \begin_layout Itemize
 Programmare diversi l.r.
  durante le fasi di allenamento seguendo schemi predefiniti oppure adattandolo
- ai risulati intermedi dell'allenamento (learning rate adattivo).
+ ai risulati intermedi dell'allenamento (
+\series bold
+learning rate adattivo
+\series default
+).
 \end_layout
 
 \begin_layout Itemize
@@ -2956,8 +3081,12 @@ Momento
 
 \end_inset
 
-Momentum è un metodo che aiuta ad accelerare SGD nella direzione rilevante
- e riduce le oscillazioni come mostrato in Figura 2.6b.
+
+\series bold
+Momentum
+\series default
+ è un metodo che aiuta ad accelerare SGD nella direzione rilevante e riduce
+ le oscillazioni come mostrato in Figura 2.6b.
  Per fare ciò introduce un termine 
 \begin_inset Formula $\gamma$
 \end_inset
@@ -3163,8 +3292,12 @@ dove
  I ricercatori inoltre hanno notato che senza l'operatore di radice quadrata
  l'algoritmo funziona molto peggio, probabilmente dovuta a una rapida decadenza
  dei coefficienti.
- Uno dei benefici di Adagrad è l'eliminazione della necessità di modificare
- manualmente il learning rate.
+ Uno dei benefici di 
+\series bold
+Adagrad
+\series default
+ è l'eliminazione della necessità di modificare manualmente il learning
+ rate.
  D'altra parte introduce un' altra debolezza, anche estraendo la radice
  quadrata, a denominatore sommiamo sempre quantità positive, questo alla
  lunga porta il learning rate a valori infinitesimi, bloccando di fatto
@@ -3179,7 +3312,10 @@ Adadelta
 \begin_layout Standard
 È un estensione di Adagrad che cerca di ridurre l'aggressività con cui monotonic
 amente decresce il learning rate.
- Invece di accumulare tutti i quadrati dei precedenti gradienti, Adadelta
+ Invece di accumulare tutti i quadrati dei precedenti gradienti, 
+\series bold
+Adadelta
+\series default
  restringe l'accumulo con una finestra di una fissata dimensione 
 \begin_inset Formula $w.$
 \end_inset
@@ -3369,8 +3505,15 @@ Adam
 \end_layout
 
 \begin_layout Standard
-Adaptive Moment Estimation (Adam) è un altro metodo per adattare il learning
- rate ad ogni parametro.
+
+\series bold
+Adaptive Moment Estimation
+\series default
+ (
+\series bold
+Adam
+\series default
+) è un altro metodo per adattare il learning rate ad ogni parametro.
  In aggiunta alla media decadente dei gradienti precedenti al quadrato 
 \begin_inset Formula $v_{t}$
 \end_inset
@@ -3531,7 +3674,11 @@ La norma
 \end_inset
 
  mostra ancora un comportamento molto stabile, per questo gli autori di
- AdaMax la propongono.
+ 
+\series bold
+AdaMax
+\series default
+ la propongono.
  Definiamo 
 \begin_inset Formula $u_{t}=\lim_{p\rightarrow\infty}(v_{t})^{1/p}$
 \end_inset
@@ -3643,8 +3790,15 @@ Come visto prima, Adam può essere visto come una combinazione di RMSprop
 .
  Abbiamo visto anche che Nesterov accelerated gradient (NAG) è superiore
  a momentum.
- Nadam (Nesterov-accelerated Adaptive Moment Estimation) combina così Adam
- e NAG.
+ 
+\series bold
+Nadam
+\series default
+ (
+\series bold
+Nesterov-accelerated Adaptive Moment Estimation
+\series default
+) combina così Adam e NAG.
  In NAG calcoliamo il gradiente non nella posizione attuale ma nella posizione
  stimata a priori, in cui arriveremo dopo l' aggiornamento.
 \end_layout
@@ -3877,11 +4031,18 @@ Backpropagation
 \end_layout
 
 \begin_layout Standard
-In questa sezione svilupperemo una comprensione intuitiva della backpropagation
+In questa sezione svilupperemo una comprensione intuitiva della 
+\series bold
+backpropagation
+\series default
  che permette di calcolare agilmente il gradiente della funzione di costo
  (error function o loss function) di una rete neurale, tramite l'applicazione
  ricorsiva della regola di derivazione di funzioni composte, nota anche
- come regola della catena.
+ come 
+\series bold
+regola della catena
+\series default
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -4122,7 +4283,11 @@ Backpropagation
 Dal punto di vista pratico, la regola della catena è molto utile, permette
  facilmente di parallelizzare ed eseguire localmente il calcolo del gradiente
  e l'aggiornamento dei pesi.
- Ogni neurone ha la propria funzione di attivazione con la propria derivata.
+ Ogni neurone ha la propria 
+\shape italic
+funzione di attivazione
+\shape default
+ con la propria derivata.
  Possiamo calcolare le derivate singolarmente e propagare all'indietro semplicem
 ente tramite un prodotto.
  Per esempio nella rete in Figura 2.10 il neurone di output calcola tutte
@@ -4153,15 +4318,26 @@ e scelte, inizializzazione dei pesi e altri.
 \series bold
 scomparsa del gradiente
 \series default
- (in lingua inglese vanishing gradient problem) è un fenomeno che crea difficolt
-à nell'addestramento delle reti neurali profonde tramite retropropagazione
- dell'errore mediante discesa stocastica del gradiente.
+ (in lingua inglese 
+\series bold
+vanishing gradient
+\series default
+ problem) è un fenomeno che crea difficoltà nell'addestramento delle reti
+ neurali profonde tramite retropropagazione dell'errore mediante discesa
+ stocastica del gradiente.
  Come visto, ogni parametro del modello riceve ad ogni iterazione un aggiornamen
 to proporzionale alla derivata parziale della funzione di perdita rispetto
  al parametro stesso.
  Una delle principali cause è la presenza di funzioni di attivazione non
- lineari classiche, come la tangente iperbolica o la funzione logistica,
- che hanno gradiente a valori nell'intervallo 
+ lineari classiche, come la 
+\shape italic
+tangente iperbolica
+\shape default
+ o la 
+\shape italic
+funzione logistica
+\shape default
+, che hanno gradiente a valori nell'intervallo 
 \begin_inset Formula ${\displaystyle (0,1)}$
 \end_inset
 
@@ -4190,10 +4366,13 @@ Overfitting
 \end_layout
 
 \begin_layout Standard
-In statistica e in informatica, si parla di overfitting (in italiano: adattament
-o eccessivo, sovradattamento) quando un modello statistico molto complesso
- si adatta ai dati osservati (il campione) perché ha un numero eccessivo
- di parametri rispetto al numero di osservazioni.
+In statistica e in informatica, si parla di 
+\series bold
+overfitting
+\series default
+ (in italiano: adattamento eccessivo, sovradattamento) quando un modello
+ statistico molto complesso si adatta ai dati osservati (il campione) perché
+ ha un numero eccessivo di parametri rispetto al numero di osservazioni.
  Un modello assurdo e sbagliato può adattarsi perfettamente se è abbastanza
  complesso rispetto alla quantità di dati disponibili.
  Si sostiene che l'overfitting sia una violazione del principio del Rasoio
@@ -4305,9 +4484,20 @@ Holdout cross validation
 \end_layout
 
 \begin_layout Standard
-È il metodo più semplice per implementare la validazione incrociata.
- Il data set viene diviso staticamente in due parti, training set e validation
- set e i due sottoinsiemi vengono usati come descritto prima.
+È il metodo più semplice per implementare la 
+\series bold
+validazione incrociata
+\series default
+.
+ Il data set viene diviso staticamente in due parti, 
+\series bold
+training set
+\series default
+ e 
+\series bold
+validation set
+\series default
+ e i due sottoinsiemi vengono usati come descritto prima.
 \end_layout
 
 \begin_layout Subsection
@@ -4315,11 +4505,14 @@ K-fold cross validation
 \end_layout
 
 \begin_layout Standard
-Il data set viene suddiviso in k sotto insiemi di egual dimensione (escluso
- al più l'ultimo), il training del modello viene ripetuto k volte ed ogni
- volta viene usato un sotto insieme come validation set, ogni volta ripartendo
- dallo stato iniziale.
- Alla fine delle k iterazione i risultati delle validazioni vengono mediati
+Il data set viene suddiviso in 
+\series bold
+k
+\series default
+ sotto insiemi di egual dimensione (escluso al più l'ultimo), il training
+ del modello viene ripetuto k volte ed ogni volta viene usato un sotto insieme
+ come validation set, ogni volta ripartendo dallo stato iniziale.
+ Alla fine delle k iterazioni i risultati delle validazioni vengono mediati
  per ottenere il risultato finale.
  Il vantaggio di questo metodo è che importa meno come i dati vengono divisi
  in quanto dopo k iterazioni tutto il dataset è stato usato almeno una volta
@@ -4387,26 +4580,49 @@ Fino ad ora abbiamo visto molti tasselli che compongono una rete neurale
  Per altre grandezze invece va fatto ricorso all'esperienza, ad altri risultati
  pubblicati riguardanti reti che svolgono un compito simile e tanti, tantissimi
  tentativi ed errori.
- Per valutare la bontà di un modello possiamo usare l'insieme di test e
- ancora la cross validation.
- Quanti e quali sono quindi gli iperparametri che il progettista della rete
- deve scegliere? Molti, per esempio in una rete feedforward bisogna definire:
+ Per valutare la bontà di un modello possiamo usare l'
+\series bold
+insieme di test
+\series default
+ e ancora la cross validation.
+ Quanti e quali sono quindi gli 
+\series bold
+iperparametri
+\series default
+ che il progettista della rete deve scegliere? Molti, per esempio in una
+ rete feedforward bisogna definire:
 \end_layout
 
 \begin_layout Itemize
-Numero dei neuroni e loro disposizione in strati;
+
+\series bold
+numero dei neuroni
+\series default
+ e loro disposizione in strati;
 \end_layout
 
 \begin_layout Itemize
-funzione di attivazione dei neuroni;
+
+\series bold
+funzione di attivazione
+\series default
+ dei neuroni;
 \end_layout
 
 \begin_layout Itemize
-funzione di errore;
+
+\series bold
+funzione di errore
+\series default
+;
 \end_layout
 
 \begin_layout Itemize
-algoritmo di discesa del gradiente;
+algoritmo di 
+\series bold
+discesa del gradiente
+\series default
+;
 \end_layout
 
 \begin_layout Standard
@@ -4414,11 +4630,19 @@ eventualmente anche:
 \end_layout
 
 \begin_layout Itemize
-dimensione batch;
+
+\series bold
+dimensione batch
+\series default
+;
 \end_layout
 
 \begin_layout Itemize
-dimensione validation set per la cross validation;
+
+\series bold
+dimensione validation set
+\series default
+ per la cross validation;
 \end_layout
 
 \begin_layout Itemize
@@ -4476,7 +4700,11 @@ Generalmente allenare una rete fornendole gli esempi sempre nello stesso
  In altri casi, in cui lo scopo della rete è risolvere via via problemi
  sempre più complessi, allora è meglio fornire gli esempi in ordine di complessi
 tà.
- Quest'ultimo è il caso del Curriculum learning.
+ Quest'ultimo è il caso del 
+\series bold
+Curriculum learning
+\series default
+.
 \end_layout
 
 \begin_layout Subsection
@@ -4591,10 +4819,13 @@ Normalizzazione
 \end_layout
 
 \begin_layout Standard
-Ci riferiamo alla normalizzazione dei dati non in senso geometrico classico,
- che consiste nel dividire ogni vettore per la sua norma, ma come l'operazione
- di riscalamento di ogni dimensione in modo tale che ognuna di esse abbia
- circa la stessa scala.
+Ci riferiamo alla 
+\series bold
+normalizzazione
+\series default
+ dei dati non in senso geometrico classico, che consiste nel dividire ogni
+ vettore per la sua norma, ma come l'operazione di riscalamento di ogni
+ dimensione in modo tale che ognuna di esse abbia circa la stessa scala.
  Per far ciò possiamo operare in due modi:
 \end_layout
 
@@ -4648,8 +4879,15 @@ o
 \end_layout
 
 \begin_layout Standard
-Generalmente sottrazione della media e normalizzazione vengono effettuate
- in coppia.
+Generalmente 
+\series bold
+sottrazione della media
+\series default
+ e 
+\series bold
+normalizzazione
+\series default
+ vengono effettuate in coppia.
  Ha senso normalizzare se si ha ragione di credere che l'input abbia features
  in scale differenti ma equamente importanti.
  
@@ -4711,16 +4949,28 @@ Batch Normalization
 \begin_layout Standard
 Con l’aumento del numero di strati delle reti neurali permesso dalla sempre
  crescente potenza di calcolo dei computer odierni sono sorti vari problemi
- soprattutto durante l’addestramento, tra cui l’esplosione e la scomparsa
- del gradiente.
- Una delle possibili soluzioni a questi problemi consiste nel layer di batch
- normalization.
- Come già detto precedentemente, solitamente l’input di una rete viene normalizz
-ato (cioè tutti gli input vengono riscalati per avere valori compresi in
- un range scelto, solitamente [0,1]) o standardizzato (cioè ai valori degli
- input gli viene sottratta la media e vengono divisi per la deviazione standard
- del dataset, per avere dei dati distribuiti con media 0 e deviazione standard
- 1).
+ soprattutto durante l’addestramento, tra cui l’esplosione e la 
+\shape italic
+scomparsa del gradiente
+\shape default
+.
+ Una delle possibili soluzioni a questi problemi consiste nel layer di 
+\series bold
+batch normalization
+\series default
+.
+ Come già detto precedentemente, solitamente l’input di una rete viene 
+\shape italic
+normalizzato
+\shape default
+ (cioè tutti gli input vengono riscalati per avere valori compresi in un
+ range scelto, solitamente [0,1]) o 
+\shape italic
+standardizzato
+\shape default
+ (cioè ai valori degli input gli viene sottratta la media e vengono divisi
+ per la deviazione standard del dataset, per avere dei dati distribuiti
+ con media 0 e deviazione standard 1).
  Ciò aiuta l’addestramento in quanto riduce il range dinamico dei dati in
  input a un range fisso, permettendo alla rete di estrarre feature più robuste
  e più velocemente.
@@ -4730,13 +4980,40 @@ ato (cioè tutti gli input vengono riscalati per avere valori compresi in
  dopo il layer della rete da normalizzare.
  In questo modo non solo l’input della rete ma anche l’output dei vari layer
  viene standardizzato.
- Ogni layer di batch normalization ha due pesi (per ogni batch), un fattore
- di scala e un bias, che modificano l’output standardizzato permettendo
- di cambiarne media e deviazione standard.
+ Ogni layer di batch normalization ha 
+\series bold
+due pesi
+\series default
+ (
+\shape italic
+per ogni batch
+\shape default
+), un 
+\series bold
+fattore di scala
+\series default
+ e un 
+\series bold
+bias
+\series default
+, che modificano l’output standardizzato permettendo di cambiarne media
+ e deviazione standard.
  Questi pesi possono venire aggiustati durante l’addestramento.
- Il termine batch nel nome deriva dal gruppo di dati su cui viene effettuata
- la normalizzazione nel layer, che in questo caso è appunto un batch utilizzato
- durante l’addestramento con Stochastic Gradient Descent (SGD).
+ Il termine 
+\series bold
+batch
+\series default
+ nel nome deriva dal gruppo di dati su cui viene effettuata la normalizzazione
+ nel layer, che in questo caso è appunto un batch utilizzato durante l’addestram
+ento con 
+\series bold
+Stochastic Gradient Descent
+\series default
+ (
+\series bold
+SGD
+\series default
+).
  Per implementare la batch normalization:
 \end_layout
 
@@ -4813,10 +5090,25 @@ e: la rete, infatti, non viene esposta ad un batch di input ma ad un solo
  Per superare questo problema, la rete, durante la fase di testing, normalizza
  i valori di input utilizzando media e varianza stimati durante la fase
  di training.
- La Batch normalization si può utilizzare su reti feed forward, come su
- reti convoluzionali e reti ricorrenti.
- Per le reti ricorrenti, lstm, gru o vanilla, media e varianza vengono calcolate
- per ogni step di tempo anzichè per ogni strato.
+ La Batch normalization si può utilizzare su 
+\series bold
+reti feed forward
+\series default
+, come su 
+\series bold
+reti convoluzionali
+\series default
+ e 
+\series bold
+reti ricorrenti
+\series default
+.
+ Per le reti ricorrenti, 
+\shape italic
+lstm, gru o vanilla
+\shape default
+, media e varianza vengono calcolate per ogni step di tempo anzichè per
+ ogni strato.
  Per le reti convoluzionali media e varianza vengono calcolate per ogni
  filtro.
  I vantaggi introdotti dalla batch normalization sono molteplici: 
@@ -4860,10 +5152,14 @@ Consiste nel monitorare l'errore durante la fase di validazione.
  un certo numero di epoche osserviamo che l'errore di validazione che prima
  diminuiva inizia ad aumentare, magari oscillando anche, questo è il caso
  dell'overfitting.
- Early stopping è un metodo parametrizzato da tre fattori, quantità da monitorar
-e, un delta che indica il valore assoluto o percentuale di cambiamento della
- quantità monitorata per determinare se c'è stato un miglioramento o peggioramen
-to ed infine un parametro patience che determina dopo quante epoche senza
+ 
+\series bold
+Early stopping
+\series default
+ è un metodo parametrizzato da tre fattori, quantità da monitorare, un delta
+ che indica il valore assoluto o percentuale di cambiamento della quantità
+ monitorata per determinare se c'è stato un miglioramento o peggioramento
+ ed infine un parametro patience che determina dopo quante epoche senza
  miglioramenti fermare l'allenamento.
 \begin_inset Float figure
 placement H
@@ -4908,7 +5204,11 @@ Le reti neurali, durante il loro processo di apprendimento, sfruttano, come
  Abbiamo visto che c'è anche un grande problema, che è quello dell'overfitting.
  Sono state sviluppate alcune tecniche che, operando sulla funzione costo,
  aiutano a ridurre gli effetti del sovraallenamento di una rete neurale.
- Tali tecniche prendono il nome di tecniche di regolarizzazione.
+ Tali tecniche prendono il nome di tecniche di 
+\series bold
+regolarizzazione
+\series default
+.
  Generalmente, tali tecniche prevedono l'aggiunta di un fattore, dipendente
  dai pesi, dopo l'espressione della funzione costo.
  Tale fattore ha lo scopo di introdurre un termine di penalità sulla norma
@@ -4952,14 +5252,20 @@ dove
 \end_inset
 
  è anch'esso un iperparametro.
- La regolarizzazione può essere vista come un compromesso tra trovare pesi
- piccoli e minimizzare la funzione costo.
+ La regolarizzazione può essere vista come un 
+\shape italic
+compromesso
+\shape default
+ tra trovare pesi piccoli e minimizzare la funzione costo.
  Il parametro 
 \begin_inset Formula $\gamma$
 \end_inset
 
- viene detto tasso di regolarizzazione e serve per determinare il bilanciamento
- di tale compromesso: quando 
+ viene detto 
+\series bold
+tasso di regolarizzazione
+\series default
+ e serve per determinare il bilanciamento di tale compromesso: quando 
 \begin_inset Formula $\gamma$
 \end_inset
 
@@ -4983,8 +5289,12 @@ Dropout
 \end_layout
 
 \begin_layout Standard
-La tecnica di dropout invece funziona diversamente, in quanto modifica non
- la funzione di costo della rete, ma la rete stessa.
+La tecnica di 
+\series bold
+dropout
+\series default
+ invece funziona diversamente, in quanto modifica non la funzione di costo
+ della rete, ma la rete stessa.
  Abbiamo visto il principio di funzionamento di una rete neurale e come
  essa riesca ad allenarsi.
  Ecco, questa tecnica prevede di applicare il solito procedimento togliendo
@@ -5052,7 +5362,15 @@ Prima di partire con l'allenamento i pesi vanno inizializzati.
 \end_layout
 
 \begin_layout Itemize
-Una prima idea di inizializzazione è quella di porre tutti i pesi a zero.
+Una prima idea di 
+\series bold
+inizializzazione
+\series default
+ è quella di porre tutti i pesi a 
+\series bold
+zero
+\series default
+.
  Pessima idea, infatti avendo tutti i pesi uguali, ogni neurone calcolerà
  lo stesso output e lo stesso gradiente, quindi i pesi subiranno tutti gli
  stessi aggiornamenti e i pesi finali resteranno tutti uguali tra loro.
@@ -5063,9 +5381,12 @@ Una prima idea di inizializzazione è quella di porre tutti i pesi a zero.
 \end_layout
 
 \begin_layout Itemize
-Inizializzazione con numeri grandi: anche questa è una pessima idea, a seconda
- della funzione di attivazione del neurone abbiamo diversi comportamenti
- ma tutti problematici.
+
+\series bold
+Inizializzazione con numeri
+\series default
+ grandi: anche questa è una pessima idea, a seconda della funzione di attivazion
+e del neurone abbiamo diversi comportamenti ma tutti problematici.
  Come detto prima, i pesi grandi peggiorano la capacità di generalizzazione
  della rete, inoltre se usassimo funzioni di attivazione come softmax o
  tangente iperbolica potremmo essere fin da subito nelle zone di saturazione,
@@ -5073,10 +5394,13 @@ Inizializzazione con numeri grandi: anche questa è una pessima idea, a seconda
 \end_layout
 
 \begin_layout Itemize
-Inizializzare i pesi intorno allo zero: abbandonata l'idea di inizializzare
- con numeri grandi, vogliamo che i pesi siano molto vicini allo zero, non
- identicamente nulli e distribuiti in modo che circa la metà sia positiva
- e metà sia negativa.
+
+\series bold
+Inizializzare i pesi intorno allo zero
+\series default
+: abbandonata l'idea di inizializzare con numeri grandi, vogliamo che i
+ pesi siano molto vicini allo zero, non identicamente nulli e distribuiti
+ in modo che circa la metà sia positiva e metà sia negativa.
  Una pratica comune è inizializzare i pesi campionandoli da una distribuzione
  gaussiana a media nulla e varianza piccola (0.01).
  Questo tipo di inizializzazione può andare bene se la rete neurale dispone
@@ -5089,9 +5413,12 @@ me che portano alla sua dissolvenza.
 \end_layout
 
 \begin_layout Itemize
-Inizializzazione di Xavier: l'idea è quindi quella di avere una distribuzione
- delle attivazioni tale che la rete neurale sia in grado di apprendere in
- maniera efficiente.
+
+\series bold
+Inizializzazione di Xavier
+\series default
+: l'idea è quindi quella di avere una distribuzione delle attivazioni tale
+ che la rete neurale sia in grado di apprendere in maniera efficiente.
  In quest'ottica, Xavier (2010) ha proposto una inizializzazione dei pesi
  secondo una normale a media nulla con deviazione standard tale che la varianza
  delle attivazioni 
@@ -5242,10 +5569,13 @@ Il fattore di correzione 2 ha senso: la ReLU dimezza di fatto gli input,
 \end_layout
 
 \begin_layout Itemize
-Glorot & Bengio seguendo un simile ragionamento a quello di Xavier ma applicato
- alla backpropagation, quindi procedendo a ritroso dall'ultimo strato al
- primo, invertendo anche il ruolo di input e output, hanno trovato che deve
- valere:
+
+\series bold
+Glorot & Bengio
+\series default
+ seguendo un simile ragionamento a quello di Xavier ma applicato alla backpropag
+ation, quindi procedendo a ritroso dall'ultimo strato al primo, invertendo
+ anche il ruolo di input e output, hanno trovato che deve valere:
 \begin_inset Formula 
 \[
 n_{in,i}Var(W_{i})=1
@@ -5285,8 +5615,16 @@ Data augmentation
 \end_layout
 
 \begin_layout Standard
-Si può anche pensare di ampliare artificialmente i dati di allenamento,
- in quanto ottenere nuovi dati per allenare la rete è sempre una buona idea.
+Si può anche pensare di 
+\series bold
+ampliare
+\series default
+ artificialmente
+\series bold
+ i dati di allenamento
+\series default
+, in quanto ottenere nuovi dati per allenare la rete è sempre una buona
+ idea.
  Il problema è che non sempre è possibile, oppure è troppo costoso ottenerne
  di nuovi.
  Quindi se ne generano di nuovi a partire da quelli che abbiamo già a disposizio
@@ -5318,7 +5656,7 @@ status open
 
 \begin_layout Plain Layout
 Data augmentation: Nonostante la differenza sia minima, per l'analisi svolta
- dalla rete sono due immagini completamente diverse.
+ dalla rete sono due immagini significativamente diverse.
 \end_layout
 
 \end_inset
@@ -5387,9 +5725,12 @@ f(x)=\frac{1}{1+e^{-x}}
 \end_inset
 
 La prima e più importante è quella relativa alla dissolvenza del gradiente
- in seguito alla saturazione dei neuroni, ossia quei neuroni che presentano
- valori di output agli estremi del codominio della funzione di attivazione,
- in questo caso 
+ in seguito alla 
+\shape italic
+saturazione
+\shape default
+ dei neuroni, ossia quei neuroni che presentano valori di output agli estremi
+ del codominio della funzione di attivazione, in questo caso 
 \begin_inset Formula $(0,1)$
 \end_inset
 
@@ -5412,9 +5753,12 @@ La prima e più importante è quella relativa alla dissolvenza del gradiente
 
 Tale saturazione diventa problematica durante le fase di back propagation,
  in quanto il gradiente locale assume valori prossimi allo zero, che per
- la regola della catena vanno a moltiplicare tutti i gradienti calcolati
- in precedenza e quelli successivi, conducendo così all'annullamento del
- gradiente globale.
+ la 
+\shape italic
+regola della catena
+\shape default
+ vanno a moltiplicare tutti i gradienti calcolati in precedenza e quelli
+ successivi, conducendo così all'annullamento del gradiente globale.
 \begin_inset Formula 
 \[
 f'(x)=f(x)(1-f(x))
@@ -5552,8 +5896,12 @@ f(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
 
 \end_inset
 
-Tuttavia, rimane il problema della saturazione dei neuroni, anzi viene addirittu
-ra accentuato, dal momento che la zona di sicurezza risulta ancora più ristretta.
+Tuttavia, rimane il problema della 
+\shape italic
+saturazione
+\shape default
+ dei neuroni, anzi viene addirittura accentuato, dal momento che la zona
+ di sicurezza risulta ancora più ristretta.
  Rimane anche il problema della complessità computazionale della funzione
  esponenziale.
 \end_layout
@@ -5563,10 +5911,13 @@ ReLU
 \end_layout
 
 \begin_layout Standard
-La Rectied Linear Unit (ReLU) è diventata popolare negli ultimi anni per
- via dell'incremento prestazionale che offre nel processo di convergenza:
- velocizza infatti di circa 6 volte la discesa del gradiente rispetto alle
- alternative viste finora.
+La 
+\series bold
+Rectifier Linear Unit
+\series default
+ (ReLU) è diventata popolare negli ultimi anni per via dell'incremento prestazio
+nale che offre nel processo di convergenza: velocizza infatti di circa 6
+ volte la discesa del gradiente rispetto alle alternative viste finora.
 \begin_inset Float figure
 wide false
 sideways false
@@ -5609,7 +5960,11 @@ f(x)=x^{+}=max(0,x)
 \end_inset
 
 Questo risultato è da attribuire in larga parte al fatto che la ReLU risolve
- il problema della dissolvenza del gradiente, non andando a saturare i neuroni.
+ il 
+\shape italic
+problema della dissolvenza
+\shape default
+ del gradiente, non andando a saturare i neuroni.
  Durante la fase di back propagation infatti, se il gradiente calcolato
  fino a quel punto è positivo questo viene semplicemente lasciato passare,
  perchè la derivata locale per il quale viene moltiplicato è pari ad uno.
@@ -5656,9 +6011,17 @@ Leaky ReLU
 \end_layout
 
 \begin_layout Standard
-La leaky ReLU è un tentativo di risolvere il problema della disattivazione
- dei neuroni comportato dalla ReLU classica, e consiste nell'introdurre
- una piccola pendenza negativa (di circa 0.01) 
+La 
+\series bold
+leaky ReLU
+\series default
+ è un tentativo di risolvere il problema della disattivazione dei neuroni
+ comportato dalla ReLU classica, e consiste nell'introdurre una piccola
+ 
+\series bold
+pendenza negativa
+\series default
+ (di circa 0.01) 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -5706,10 +6069,16 @@ f(x)=\max(\alpha x,x)
 \end_inset
 
 In alcune varianti, α può essere un parametro da stimare, al pari degli
- altri pesi della rete (si parla di Parametric ReLU ), oppure una variabile
- casuale: è il caso della Randomized ReLU, dove ad ogni iterazione la pendenza
- della parte negativa della funzione viene scelta casualmente all'interno
- di un range pressato.
+ altri pesi della rete (si parla di 
+\series bold
+Parametric ReLU
+\series default
+ ), oppure una variabile casuale: è il caso della 
+\series bold
+Randomized ReLU
+\series default
+, dove ad ogni iterazione la pendenza della parte negativa della funzione
+ viene scelta casualmente all'interno di un range pressato.
  In alcuni recenti esperimenti, Bing Xu et al.
  (2015) hanno mostrato come le varianti della ReLU classica siano in grado
  di aumentare le performance finali del modello in termini di accuratezza,
@@ -5732,9 +6101,12 @@ Formalizzare i problemi
 \end_layout
 
 \begin_layout Standard
-La visione artificiale (nota anche come computer vision) è l'insieme dei
- processi che mirano a creare un modello approssimato del mondo reale (3D)
- partendo da immagini bidimensionali (2D).
+La visione artificiale (nota anche come 
+\series bold
+computer vision
+\series default
+) è l'insieme dei processi che mirano a creare un modello approssimato del
+ mondo reale (3D) partendo da immagini bidimensionali (2D).
  Vedere è inteso non solo come l'acquisizione di una fotografia bidimensionale
  di un'area ma soprattutto come l'interpretazione del contenuto di quell'area.
  L'informazione è intesa in questo caso come qualcosa che implica una decisione
@@ -5755,21 +6127,32 @@ Nella letteratura troviamo differenti varietà del problema:
 \end_layout
 
 \begin_layout Itemize
-Recognition (riconoscimento): uno o più oggetti prespecificati o memorizzati
- possono essere ricondotti a classi generiche usualmente insieme alla loro
- posizione 2D o 3D nella scena.
+
+\series bold
+Recognition
+\series default
+ (riconoscimento): uno o più oggetti prespecificati o memorizzati possono
+ essere ricondotti a classi generiche usualmente insieme alla loro posizione
+ 2D o 3D nella scena.
 \end_layout
 
 \begin_layout Itemize
-Identification (identificazione): viene individuata un'istanza specifica
- di una classe.
+
+\series bold
+Identification
+\series default
+ (identificazione): viene individuata un'istanza specifica di una classe.
  Es.
  Identificazione di un volto, impronta digitale o veicolo specifico.
 \end_layout
 
 \begin_layout Itemize
-Detection (rilevamento): l'immagine è scandita fino all'individuazione di
- una condizione specifica.
+
+\series bold
+Detection
+\series default
+ (rilevamento): l'immagine è scandita fino all'individuazione di una condizione
+ specifica.
  Es.
  Individuazione di possibili cellule anormali o tessuti nelle immagini mediche.
 \end_layout
@@ -5823,41 +6206,65 @@ La classificazione presenta alcuni problemi:
 \end_layout
 
 \begin_layout Itemize
-Variazione punto di vista (Viewpoint variation): una singola istanza di
- un oggetto può essere orientata in modi diversi rispetto alla camera, producend
-o immagini diverse;
+Variazione punto di vista (
+\shape italic
+Viewpoint variation
+\shape default
+): una singola istanza di un oggetto può essere orientata in modi diversi
+ rispetto alla camera, producendo immagini diverse;
 \end_layout
 
 \begin_layout Itemize
-Variazione scala (Scale variation): oggetti diversi appartenenti alla medesima
- classe possono differire nelle loro dimensioni reali;
+Variazione scala (
+\shape italic
+Scale variation
+\shape default
+): oggetti diversi appartenenti alla medesima classe possono differire nelle
+ loro dimensioni reali;
 \end_layout
 
 \begin_layout Itemize
-Deformazione (Deformation): alcuni oggetti non sono corpi rigidi e possono
- apparire deformati in modi diversi;
+Deformazione (
+\shape italic
+Deformation
+\shape default
+): alcuni oggetti non sono corpi rigidi e possono apparire deformati in
+ modi diversi;
 \end_layout
 
 \begin_layout Itemize
-Occlusione (Occlusion): parti dell'oggetto da riconoscere è nascosto e non
- visibile;
+Occlusione (
+\shape italic
+Occlusion
+\shape default
+): parti dell'oggetto da riconoscere è nascosto e non visibile;
 \end_layout
 
 \begin_layout Itemize
-Condizioni di illuminazione (Illumination conditions): l'illuminazione ha
- un ruolo decisivo nell'informazione codificata all'interno dei pixel che
- compongono l'immagine;
+Condizioni di illuminazione (
+\shape italic
+Illumination conditions
+\shape default
+): l'illuminazione ha un ruolo decisivo nell'informazione codificata all'interno
+ dei pixel che compongono l'immagine;
 \end_layout
 
 \begin_layout Itemize
-Disordine di sfondo (Background clutter): gli oggetti di interesse possono
- mescolarsi e confondersi nell'ambiente circostante, rendendo difficile
- l'identificazione;
+Disordine di sfondo (
+\shape italic
+Background clutter
+\shape default
+): gli oggetti di interesse possono mescolarsi e confondersi nell'ambiente
+ circostante, rendendo difficile l'identificazione;
 \end_layout
 
 \begin_layout Itemize
-Variazione intra-classe (Intra-class variation): oggetti appartenti alla
- stessa classe possono differire significativamente l'uno dall'altro.
+Variazione intra-classe (
+\shape italic
+Intra-class variation
+\shape default
+): oggetti appartenti alla stessa classe possono differire significativamente
+ l'uno dall'altro.
 \end_layout
 
 \begin_layout Standard
@@ -5898,8 +6305,11 @@ Dataset CIFAR-10
 \end_layout
 
 \begin_layout Standard
-In queste note si farà riferimento al dataset CIFAR-10 che consiste in 60000
- immagini di dimensione 
+In queste note si farà riferimento al dataset
+\series bold
+ CIFAR-10
+\series default
+ che consiste in 60000 immagini di dimensione 
 \begin_inset Formula $32\times32$
 \end_inset
 
@@ -6086,8 +6496,12 @@ con
 
 \begin_layout Standard
 Le distanze comunemente usate sono le prime due, L1 e L2.
- In altre parole Nearest Neihbor Classifier è ricondotto ad un problema
- di minimizzazione riformulando il problema di classificazione come segue:
+ In altre parole 
+\series bold
+Nearest Neihbor Classifier
+\series default
+ è ricondotto ad un problema di minimizzazione riformulando il problema
+ di classificazione come segue:
 \end_layout
 
 \begin_layout Itemize
@@ -6145,11 +6559,10 @@ K-Nearest Neighbor Classifier
 Questo classificatore è un estensione del precedente e si basa su un'idea
  molto semplice: invece di assegnare l'etichetta dell'immagine più vicina
  (rispetto ad una definita distanza), troviamo le 
-\shape italic
-k
-\shape default
- immagini più vicine e assegnamo l'etichetta che compare maggiormente nelle
- 
+\series bold
+k immagini più vicine
+\series default
+ e assegnamo l'etichetta che compare maggiormente nelle 
 \shape italic
 k
 \shape default
@@ -6158,7 +6571,11 @@ k
 \begin_inset Formula $k=1$
 \end_inset
 
- otteniamo Nearest Neihbor Classifier precedente.
+ otteniamo 
+\shape italic
+Nearest Neihbor Classifier
+\shape default
+ precedente.
  Intuituivamente un alto valore di 
 \shape italic
 k 
@@ -6213,21 +6630,6 @@ confronto NN classifier e 5-NN classifier
  esempio in K-NN nel caso in cui ci sia parità tra due o più classi).
  Notiamo come nel caso di punti anomali, NN crea piccole isole di probabili
  previsioni errate, mentre 5-NN smussa queste irregolarità.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Marginal
-status open
-
-\begin_layout Plain Layout
-
-\color red
-To-do parlare di overfitting, cross-validation, hyperparameter 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -6329,8 +6731,11 @@ Classificatore Lineare (Linear Classifier)
 \end_layout
 
 \begin_layout Standard
-Un classificatore può anche essere visto come una funzione che associa ad
- un'immagine 
+Un 
+\series bold
+classificatore
+\series default
+ può anche essere visto come una funzione che associa ad un'immagine 
 \begin_inset Formula $\boldsymbol{x}$
 \end_inset
 
@@ -6498,8 +6903,12 @@ Linear Classifier
 
 \end_inset
 
-Il classificatore lineare assegna ad un'immagine di input la classe corrisponden
-te al più alto punteggio: 
+Il 
+\series bold
+classificatore lineare
+\series default
+ assegna ad un'immagine di input la classe corrispondente al più alto punteggio:
+ 
 \begin_inset Formula 
 \begin{equation}
 \hat{y_{j}}=arg\max_{i=1,...,L}[s_{j}]_{i}.
@@ -6849,7 +7258,10 @@ Poichè trattiamo le nostre immagini di input come vettori colonna possiamo
 \end_inset
 
  (escludendo il bias trick).
- Inoltre dall'algebra lineare sappiamo che l'equazione generica di un iperpiano
+ Inoltre dall'algebra lineare sappiamo che l'equazione generica di un 
+\series bold
+iperpiano
+\series default
  (sottospazio affine di 
 \begin_inset Formula $\mathbb{R}^{n}$
 \end_inset
@@ -6969,8 +7381,11 @@ Un'altra possibile interpretazione per i pesi
 \begin_inset Formula $W$
 \end_inset
 
- è che ogni riga della matrice corrisponda a un template (o prototipo) per
- ogni classe.
+ è che ogni riga della matrice corrisponda a un 
+\series bold
+template
+\series default
+ (o prototipo) per ogni classe.
  Il punteggio di ogni classe è ottenuto tramite prodotto scalare e indica
  il grado di somiglianza tra l'immagine test e il template.
 \end_layout
@@ -6980,11 +7395,26 @@ Reti Convoluzionali
 \end_layout
 
 \begin_layout Standard
-Le reti neurali convoluzionali (Convolutional Neural Networks, CNN) sono
- di fatto delle reti neurali artificiali.
+Le 
+\series bold
+reti neurali convoluzionali
+\series default
+ (
+\series bold
+Convolutional Neural Networks, CNN
+\series default
+) sono di fatto delle reti neurali artificiali.
  Esattamente come queste ultime infatti, anche le reti neurali convoluzionali
  sono costituite da neuroni collegati fra loro tramite dei rami pesati (weight);
- i parametri allenabili delle reti sono sempre quindi i weight ed i bias.
+ i parametri allenabili delle reti sono sempre quindi i 
+\series bold
+weight
+\series default
+ ed i 
+\series bold
+bias
+\series default
+.
  Tutto quanto detto in precedenza sull’allenamento di una rete neurale,
  cioè forward/backward propagation e aggiornamento dei pesi, vale anche
  in questo contesto; inoltre un’intera rete neurale convoluzionale utilizza
@@ -6996,11 +7426,19 @@ Le reti neurali convoluzionali (Convolutional Neural Networks, CNN) sono
  Ad esempio di poter effettuare delle forward propagation più efficienti
  in modo da ridurre l’ammontare di parametri della rete.
  Il nome Convolutional Neural Networks deriva dal fatto che tali reti utilizzano
- un'operazione matematica lineare chiamata convoluzione.
- Gli strati composti da operazioni di convoluzione prendono il nome di Convoluti
-onal Layers, ma non sono gli unici strati che compongono una CNN: la tipica
- architettura prevede infatti l'alternarsi di Convolutional Layers, Pooling
- Layers e Fully Connected Layers.
+ un'operazione matematica lineare chiamata 
+\series bold
+convoluzione
+\series default
+.
+ Gli strati composti da operazioni di convoluzione prendono il nome di 
+\series bold
+Convolutional Layers
+\series default
+, ma non sono gli unici strati che compongono una CNN: la tipica architettura
+ prevede infatti l'alternarsi di 
+\series bold
+Convolutional Layers, Pooling Layers e Fully Connected Layers.
 \end_layout
 
 \begin_layout Section
@@ -7011,9 +7449,12 @@ Inadeguatezza della struttura fully-connected
 Come visto nel capitolo precedente, le reti neurali tradizionali ricevono
  in input un singolo vettore, e lo trasformano attraverso una serie di strati
  nascosti, dove ogni neurone è connesso ad ogni singolo neurone sia dello
- strato precedente che di quello successivo (ovvero "fully-connected") e
- funziona quindi in maniera completamente indipendente, dal momento che
- non vi è alcuna condivisione delle connessioni con i nodi circostanti.
+ strato precedente che di quello successivo (ovvero "
+\shape italic
+fully-connected
+\shape default
+") e funziona quindi in maniera completamente indipendente, dal momento
+ che non vi è alcuna condivisione delle connessioni con i nodi circostanti.
  Nel caso l'input sia costituito da immagini di dimensioni ridotte, ad esempio
  
 \begin_inset Formula $32\times32\times3$
@@ -7037,9 +7478,31 @@ Come visto nel capitolo precedente, le reti neurali tradizionali ricevono
  Le Convolutional Neural Networks prendono invece vantaggio dall'assunzione
  che gli input hanno proprio una struttura di questo tipo, e questo permette
  loro la costruzione di un'architettura su misura attraverso la formalizzazione
- di tre fondamentali proprietà: l'interazione sparsa (sparse interaction),
- l'invarianza rispetto a traslazioni (invariant to translation), e la condivisio
-ne dei parametri (weight sharing).
+ di tre fondamentali proprietà: 
+\series bold
+l'interazione sparsa
+\series default
+ (
+\series bold
+sparse interaction
+\series default
+), l
+\series bold
+'invarianza rispetto a traslazioni
+\series default
+ (
+\series bold
+invariant to translation
+\series default
+), e la 
+\series bold
+condivisione dei parametri
+\series default
+ (
+\series bold
+weight sharing
+\series default
+).
  Il risultato è una rete più effcace e allo stesso tempo parsimoniosa in
  termini di parametri.
 \end_layout
@@ -7054,8 +7517,11 @@ In problemi discreti l'operazione di convoluzione non è altro che la somma
  il nome di filtro o kernel) e una porzione dell'input di pari dimensioni.
  L'operazione di convoluzione viene quindi ripetuta spostando il filtro
  lungo tutta la supercie dell'input, sia in altezza che in larghezza.
- Questo produce quella che viene chiamata mappa di attivazioni (o features
- map), la quale costituisce di fatto il primo strato nascosto della rete.
+ Questo produce quella che viene chiamata mappa di attivazioni (o 
+\series bold
+features map
+\series default
+), la quale costituisce di fatto il primo strato nascosto della rete.
 \begin_inset Float figure
 placement H
 wide false
@@ -7157,18 +7623,39 @@ Convolutional Layer
 \begin_layout Standard
 Come si può intuire questo è il principale tipo di layer: l’utilizzo di
  uno o più di questi layer in una rete neurale convoluzionale è indispensabile.
- I parametri di un convolutional layer in pratica riguardano un insieme
- di filtri allenabili.
- Ciascun filtro è spazialmente piccolo, lungo le dimensioni di larghezza
- ed altezza, ma si estende per l’intera profondità del volume di input a
- cui viene applicato.
+ I
+\series bold
+ parametri di un convolutional laye
+\series default
+r in pratica riguardano un insieme di filtri allenabili.
+ Ciascun 
+\series bold
+filtro
+\series default
+ è spazialmente ridotto, lungo le dimensioni di larghezza ed altezza, ma
+ si estende per l’intera profondità del volume di input a cui viene applicato.
  Durante la forward propagation si trasla, o più precisamente si convolve,
  ciascun filtro lungo la larghezza e l’altezza del volume di input, producendo
- una activation map (o feature map) bidimensionale per quel filtro.
+ una 
+\series bold
+activation map
+\series default
+ (o 
+\series bold
+feature map
+\series default
+) bidimensionale per quel filtro.
  Intuitivamente, la rete avrà come obbiettivo quello di apprendere (tramite
- backpropagation e discesa del gradiente) dei filtri che si attivano in
- presenza di un qualche specifico tipo di feature in una determinata regione
- spaziale dell’input.
+ 
+\series bold
+backpropagation
+\series default
+ e 
+\series bold
+discesa del gradiente
+\series default
+) dei filtri che si attivano in presenza di un qualche specifico tipo di
+ feature in una determinata regione spaziale dell’input.
  L’accodamento di tutte queste activation map, per tutti i filtri, lungo
  la dimensione della profondità forma il volume di output di un layer convoluzio
 nale.
@@ -7197,8 +7684,11 @@ Era già stato menzionato in precedenza il fatto che, avendo a disposizione
  Infatti qui ciascun neurone è connesso solo ad una piccola regione locale
  del volume di input.
  L’estensione spaziale (sempre larghezza e altezza) di questa regione è
- un parametro del layer convoluzionale e viene detto receptive field del
- neurone.
+ un parametro del layer convoluzionale e viene detto 
+\series bold
+receptive field
+\series default
+ del neurone.
  È bene ricordare quanto già detto in precedenza: l’estensione lungo l’asse
  della profondità della regione considerata è sempre uguale alla profondità
  del volume di input.
@@ -7275,7 +7765,11 @@ onale rispetto al volume di input.
 \end_layout
 
 \begin_layout Itemize
-Profondità (depth): corrisponde al numero di filtri 
+
+\series bold
+Profondità (depth)
+\series default
+: corrisponde al numero di filtri 
 \begin_inset Formula $N_{F}$
 \end_inset
 
@@ -7286,8 +7780,12 @@ Profondità (depth): corrisponde al numero di filtri
 \end_layout
 
 \begin_layout Itemize
-Stride: specifica il numero di pixel di cui si vuole traslare il filtro
- ad ogni spostamento.
+
+\series bold
+Stride
+\series default
+: specifica il numero di pixel di cui si vuole traslare il filtro ad ogni
+ spostamento.
  Poiché come detto eseguendo la convoluzione tra filtro e parte dell'input
  otteniamo un singolo scalare, questo parametro permette di specificare
  in che maniera allocare le depth column in tutto lo spazio, cioè larghezza
@@ -7300,9 +7798,13 @@ Stride: specifica il numero di pixel di cui si vuole traslare il filtro
 \end_layout
 
 \begin_layout Itemize
-Zero padding: a volte può risultare conveniente aggiungere un bordo di zeri
- al volume di input, in modo così da controllare le dimensioni dell'output
- ed evitare incongruenze durante le operazioni.
+
+\series bold
+Zero padding
+\series default
+: a volte può risultare conveniente aggiungere un bordo di zeri al volume
+ di input, in modo così da controllare le dimensioni dell'output ed evitare
+ incongruenze durante le operazioni.
  Lo spessore di questo bordo è determinato dall'iperparametro di zero-padding,
  ed è spesso utilizzato per far combaciare la dimensione dell'input con
  quella dell'output.
@@ -7500,19 +8002,36 @@ Nell'esempio sopra riportato, ognuno dei
 
 , solamente per il primo strato.
  Tale quantità, chiaramente intrattabile nella realtà, viene drasticamente
- ridotta dalla proprietà di condivisione dei paramtetri (weight sharing)
- delle CNN, la quale si fonda su una ragionevole assunzione: se la rilevazione
+ ridotta dalla proprietà di condivisione dei parametri (
+\series bold
+weight sharing
+\series default
+) delle CNN, la quale si fonda su una ragionevole assunzione: se la rilevazione
  di una caratteristica in una determinata posizione spaziale risulta utile,
  lo sarà anche in differenti posizioni spaziali.
- Si assume cioè una struttura dell'immagine invarante rispetto a traslazioni.
+ Si assume cioè una struttura dell'immagine
+\series bold
+ invarante rispetto a traslazioni
+\series default
+.
  Questo è il motivo per cui facciamo scorrere lo stesso filtro su tutto
  il volume di input.
- In pratica, chiamando una singola “sezione” bidimensionale lungo l’asse
- di profondità del volume di output con depth slice (o mappa di attivazione,
- ad esempio un volume 55 x 55 x 96 ha 96 depth slice, ciascuna ovviamente
- di dimensioni 55 x 55), si farà in modo che tutti i neuroni di ciascuna
- depth slice (attenzione a non confondere con depth column) utilizzino gli
- stessi weight e bias.
+ In pratica, chiamando una singola “
+\shape italic
+sezione
+\shape default
+” bidimensionale lungo l’asse di profondità del volume di output con depth
+ slice (o mappa di attivazione, ad esempio un volume 55 x 55 x 96 ha 96
+ depth slice, ciascuna ovviamente di dimensioni 55 x 55), si farà in modo
+ che tutti i neuroni di ciascuna 
+\series bold
+depth slice
+\series default
+ (attenzione a non confondere con 
+\shape italic
+depth column
+\shape default
+) utilizzino gli stessi weight e bias.
  Tornando all'esempio, la proprietà di weight sharing comporta una diminuzione
  dei parametri per il primo strato fino a 
 \begin_inset Formula $(11\times11\times3)\times96+96=34944$
@@ -7667,7 +8186,15 @@ Campo recettivo
 
 \begin_layout Standard
 \noindent
-Un concetto base nelle CNN è il campo recettivo.
+Un concetto base nelle CNN è il 
+\series bold
+campo recettivo
+\series default
+ (
+\series bold
+receptive field
+\series default
+).
  A causa della connettività sparsa, in una CNN l'output dipende solo dalla
  regione dell'input, a differenza delle reti FC dove il valore di ogni output
  dipende da tutto l'input.
@@ -7735,16 +8262,22 @@ Pooling layer
 
 \begin_layout Standard
 Nell'architettura di una CNN è pratica comune inserire fra due o più convolution
-al layers uno strato di Pooling, la cui funzione è quella di ridurre progressiva
-mente la dimensione spaziale degli input (larghezza e altezza), in modo
- da diminuire numero di parametri e carico computazionale, e di conseguenza
- controllare anche il sovradattamento.
+al layers uno strato di 
+\series bold
+Pooling
+\series default
+, la cui funzione è quella di ridurre progressivamente la dimensione spaziale
+ degli input (larghezza e altezza), in modo da diminuire numero di parametri
+ e carico computazionale, e di conseguenza controllare anche il sovradattamento.
  Per il ridimensionamento si utilizza una semplice funzione, come ad esempio
  un’operazione di 
-\begin_inset Formula $\max$
-\end_inset
-
- oppure di media (il massimo o la media di un determinato insieme di elementi),
+\series bold
+max (max-pooling)
+\series default
+ oppure di 
+\series bold
+media (average-pooling)
+\series default
  e pertanto non comporta la presenza di pesi allenabili.
  L'assenza di pesi allenabili comporta anche che questo layer svolga le
  sue mansioni solo durante la forward propagation, nelle fasi di backward
@@ -7753,12 +8286,20 @@ mente la dimensione spaziale degli input (larghezza e altezza), in modo
 \end_layout
 
 \begin_layout Itemize
-il lato F dell’estensione spaziale della selezione quadrata che verrà di
- volta in volta considerata sull’input in ogni suo depth slice; 
+il 
+\series bold
+lato
+\series default
+ F dell’estensione spaziale della selezione quadrata che verrà di volta
+ in volta considerata sull’input in ogni suo depth slice; 
 \end_layout
 
 \begin_layout Itemize
-il parametro di stride S;
+il parametro di 
+\series bold
+stride
+\series default
+ S;
 \end_layout
 
 \begin_layout Standard
@@ -7838,8 +8379,12 @@ Fully Connected layer
 \begin_layout Standard
 Questo tipo di layer è esattamente uguale ad uno qualsiasi dei layer di
  una classica rete neurale artificiale con architettura fully connected:
- semplicemente in un layer Fully Connected (FC) ciascun neurone è connesso
- a tutti i neuroni del layer precedente, nello specifico alle loro attivazioni.
+ semplicemente in un 
+\series bold
+layer Fully Connected (FC)
+\series default
+ ciascun neurone è connesso a tutti i neuroni del layer precedente, nello
+ specifico alle loro attivazioni.
  L'architettura fully-connected implica il rilassamento dell'assunzione
  di weight sharing.
  Valgono quindi la maggior parte delle considerazioni fatte nel capitolo
@@ -7960,8 +8505,12 @@ Architetture note di CNN sono:
 \end_layout
 
 \begin_layout Enumerate
-LeNet-5: sviluppato nel 1998 per identificare cifre scritte a mano per il
- riconoscimento dello zip code nel servizio postale (60000 parametri).
+
+\series bold
+LeNet-5
+\series default
+: sviluppato nel 1998 per identificare cifre scritte a mano per il riconosciment
+o dello zip code nel servizio postale (60000 parametri).
  L'idea era quella di usare una sequenza di 3 layers: convoluzione, pooling,
  non-linearità.
  I pixel in un'immagine sono altamente correlati, la convoluzione può essere
@@ -7973,8 +8522,12 @@ LeNet-5: sviluppato nel 1998 per identificare cifre scritte a mano per il
 \end_layout
 
 \begin_layout Enumerate
-AlexNet: sviluppata nel 2012, è simile a LeNet-5 (60 milioni di parametri,
- conv.: 3.7 milioni, FC: 58.6 milioni).
+
+\series bold
+AlexNet
+\series default
+: sviluppata nel 2012, è simile a LeNet-5 (60 milioni di parametri, conv.:
+ 3.7 milioni, FC: 58.6 milioni).
  La dimensione dell'input è di 224x224x3, mentre i layer sono:
 \end_layout
 
@@ -7997,8 +8550,12 @@ Per evitare l'overfitting la rete usa ReLU, Dropout (0.5), weight decay e
 
 \end_deeper
 \begin_layout Enumerate
-VGG16: introdotta nel 2014 come variante della AlexNet (138 milioni di parametri
-, conv.:11%, FC:89%).
+
+\series bold
+VGG16
+\series default
+: introdotta nel 2014 come variante della AlexNet (138 milioni di parametri,
+ conv.:11%, FC:89%).
  La dimensione dell'input è di 224x224x3.
  L'idea è quella di usare convoluzioni multiple 3x3 in sequenza per ottenere
  campi recettivi più larghi con meno parametri e più non-liearità anzichè
@@ -8006,8 +8563,12 @@ VGG16: introdotta nel 2014 come variante della AlexNet (138 milioni di parametri
 \end_layout
 
 \begin_layout Enumerate
-GoogleNet: rete con alta efficienza computazionale (5 milioni di parametri,
- 22 layers di moduli Inception).
+
+\series bold
+GoogleNet
+\series default
+: rete con alta efficienza computazionale (5 milioni di parametri, 22 layers
+ di moduli Inception).
  Questa rete è basata su moduli Inception, ovvero una sorta di 
 \begin_inset Quotes fld
 \end_inset
@@ -8036,9 +8597,13 @@ ente molto costose.
 \end_layout
 
 \begin_layout Enumerate
-Inception Module: per ridurre il carico computazionale della rete, il numero
- dei canali di input è ridotto aggiungendo un layer convoluzionale 1x1 prima
- delle convoluzioni 3x3 e 5x5.
+
+\series bold
+Inception Module
+\series default
+: per ridurre il carico computazionale della rete, il numero dei canali
+ di input è ridotto aggiungendo un layer convoluzionale 1x1 prima delle
+ convoluzioni 3x3 e 5x5.
  Il volume dell'output ha dimensione simile, ma il numero di operazioni
  richieste è ridotto significativamente grazie alla convoluzione 1x1 (che
  incrementa quindi il numero di non-linearità).
@@ -8197,7 +8762,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Inception module (with dimension reductions)
+Inception module 
 \end_layout
 
 \end_inset
@@ -8219,10 +8784,16 @@ Data Augmentation
 \end_layout
 
 \begin_layout Standard
-La Data Augmentation è tipicamente performata tramite:
+La 
+\series bold
+Data Augmentation
+\series default
+ è tipicamente effettuata tramite:
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 trasformazioni geometriche
 \end_layout
 
@@ -8245,6 +8816,8 @@ flip
 
 \end_deeper
 \begin_layout Itemize
+
+\series bold
 trasformazioni fotometriche
 \end_layout
 
@@ -8280,8 +8853,11 @@ za perfetta rispetto alle trasformazioni considerate.
 
 \begin_layout Standard
 \noindent
-La Test Time Augmentation (TTA) può essere performata a test time per migliorare
- la precisione delle predizioni.
+La 
+\series bold
+Test Time Augmentation (TTA)
+\series default
+ può essere performata a test time per migliorare la precisione delle predizioni.
  TTA è particolarmente utile per le immagini di test in cui il modello è
  parecchio insicuro.
 \end_layout
@@ -8315,7 +8891,11 @@ Confusion matrix
 
 \begin_layout Standard
 \noindent
-L'idea della confusion matrix sta nel fatto che l'elemento 
+L'idea della 
+\series bold
+confusion matrix
+\series default
+ sta nel fatto che l'elemento 
 \emph on
 C(i, j) 
 \emph default
@@ -8375,8 +8955,11 @@ Classificazione a due classi
 \begin_layout Standard
 \noindent
 La performance della classificazione nel caso di classificatori binari può
- anche essere misurata in termini della ROC (Receiver Operating Characteristic)
- curve.
+ anche essere misurata in termini della 
+\series bold
+ROC (Receiver Operating Characteristic) curve
+\series default
+.
  
 \end_layout
 
@@ -8394,7 +8977,11 @@ TPR = 100%
 \end_layout
 
 \begin_layout Standard
-Quindi, più larga è l'Area Under Curve (AUC), meglio è.
+Quindi, più larga è l'
+\series bold
+Area Under Curve (AUC)
+\series default
+, meglio è.
 \end_layout
 
 \begin_layout Standard
@@ -8466,7 +9053,11 @@ La parte convoluzionale può quindi essere vista come un estrattore di feature
 
 \begin_layout Standard
 \noindent
-L'idea alla base del transfer learning è quindi quella di:
+L'idea alla base del 
+\series bold
+transfer learning
+\series default
+ è quindi quella di:
 \end_layout
 
 \begin_layout Itemize
@@ -8491,16 +9082,24 @@ Ci sono due opzioni di congelamento della CNN:
 \end_layout
 
 \begin_layout Itemize
-Trensfer Learning: solo i layers della FCN vengono allenati (una buona opzione
- quando si hanno pochi dati di training e ci si aspetta che la CNN pre-allenata
- sia compatibile col problema)
+
+\series bold
+Transfer Learning
+\series default
+: solo i layers della FCN vengono allenati (una buona opzione quando si
+ hanno pochi dati di training e ci si aspetta che la CNN pre-allenata sia
+ compatibile col problema)
 \end_layout
 
 \begin_layout Itemize
-Fine tuning: l'intera CNN è riallenata, ma i layer convoluzionali sono inizializ
-zati al modello pre-allenato (una buona opzione quando si hanno abbastanza
- dati di training o quando non ci si aspetta che la CNN pre-allenata sia
- compatibile col problema)
+
+\series bold
+Fine tuning
+\series default
+: l'intera CNN è riallenata, ma i layer convoluzionali sono inizializzati
+ al modello pre-allenato (una buona opzione quando si hanno abbastanza dati
+ di training o quando non ci si aspetta che la CNN pre-allenata sia compatibile
+ col problema)
 \end_layout
 
 \begin_layout Standard
@@ -8548,8 +9147,12 @@ Segmentazione di immagini
 \end_layout
 
 \begin_layout Standard
-La segmentazione semantica di un immagine ha come obiettivo quella di assegnare
- ad ogni pixel un'etichetta proveniente da un insieme fissato.
+La 
+\series bold
+segmentazione semantica
+\series default
+ di un immagine ha come obiettivo quella di assegnare ad ogni pixel un'etichetta
+ proveniente da un insieme fissato.
  
 \begin_inset Float figure
 placement H
@@ -8667,9 +9270,12 @@ Quindi, dato che la FCN è lineare, può essere rappresentata come una convoluzi
 e di L filtri di dimensione 1x1xN.
  Ognuno di questi filtri convoluzionali contiene i pesi della FCN per il
  corrispondente neurone in output.
- Per ogni classe in output, otteniamo quindi un'immagine avente una risoluzione
- più bassa rispetto a quella dell'immagine in input e probabilità delle
- classi per il campo recettivo di ogni pixel.
+ Per ogni classe in output, otteniamo quindi un'immagine (
+\series bold
+heatmap
+\series default
+) avente una risoluzione più bassa rispetto a quella dell'immagine in input
+ e probabilità delle classi per il campo recettivo di ogni pixel.
 \end_layout
 
 \begin_layout Standard
@@ -8726,19 +9332,30 @@ Esempio di heatmap (sopra), Direct Heatmap Predictions (sotto)
 
 \begin_layout Standard
 \noindent
-Le Fully-Convolutional Neural Networks sono dunque un mezzo per effettuare
- predizioni su immagini di dimensione arbitraria.
+Le 
+\series bold
+Fully-Convolutional Neural Networks
+\series default
+ sono dunque un mezzo per effettuare predizioni su immagini di dimensione
+ arbitraria.
  Ci sono varie soluzioni per segmentare le immagini tramite FCNN:
 \end_layout
 
 \begin_layout Enumerate
-Direct Heatmap Predictions: possiamo assegnare l'etichetta predetta nella
- heatmap all'intero campo recettivo, nonostante questa sarebbe una stima
- molto grossolana
+
+\series bold
+Direct Heatmap Predictions
+\series default
+: possiamo assegnare l'etichetta predetta nella heatmap all'intero campo
+ recettivo, nonostante questa sarebbe una stima molto grossolana
 \end_layout
 
 \begin_layout Enumerate
-Shift and Stich: assumiamo che ci sia un ratio 
+
+\series bold
+Shift and Stich
+\series default
+: assumiamo che ci sia un ratio 
 \emph on
 f
 \emph default
@@ -8782,7 +9399,11 @@ frapponiamo le heatmap per formare un immagine larga quanto l'input
 
 \end_deeper
 \begin_layout Enumerate
-solo convoluzioni: campo recettivo piccolo e metodo molto inefficiente
+
+\series bold
+solo convoluzioni
+\series default
+: campo recettivo piccolo e metodo molto inefficiente
 \end_layout
 
 \begin_layout Standard
@@ -8876,18 +9497,29 @@ g delle predizioni per coprire ogni pixel dell'immagine (convoluzioni +
 
 \begin_layout Standard
 \noindent
-Per fare l'upsampling possiamo usare 2 metodi:
+Per fare 
+\series bold
+l'upsampling
+\series default
+ possiamo usare 2 metodi:
 \end_layout
 
 \begin_layout Itemize
-Nearest Neighbor: si riempiono tutti i pixel del layer di output col valore
- del corrispettivo pixel del layer di input
+
+\series bold
+Nearest Neighbor
+\series default
+: si riempiono tutti i pixel del layer di output col valore del corrispettivo
+ pixel del layer di input
 \end_layout
 
 \begin_layout Itemize
-Bed of Nails: si riempiono tutti i pixel del layer di output con degli 0,
- eccetto un pixel che avrà il valore del corrispettivo pixel del layer in
- input
+
+\series bold
+Bed of Nails
+\series default
+: si riempiono tutti i pixel del layer di output con degli 0, eccetto un
+ pixel che avrà il valore del corrispettivo pixel del layer in input
 \end_layout
 
 \begin_layout Standard
@@ -8930,8 +9562,11 @@ UpSampling
 \begin_layout Standard
 \noindent
 Per mantenere anche le informazioni delle posizioni dei pixel, usiamo un
- meccanismo chiamato Max Unpooling (l'inverso del Max Pooling, vedi figura
- sotto).
+ meccanismo chiamato 
+\series bold
+Max Unpooling
+\series default
+ (l'inverso del Max Pooling, vedi figura sotto).
 \end_layout
 
 \begin_layout Standard
@@ -8972,7 +9607,7 @@ Max Unpooling
 \noindent
 Inoltre possiamo anche fare una convoluzione trasposta, che è esattamente
  l'operazione reciproca della convoluzione.
- L'unico problema sta nei pixel che overlappano, ma la soluzione consiste
+ L'unico problema sta nei pixel che si sovrappongono, ma la soluzione consiste
  nel fare una somma pesata tra i pixel in input e la parte di filtro compresa
  nella regione di overlap.
 \end_layout
@@ -9025,7 +9660,11 @@ Convoluzione trasposta (stride = 2)
 I filtri di upsampling possono essere appresi durante il training con un'inizial
 izzazione uguale all'interpolazione bilineare.
  Le predizioni derivate dall'upsampling sono comunque troppo grossolane.
- La soluzione a questo problema è quella di usare delle Skip Connections.
+ La soluzione a questo problema è quella di usare delle 
+\series bold
+Skip Connections
+\series default
+.
  Queste integrano una tradizionale rete di contrazione dove la convoluzione
  è rimpiazzata dalla convoluzione trasposta.
 \end_layout
@@ -9065,11 +9704,15 @@ Skip connections
 \end_layout
 
 \begin_layout Paragraph
-Come allenare una FCNN
+Metodi per allenare una FCNN
 \end_layout
 
 \begin_layout Enumerate
-modo Patch-Based: eseguiamo i seguenti step:
+
+\series bold
+Patch-Based
+\series default
+: eseguiamo i seguenti step:
 \end_layout
 
 \begin_deeper
@@ -9122,9 +9765,12 @@ i batch sono poi randomicamente assemblati durante il training
 
 \end_deeper
 \begin_layout Enumerate
-modo Full-Image: è possibile allenare direttamente una FCNN che include
- i layer di upsampling, quindi il learning diventa la seguente minimizzazione
- 
+
+\series bold
+Full-Image
+\series default
+: è possibile allenare direttamente una FCNN che include i layer di upsampling,
+ quindi il learning diventa la seguente minimizzazione 
 \begin_inset Formula 
 \begin{equation}
 min_{x_{j}\in I}\sum_{x_{j}}l(\boldsymbol{x_{j}},\theta)
@@ -9147,8 +9793,11 @@ dove
 \emph default
 sono i pizel in una regione dell'immagine di input e la funzione di errore
  è valutata sulle etichette corrispondenti nell'annotazione.
- Tale metodo è chiamato anche ''metodo end-to-end'' ed è più efficiente
- del Patch-Based.
+ Tale metodo è chiamato anche ''
+\shape italic
+metodo end-to-end
+\shape default
+'' ed è più efficiente del Patch-Based.
 \end_layout
 
 \end_deeper
@@ -9157,8 +9806,16 @@ U-Net
 \end_layout
 
 \begin_layout Standard
-La U-Net è formata da una parte contrattiva e una parte espansiva e non
- ha FC layers (è simmetrica).
+La 
+\series bold
+U-Net
+\series default
+ è formata da una parte contrattiva e una parte espansiva e non ha FC layers
+ (è 
+\series bold
+simmetrica
+\series default
+).
  Essa usa un gran numero di feature maps nella parte di downsampling e usa
  molta data augmentation.
 \end_layout
@@ -9184,7 +9841,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+U-Net
 \end_layout
 
 \end_inset
@@ -9199,7 +9856,11 @@ status open
 
 \begin_layout Standard
 \noindent
-Nella parte di contrazione, la rete ripete blocchi aventi:
+Nella parte di 
+\series bold
+contrazione
+\series default
+, la rete ripete blocchi aventi:
 \end_layout
 
 \begin_layout Itemize
@@ -9221,7 +9882,11 @@ A ogni downsampling, inoltre, il numero di feature maps è raddoppiato.
 
 \begin_layout Standard
 \noindent
-Nella parte di espansione, la rete ripete blocchi aventi:
+Nella parte di 
+\series bold
+espansione
+\series default
+, la rete ripete blocchi aventi:
 \end_layout
 
 \begin_layout Itemize
@@ -9238,19 +9903,39 @@ concatenazione delle cropped features corrispondenti
 \end_layout
 
 \begin_layout Standard
-Il risultato è un'immagine in outputpiù piccola di quella in input.
+Il risultato è un'immagine in output più piccola di quella in input.
 \end_layout
 
 \begin_layout Standard
 \noindent
-La U-Net usa il metodo di training Full-Image con una funzione di errore
- pesata
+La rete U-Net usa il metodo di training Full-Image con 
+\series bold
+una funzione di errore
+\series default
+ pesata (
+\series bold
+NB
+\series default
+.
+ È la funzione appositamente formulata per la segmentazioni di immagini
+ biomediche per cui U-Net è stata pensata 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://arxiv.org/pdf/1505.04597.pdf
+\end_layout
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\hat{\theta}=min_{\theta}\sum_{x_{j}}w(\boldsymbol{x_{j}})l(\boldsymbol{x_{j}},\theta)
+\hat{\theta}=min_{\theta}\sum_{x_{j}}w(\boldsymbol{x_{j}})log(\boldsymbol{x_{j}},\theta)
 \end{equation}
 
 \end_inset
@@ -9284,12 +9969,12 @@ In quest'ultima relazione,
 \begin_inset Formula $d_{1}$
 \end_inset
 
-è la distanza tra il bordo e la cella più vicina, mentre 
+è la distanza tra il bordo e la cellula più vicina, mentre 
 \begin_inset Formula $d_{2}$
 \end_inset
 
-è la distanza tra il bordo e la seconda cella più vicina (i pesi sono più
- grandi quando la distanza dalle due celle più vicine al bordo è piccola).
+è la distanza tra il bordo e la seconda cellula più vicina (i pesi sono
+ più grandi quando la distanza dalle due celle più vicine al bordo è piccola).
  Inoltre, il primo termine dell'equazione tiene conto dello sbilanciamento
  delle classi nel training set, mentre il secondo migliora la performance
  della classificazione ai bordi di oggetti diversi tra loro.
@@ -9303,9 +9988,12 @@ Global Averaging Pooling
 L'idea principale consiste nell'usare, anzichè le convoluzioni tradizionali,
  uno stack di convoluzioni 1x1 + ReLU, che corrisponde alle reti di MLP
  usate in maniera scorrevole su tutta l'immagine.
- Viene quindi introdotto il Global Averaging Pooling layer, che calcola
- la media di ogni feature map al posto del FC layer alla fine della rete
- e predire usando una semplice softmax.
+ Viene quindi introdotto il 
+\series bold
+Global Averaging Pooling layer
+\series default
+, che calcola la media di ogni feature map al posto del FC layer alla fine
+ della rete e predire usando una semplice softmax.
  L'importante è che il numero di feature maps sia uguale al numero di classi
  in output.
  Tra i vantaggi di questo layer vi è quello di riuscire a classificare immagini
@@ -9314,7 +10002,11 @@ L'idea principale consiste nell'usare, anzichè le convoluzioni tradizionali,
 
 \begin_layout Standard
 \noindent
-In pratica è come se avessimo una rete nella rete (NiN) composta da:
+In pratica è come se avessimo una
+\series bold
+ rete nella rete (NiN)
+\series default
+ composta da:
 \end_layout
 
 \begin_layout Itemize
@@ -9379,8 +10071,11 @@ Weakly-Supervised Localization
 
 \begin_layout Standard
 \noindent
-La Weakly-Supervised Localization effettua una localizzazione su un'immagine
- senza box di contorno annotati.
+La 
+\series bold
+Weakly-Supervised Localization
+\series default
+ effettua una localizzazione su un'immagine senza box di contorno annotati.
  Il training set è fornito come per la classificazione con coppie <immagine,
  etichetta> (
 \emph on
@@ -9407,8 +10102,11 @@ I vantaggi del GAP layer vanno oltre al semplice agire come regolarizzatore
  localizzare con successo le regioni discriminative per la classificazione
  contenenti gli oggetti con cui gli umani interagiscono piuttosto che gli
  umani stessi.
- Ciò viene fatto tramite una tecnica chiamata Class Activation Mapping (CAM),
- che permette di identificare quali regioni di un'immagine verranno usare
+ Ciò viene fatto tramite una tecnica chiamata 
+\series bold
+Class Activation Mapping (CAM)
+\series default
+, che permette di identificare quali regioni di un'immagine verranno usate
  per la discriminazione.
  Essa richiede solo un FC layer dopo il GAP e una piccola regolarizzazione.
  Tale layer calcola lo score 
@@ -9466,7 +10164,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+CAM
 \end_layout
 
 \end_inset
@@ -9603,8 +10301,15 @@ Grad-CAM
 \noindent
 CAM ha il grande svantaggio di dover modificare la rete per poter predire
  un'altra classe.
- Una tecnica che risolve questo problema è la Grad-CAM, la quale usa il
- gradiente per calcolare la heatmap a bassa risoluzione 
+ Una tecnica che risolve questo problema è la 
+\series bold
+Grad-CAM
+\series default
+, la quale usa il 
+\series bold
+gradiente
+\series default
+ per calcolare la heatmap a bassa risoluzione 
 \begin_inset Formula $\boldsymbol{g^{c}}$
 \end_inset
 
@@ -9683,8 +10388,15 @@ Consideriamo l'operatore di augmentation
 x
 \series default
 .
- L'Augmented Grad-CAM incrementa la risoluzione delle heatmap tramite image
- augmentation.
+ L
+\series bold
+'Augmented Grad-CAM
+\series default
+ incrementa la risoluzione delle heatmap tramite 
+\series bold
+image augmentation
+\series default
+.
  Tutte le risposte generate dalla CNN alle versioni multiple augmentate
  della stessa immagine di input hanno molte informazioni per la ricostruzione
  della heatmap 
@@ -9730,19 +10442,22 @@ Augmented Grad-CAM
 
 \begin_layout Standard
 \noindent
-Viene fatta la cosiddetta Super-Resolution (SR) della heatmap sfruttando
- le informazioni condivise nelle heatmap a bassa risoluzione calcolate dallo
- stess input sotto diverse, ma note, trasformazioni.
+Viene fatta la cosiddetta 
+\series bold
+Super-Resolution (SR)
+\series default
+ della heatmap sfruttando le informazioni condivise nelle heatmap a bassa
+ risoluzione calcolate dallo stess input sotto diverse, ma note, trasformazioni.
  Le CNN sono in generale invarianti alle rototraslazioni, in termini di
  predizioni, ma ogni heatmap a bassa risoluzione
 \series bold
-
+ 
 \begin_inset Formula $\boldsymbol{g_{l}}$
 \end_inset
 
 
 \series default
-contiene di fatto diverse informazioni.
+ contiene di fatto diverse informazioni.
  Modelliamo le heatmap calcolate col Grad-CAM come risultato di un operatore
  di downsampling sconosciuto 
 \begin_inset Formula $\mathcal{\boldsymbol{D}}:\mathbb{R}^{\mathrm{N\mathbin{x}M}}\rightarrow\mathbb{R^{\mathrm{N\mathbin{x}M}}}$
@@ -9777,10 +10492,28 @@ TV_{l_{1}}(\boldsymbol{h})=\sum_{i,j}\bigparallel\partial_{x}\boldsymbol{h}(i,j)
 
 \end_inset
 
-è la regolarizzazione Anistropic Total Variation usata per preservare i
- bordi della heatmap target ad alta risoluzione.
- Questo viene risolto tramite Subgradient Descent dato che la funzione è
- convessa e non-smooth (non differenziabile e discontinua).
+è la 
+\series bold
+regolarizzazione Anistropic Total Variation
+\series default
+ usata per preservare i bordi della heatmap target ad alta risoluzione.
+ Questo viene risolto tramite 
+\series bold
+Subgradient Descent
+\series default
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Subderivative#The_subgradient
+\end_layout
+
+\end_inset
+
+) dato che la funzione è convessa e non-smooth (non differenziabile e discontinu
+a).
 \end_layout
 
 \begin_layout Chapter
@@ -9805,7 +10538,11 @@ statici
 \begin_inset Quotes fld
 \end_inset
 
+
+\shape italic
 dinamici
+\shape default
+
 \begin_inset Quotes frd
 \end_inset
 
@@ -9813,13 +10550,20 @@ dinamici
 \end_layout
 
 \begin_layout Itemize
-modelli senza memoria 
+
+\series bold
+modelli senza memoria
+\series default
+ 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-modelli autoregressivi: predicono il prossimo input a partire dal precedente
- sfruttando dei 
+
+\series bold
+modelli autoregressivi
+\series default
+: predicono il prossimo input a partire dal precedente sfruttando dei 
 \begin_inset Quotes fld
 \end_inset
 
@@ -9831,8 +10575,11 @@ ritardi
 \end_layout
 
 \begin_layout Itemize
-Feed Forward Neural Networks: generalizzano i modelli autoregressivi usando
- layer nascosti non-lineari
+
+\series bold
+Feed Forward Neural Networks
+\series default
+: generalizzano i modelli autoregressivi usando layer nascosti non-lineari
 \end_layout
 
 \end_deeper
@@ -9875,13 +10622,20 @@ Modello autoregressivo (sopra), FFNN (sotto)
 \end_layout
 
 \begin_layout Itemize
-modelli con memoria (sistemi dinamici lineari, Hidden Markov models, Recurrent
- Neural Networks)
+
+\series bold
+modelli con memoria
+\series default
+ (sistemi dinamici lineari, Hidden Markov models, Recurrent Neural Networks)
 \end_layout
 
 \begin_layout Standard
-I sistemi dinamici sono modelli generativi con uno stato nascosto che non
- può essere osservato direttamente.
+I 
+\series bold
+sistemi dinamici
+\series default
+ sono modelli generativi con uno stato nascosto che non può essere osservato
+ direttamente.
  Tale stato ha delle dinamiche che possono essere affette da rumore e produce
  l'output.
 \end_layout
@@ -9892,8 +10646,16 @@ Sistemi dinamici lineari
 
 \begin_layout Standard
 \noindent
-Nei sistemi dinamici lineari ciò si traduce nell'avere uno stato continuo
- con incertezza Gaussiana che può essere stimato usando il Kalman filtering.
+Nei 
+\series bold
+sistemi dinamici lineari
+\series default
+ ciò si traduce nell'avere uno stato continuo con incertezza Gaussiana che
+ può essere stimato usando il 
+\series bold
+Kalman filtering
+\series default
+.
  Le trasformazioni sono assunte essere lineari.
 \end_layout
 
@@ -9902,9 +10664,19 @@ Hidden Markov models
 \end_layout
 
 \begin_layout Standard
-Negli HMM lo stato è assunto come discreto e può essere stimato tramite
- l'algoritmo di Viterbi, mentre le transizioni sono stocastiche (si usa
- la cosiddetta ''matrice di transizione'').
+Negli 
+\series bold
+HMM
+\series default
+ lo stato è assunto come discreto e può essere stimato tramite 
+\series bold
+l'algoritmo di Viterbi
+\series default
+, mentre le transizioni sono 
+\shape italic
+stocastiche
+\shape default
+ (si usa la cosiddetta ''matrice di transizione'').
  L'output è una funzione stocastica degli stati nascosti.
 \end_layout
 
@@ -9913,8 +10685,15 @@ Recurrent Neural Networks
 \end_layout
 
 \begin_layout Standard
-Le reti neurali ricorrenti usano la memoria tramite delle connessioni chiamate
- connessioni ricorrenti.
+Le 
+\series bold
+reti neurali ricorrenti
+\series default
+ implementano la memoria tramite delle connessioni chiamate 
+\series bold
+connessioni ricorrenti
+\series default
+.
  Inoltre, gli stati distribuiti consentono di salvare efficentemente le
  informazioni, mentre le dinamiche non-lineari consentono di aggiornare
  stati nascosti complessi.
@@ -9969,8 +10748,15 @@ Rete neurale ricorrente
 \begin_layout Standard
 \noindent
 Nella figura sopra sono raffigurati due tipi di neuroni: quelli grigi, che
- dipendono dall'input corrente, e quelli blu, che dipendono dalla storia
- della rete.
+ dipendono dall'
+\series bold
+input corrente
+\series default
+, e quelli blu, che dipendono dalla 
+\series bold
+storia della rete
+\series default
+.
  Inoltre abbiamo dei parametri nuovi chiamati:
 \end_layout
 
@@ -10048,7 +10834,11 @@ g^{t}(x_{n}|w)=g\left(\sum_{j=0}^{J}w_{1j}^{(2)}\cdot h_{j}^{t}(\cdot)+\sum_{b=0
 
 \begin_layout Standard
 \noindent
-La rete nascosta è chiamata context network e contiene 
+La rete nascosta è chiamata 
+\series bold
+context network
+\series default
+ e contiene 
 \emph on
 B
 \emph default
@@ -10064,7 +10854,11 @@ J
 
 \begin_layout Standard
 \noindent
-La tecnica usata per allenarla è chiamata Backpropagation Through Time.
+La tecnica usata per allenarla è chiamata 
+\series bold
+Backpropagation Through Time
+\series default
+.
  Gli step che la compongono sono:
 \end_layout
 
@@ -10272,7 +11066,11 @@ Vanishing Gradient
 
 \begin_layout Standard
 Le RNN non riescono ad andare indietro nel passato per più di 10 step a
- causa del cosiddetto effetto del Vanishing Gradient.
+ causa del cosiddetto effetto del 
+\series bold
+Vanishing Gradient
+\series default
+.
  Per spiegarlo proviamo a semplificare la RNN come nella figura sotto.
 \end_layout
 
@@ -10398,9 +11196,12 @@ dove se
 \end_inset
 
  e vale 1 se usiamo una ReLU.
- Usando sigmoide o Tanh otteniamo il cosiddetto Vanishing Gradient, che
- dimostra che più si va indietro nel passato, più il gradiente tenderà a
- 0 indipendentemente dall'errore.
+ Usando sigmoide o Tanh otteniamo il cosiddetto 
+\series bold
+Vanishing Gradient
+\series default
+, che dimostra che più si va indietro nel passato, più il gradiente tenderà
+ a 0 indipendentemente dall'errore.
  Basandosi sullo stesso principio, se 
 \begin_inset Formula $v^{(1)}>1$
 \end_inset
@@ -10409,7 +11210,11 @@ dove se
 \begin_inset Quotes fld
 \end_inset
 
+
+\shape italic
 esplosione
+\shape default
+
 \begin_inset Quotes frd
 \end_inset
 
@@ -10418,9 +11223,20 @@ esplosione
 
 \begin_layout Standard
 \noindent
-Per risolvere questo problema si può usare la ReLu, che forza tutti i gradienti
+Per risolvere questo problema si può usare la ReLU, che forza tutti i gradienti
  ad essere 0 o 1.
- Derivando la (4) otteniamo infatti che:
+ Infatti ricordiamo che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+ReLU(x)=f(x)=max(0,x)
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10446,8 +11262,11 @@ Long Short-Term Memories
 
 \begin_layout Standard
 Nel 1997, Hochreiter&Schmidhuber hanno risolto il problema del vanishing
- gradient disegnando una cella di memoria che usa unità logistiche e lineari
- con interazioni moltiplicative.
+ gradient disegnando una 
+\series bold
+cella di memoria
+\series default
+ che usa unità logistiche e lineari con interazioni moltiplicative.
  L'informazione entra nella cella quando il suo gate di 
 \emph on
 ''write''
@@ -10512,11 +11331,19 @@ LSTM
 
 \begin_layout Standard
 \noindent
-La LSTM è composta da:
+La 
+\series bold
+LSTM
+\series default
+ è composta da:
 \end_layout
 
 \begin_layout Itemize
-un input gate (ci dice quanto teniamo in memoria)
+un 
+\series bold
+input gate
+\series default
+ (ci dice quanto teniamo in memoria)
 \begin_inset Formula 
 \begin{equation}
 i_{t}=\sigma\left(W_{i}\cdot\left[h_{t-1},x_{t}\right]+b_{i}\right)
@@ -10575,11 +11402,11 @@ Input gate
 
 \end_deeper
 \begin_layout Itemize
-un forget gate (se 
-\begin_inset Formula $x_{t}=0\rightarrow$
-\end_inset
-
- forget, altrimenti manteniamo in memoria)
+un 
+\series bold
+forget gate
+\series default
+ 
 \begin_inset Formula 
 \begin{equation}
 f_{t}=\sigma\left(W_{f}\cdot\left[h_{t-1},x_{t}\right]+b_{f}\right)
@@ -10630,7 +11457,11 @@ Forget gate
 
 \end_deeper
 \begin_layout Itemize
-un memory gate
+un 
+\series bold
+memory gate
+\series default
+
 \begin_inset Formula 
 \begin{equation}
 C_{t}=f_{t}\ast C_{t-1}+i_{t}\ast\tilde{C_{t}}
@@ -10681,7 +11512,11 @@ Memory gate
 
 \end_deeper
 \begin_layout Itemize
-un output gate
+un 
+\series bold
+output gate
+\series default
+
 \begin_inset Formula 
 \begin{equation}
 o_{t}=\sigma\left(W_{o}\cdot\left[h_{t-1},x_{t}\right]+b_{o}\right)
@@ -10743,7 +11578,11 @@ Output gate
 Possiamo quindi costruire un grafo computazionale con trasformazioni continue
  come nella figura sotto.
  In pratica le LSTM funzionano come i layer convoluzionali nelle CNN perchè
- sono una sorta di estrattori di features.
+ sono una sorta di 
+\shape italic
+estrattori di features
+\shape default
+.
 \end_layout
 
 \begin_layout Standard
@@ -10782,7 +11621,10 @@ LSTM in sequenza (le parti nei riquadri neri sono i layer nascosti)
 
 \begin_layout Standard
 \noindent
-Un altro approccio possibile consiste nell'usare reti LSTM bidirezionali
+Un altro approccio possibile consiste nell'usare reti 
+\series bold
+LSTM bidirezionali
+\series default
  che sfruttano l'intera sequenza in input.
  Sono composte da una RNN che attraversa l'intera sequenza da sinistra a
  destra e da una RNN che attraversa l'intera sequenza da destra a sinistra.
@@ -10802,8 +11644,16 @@ Gated Recurrent Unit
 \end_layout
 
 \begin_layout Standard
-La GRU combina i gate di input e forget in un unico ''update gate'' e fa
- un merge tra lo stato della cella e lo stato nascosto (più altri cambiamenti).
+La 
+\series bold
+GRU
+\series default
+ combina i gate di input e forget in un unico ''
+\series bold
+update gate
+\series default
+'' e fa un merge tra lo stato della cella e lo stato nascosto (più altri
+ cambiamenti).
  Le parti che caratterizzano tale unità sono:
 \end_layout
 
@@ -10891,28 +11741,48 @@ Modellazione Sequence to Sequence
 \end_layout
 
 \begin_layout Standard
-Il sequence modeling risolve vari problemi in base all'architettura usata.
+Il 
+\series bold
+sequence modeling
+\series default
+ risolve vari problemi in base all'architettura usata.
  Le architetture possibili sono:
 \end_layout
 
 \begin_layout Itemize
-uno a uno: un input di dimensione fissa viene trasformato in un output di
- dimensione fissata (es.: image classification)
+
+\series bold
+uno a uno
+\series default
+: un input di dimensione fissa viene trasformato in un output di dimensione
+ fissata (es.: image classification)
 \end_layout
 
 \begin_layout Itemize
-uno a molti: output sequenziale (es.: captioning delle immagini che prende
- un'immafine in input e produce in output una sequenza di parole)
+
+\series bold
+uno a molti
+\series default
+: output sequenziale (es.: captioning delle immagini che prende un'immafine
+ in input e produce in output una sequenza di parole)
 \end_layout
 
 \begin_layout Itemize
-molti a uno: input sequenziale (es.: analisi dei sentimenti dove una data
- frase viene classificata sulla base della positività o negatività dei sentiment
-i che esprime)
+
+\series bold
+molti a uno
+\series default
+: input sequenziale (es.: analisi dei sentimenti dove una data frase viene
+ classificata sulla base della positività o negatività dei sentimenti che
+ esprime)
 \end_layout
 
 \begin_layout Itemize
-molti a molti:
+
+\series bold
+molti a molti
+\series default
+:
 \end_layout
 
 \begin_deeper
@@ -10966,9 +11836,12 @@ Architetture seq2seq
 
 \begin_layout Standard
 \noindent
-Il modello seq2seq segue la classica architettura encoder-decoder, in cui
- durante la fase di inferenza (e non durante il training) il decoder dà
- in pasto l'output di ogni istante di tempo all'input successivo.
+Il modello seq2seq segue la classica 
+\series bold
+architettura encoder-decoder
+\series default
+, in cui durante la fase di inferenza (e non durante il training) il decoder
+ dà in pasto l'output di ogni istante di tempo all'input successivo.
 \end_layout
 
 \begin_layout Standard
@@ -11011,10 +11884,29 @@ Architettura Encoder-Decoder
 
 \begin_layout Standard
 \noindent
-Il processo di training è caratterizzato da una trasformazione delle parole
- a identificativi e da una fase di embedding.
- Il processo di inferenza (testing) è caratterizzato da una prima fase di
- embedding e da una trasformazione di identificativi in parole.
+Il processo di 
+\shape italic
+training
+\shape default
+ è caratterizzato da una 
+\series bold
+trasformazione
+\series default
+ delle parole a identificativi e da una fase di 
+\series bold
+embedding
+\series default
+.
+ Il processo di inferenza (testing) è caratterizzato anch'esso da una prima
+ fase di 
+\series bold
+embedding
+\series default
+ e da una 
+\series bold
+trasformazione
+\series default
+ di identificativi in parole.
  La fase di embedding consiste nella rappresentazione delle parole usando
  un vettore di parole (vocabolario) denso.
  L'encoder può essere una RNN così come una CNN, ad esempio nel caso di
@@ -11023,7 +11915,11 @@ Il processo di training è caratterizzato da una trasformazione delle parole
 
 \begin_layout Standard
 \noindent
-Vi sono inoltre dei caratteri speciali che vengono dati in input al decoder:
+Vi sono inoltre dei 
+\series bold
+caratteri speciali
+\series default
+ che vengono dati in input al decoder:
 \end_layout
 
 \begin_layout Itemize
@@ -11051,7 +11947,11 @@ Vi sono inoltre dei caratteri speciali che vengono dati in input al decoder:
 \end_layout
 
 \begin_layout Standard
-La preparazione dei batch si compone dei seguenti step:
+La 
+\series bold
+preparazione dei batch
+\series default
+ si compone dei seguenti step:
 \end_layout
 
 \begin_layout Enumerate
@@ -11083,8 +11983,12 @@ sostituire i token OOV (out of vocabulary) con <UNK> e calcolare la lunghezza
 \end_layout
 
 \begin_layout Standard
-Il modello seq2seq ci dice quindi che, data una coppia <S,T>, legge S e
- restituisce in output T' che corrisponda a T.
+Il 
+\series bold
+modello seq2seq
+\series default
+ ci dice quindi che, data una coppia <S,T>, legge S e restituisce in output
+ T' che corrisponda a T.
  In pratica il problema riguarda la probabilità di ottenere una sequenza
  in output data una sequenza in input:
 \end_layout
@@ -11107,8 +12011,11 @@ dove
 v 
 \emph default
 è lo stato nascosto.
- Quindi, tale problema si riconduce alla massimizzazione della crossentropy
- media:
+ Quindi, tale problema si riconduce alla 
+\series bold
+massimizzazione della crossentropy media
+\series default
+:
 \end_layout
 
 \begin_layout Standard
@@ -11127,8 +12034,11 @@ Macchine neurali di Turing
 \end_layout
 
 \begin_layout Standard
-Le Neural Turing Machines combinano una RNN con una banca di memoria esterna,
- cioè un array di vettori.
+Le 
+\series bold
+Neural Turing Machines
+\series default
+ combinano una RNN con una banca di memoria esterna, cioè un array di vettori.
  La rete principale scrive su e legge da questa memoria a ogni step.
 \end_layout
 
@@ -11175,11 +12085,21 @@ Neural Turing Machine
 La sfida è quella di imparare cosa scrivere/leggere e dove scrivere/leggere.
  La soluzione è quella di, a ogni step, leggere e scrivere ovunque ma con
  diversa misura.
- Tale meccanismo è chiamato attention mechanism e si basa sul porre l'attenzione
+ Tale meccanismo è chiamato 
+\series bold
+attention mechanism
+\series default
+ e si basa sul porre l'
+\series bold
+attenzione
+\series default
  su una specifica parte della memoria per produrre l'output.
- In pratica la RNN dà una distribuzione di attenzione (dettata dalla softmax)
- che descrive come distribuiamo in memoria ciò che ci interessa (vedi figura
- sotto).
+ In pratica la RNN dà una 
+\series bold
+distribuzione di attenzione
+\series default
+ (dettata dalla softmax) che descrive come distribuiamo in memoria ciò che
+ ci interessa (vedi figura sotto).
 \end_layout
 
 \begin_layout Standard
@@ -11303,19 +12223,33 @@ Meccanismo di attenzione
 
 \begin_layout Standard
 \noindent
-Vi sono due componenti principali in una Neural Turing Machine: l'attention
- mechanism e il RNN controller.
+Vi sono due componenti principali in una Neural Turing Machine: l'
+\series bold
+attention mechanism
+\series default
+ e il 
+\series bold
+RNN controller
+\series default
+.
  L'architettura è inoltre divisa in due parti: 
 \end_layout
 
 \begin_layout Itemize
-content-based attention: cerca in memoria e si concentra su posti che corrispond
-ono a ciò che si sta cercando
+
+\series bold
+content-based attention
+\series default
+: cerca in memoria e si concentra su posti che corrispondono a ciò che si
+ sta cercando
 \end_layout
 
 \begin_layout Itemize
-location-based attention: consente il movimento relativo nella memoria,
- abilitando la NTM a ciclare
+
+\series bold
+location-based attention
+\series default
+: consente il movimento relativo nella memoria, abilitando la NTM a ciclare
 \end_layout
 
 \begin_layout Standard
@@ -11356,20 +12290,41 @@ Attention in una NMT
 
 \begin_layout Standard
 \noindent
-Innanzitutto, il controller dà un query vector (output della RNN, usato
- come meccanismo di indirizzamento) all'attention mechanism e a ogni entry
- in memoria viene assegnato un punteggio basandosi sulla similarità con
- il vettore.
- I punteggi vengono quindi convertiti in una distribuzione usando la softmax.
- Poi si interpola il risultato della softmax con l'attention generata dallo
- step precedente, tenendo conto di un interpolation amount che rappresenta
- la velocità di interpolazione, che è un parametro predetto dalla RNN (vedi
- figura 5.17: se è 0 si prende solo A, se è 1 si prende solo B).
+Innanzitutto, il controller dà un 
+\series bold
+query vector
+\series default
+ (output della RNN, usato come meccanismo di indirizzamento) all'attention
+ mechanism e a ogni entry in memoria viene assegnato un punteggio basandosi
+ sulla similarità con il vettore.
+ I punteggi vengono quindi convertiti in una 
+\series bold
+distribuzione
+\series default
+ di probabilità usando la softmax.
+ Poi si 
+\series bold
+interpola
+\series default
+ il risultato della softmax con l'attention generata dallo step precedente,
+ tenendo conto di un 
+\series bold
+interpolation amount
+\series default
+ che rappresenta la velocità di 
+\shape italic
+interpolazione
+\shape default
+, che è un parametro predetto dalla RNN (vedi figura 5.17: se è 0 si prende
+ solo A, se è 1 si prende solo B).
  Fatto ciò, viene effettuata una convoluzione tra l'attenzione e un filtro
  di shift, che consente al controller di spostare il focus dell'attention
  mechanism su una particolare zona.
- Infine, si affina la distribuzione dell'attention, che viene poi data in
- pasto all'operazione di read o write.
+ Infine, si affina la 
+\series bold
+distribuzione dell'attention
+\series default
+, che viene poi data in pasto all'operazione di read o write.
 \end_layout
 
 \begin_layout Standard
@@ -11392,17 +12347,33 @@ Il ruolo del decoder è quello di modellare la probabilità generativa
 \end_inset
 
 .
- Nei modelli seq2seq ''vanilla'' (convenzionali), il decoder viene condizionato
- inizializzando lo stato iniziale con l'ultimo stato dell'encoder.
+ Nei modelli seq2seq 
+\shape italic
+''vanilla''
+\shape default
+ (convenzionali), il decoder viene condizionato inizializzando lo stato
+ iniziale con l'ultimo stato dell'encoder.
  Ciò funziona bene per frasi medio-corte, mentre per frasi lunghe ciò diventa
- un bottleneck.
+ un 
+\shape italic
+bottleneck
+\shape default
+.
 \end_layout
 
 \begin_layout Standard
 \noindent
-La funzione di attention mappa il query vector e l'insieme di coppie chiave-valo
-re a un output, che è calcolato come la somma pesata dei valori, dove il
- peso assegnato a ogni valore è calcolato da una funzione di compatibilità.
+La 
+\series bold
+funzione di attention
+\series default
+ mappa il query vector e l'insieme di coppie chiave-valore a un output,
+ che è calcolato come la somma pesata dei valori, dove il peso assegnato
+ a ogni valore è calcolato da una 
+\series bold
+funzione di compatibilità
+\series default
+.
  Tale funzione:
 \end_layout
 
@@ -11411,7 +12382,7 @@ compara lo stato nascosto corrente
 \begin_inset Formula $h_{t},$
 \end_inset
 
-con stati di origine h
+ con stati di origine h
 \begin_inset Formula $_{s}$
 \end_inset
 
@@ -11444,7 +12415,11 @@ applica la softmax sugli score e calcola i pesi dell'attention, uno per
 \end_layout
 
 \begin_layout Enumerate
-calcola il context vector come media pesata degli stati di origine:
+calcola il 
+\series bold
+context vector
+\series default
+ come media pesata degli stati di origine:
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{c_{t}=}\sum_{s}\alpha_{ts}\boldsymbol{\bar{h_{s}}}
@@ -11516,7 +12491,11 @@ source
 \color blue
 target 
 \color inherit
-si può usare la cosiddetta alignment matrix.
+si può usare la cosiddetta 
+\series bold
+alignment matrix
+\series default
+.
  Per ogni passo di decodifica (cioè per ogni token target generato) descrive
  quali sono i token di origine che sono più presenti nella somma pesata
  e che hanno quindi condizionato la decodifica.
@@ -11575,36 +12554,60 @@ Chatbot
 \end_layout
 
 \begin_layout Standard
-I chatbot possono essere definiti lungo due dimensioni:
+I 
+\series bold
+chatbot
+\series default
+ possono essere definiti lungo due dimensioni:
 \end_layout
 
 \begin_layout Itemize
-l'algoritmo core:
+l'
+\series bold
+algoritmo core
+\series default
+:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-generativo: codifica la domanda in un context vector e genera la risposta
- parola per parola usando la distribuzione della probabilità condizionata
- sul vocabolario della risposta (modello encoder-decoder) 
+
+\series bold
+generativo
+\series default
+: codifica la domanda in un context vector e genera la risposta parola per
+ parola usando la distribuzione della probabilità condizionata sul vocabolario
+ della risposta (modello encoder-decoder) 
 \end_layout
 
 \begin_layout Itemize
-retrieval: si basa sulla conoscenza di base delle coppie domanda-risposta,
- cioè quando viene fatta una nuova domanda, la fase di inferenza la codifica
- in un context vector e recupera, usando misure di similarità, i top-k nearest
- neighbours basandosi sulla conoscenza di base posseduta
+
+\series bold
+retrieval
+\series default
+: si basa sulla conoscenza di base delle coppie domanda-risposta, cioè quando
+ viene fatta una nuova domanda, la fase di inferenza la codifica in un context
+ vector e recupera, usando misure di similarità, i top-k nearest neighbours
+ basandosi sulla conoscenza di base posseduta
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-la gestione del contesto:
+la 
+\series bold
+gestione del contesto
+\series default
+:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-single-turn: costruisce il vettore di input considerando la domanda in arrivo
- (può perdere informazioni importanti riguardanti la storia della conversazione
+
+\series bold
+single-turn
+\series default
+: costruisce il vettore di input considerando la domanda in arrivo (può
+ perdere informazioni importanti riguardanti la storia della conversazione
  e generare, quindi, risposte irrilevanti, ma è più facile da implementare
  e allenare)
 \begin_inset Formula 
@@ -11618,9 +12621,13 @@ single-turn: costruisce il vettore di input considerando la domanda in arrivo
 \end_layout
 
 \begin_layout Itemize
-multi-turn: costruisce il vettore di input considerando un contesto di conversaz
-ione ''multi-turn'', cioè basandosi sulla domanda in arrivo ma anche sulle
- domande precedenti
+
+\series bold
+multi-turn
+\series default
+: costruisce il vettore di input considerando un contesto di conversazione
+ ''multi-turn'', cioè basandosi sulla domanda in arrivo ma anche sulle domande
+ precedenti
 \begin_inset Formula 
 \[
 \left\{ \left(\left[\boldsymbol{q}_{i-2};\boldsymbol{a}_{i-2};\boldsymbol{q}_{i-1};\boldsymbol{a}_{i-1};\boldsymbol{q}_{i}\right],\boldsymbol{a}_{i}\right)\right\} 
@@ -11636,8 +12643,11 @@ ione ''multi-turn'', cioè basandosi sulla domanda in arrivo ma anche sulle
 I chatbot generativi, in particolare, usano una RNN e la trainano per mappare
  ciò che viene detto dalla prima persona a ciò che viene risposto dal bot
  basandosi sempre sull'attention mechanism.
- Tale meccanismo di risposta single-turn è stato esteso nel 2017 in un attention
- mechanism gerarchico.
+ Tale meccanismo di risposta single-turn è stato esteso nel 2017 in un 
+\series bold
+attention mechanism gerarchico
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -11759,7 +12769,11 @@ dove
 \begin_inset Formula $\boldsymbol{\alpha}_{i,y,j}$
 \end_inset
 
- è la softmax.
+ è la 
+\series bold
+softmax
+\series default
+.
  Le reti di attenzione gerarchiche sono state usate anche per la classificazione
  degli argomenti (es.: dataset di Yahoo Answers), così come per l'analisi
  dei sentimenti.
@@ -11771,8 +12785,12 @@ Trasformatore
 \end_layout
 
 \begin_layout Standard
-Un modello trasformatore è caratterizzato da uno stack di encoder che codificano
- la sequenza in input e da uno stack di decoder che producono l'output.
+Un modello 
+\series bold
+trasformatore
+\series default
+ è caratterizzato da uno stack di encoder che codificano la sequenza in
+ input e da uno stack di decoder che producono l'output.
  Ogni encoder e decoder hanno una struttura interna che consente di non
  usare un modello ricorrente.
  Ciò consente di allenare il modello con una quantità molto vasta di parole.
@@ -11827,22 +12845,32 @@ Andando più nel dettaglio, gli elementi che compongono un trasformatore
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 dot-product attention scalata
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 multi-head attention
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 FFNN posizionale
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 embedding e softmax
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 codifica posizionale
 \end_layout
 
@@ -11899,10 +12927,24 @@ Attention(Q,K,V)=softmax\left(\frac{QK^{T}}{\sqrt{d_{k}}}\right)V
 \begin_layout Standard
 \noindent
 In particolare, Q, K e V sono delle matrici che indicano rispettivamente
- l'encoding delle parole in input (query), la trasformazione delle query
- in chiavi (key) e il valore di queste parole trasformate in chiavi (value).
- Nella dot-product attention scalata, a ogni step viene paragonato ogni
- valore di query 
+ l'encoding delle parole in input (
+\series bold
+query
+\series default
+), la trasformazione delle query in chiavi (
+\series bold
+key
+\series default
+) e il valore di queste parole trasformate in chiavi (
+\series bold
+value
+\series default
+).
+ Nella dot-product 
+\series bold
+attention scalata
+\series default
+, a ogni step viene paragonato ogni valore di query 
 \begin_inset Formula $q_{i}$
 \end_inset
 
@@ -11923,9 +12965,16 @@ t attention più volte in parallelo e poi concatenare i risultati.
 
 \begin_layout Standard
 \noindent
-Dopodichè si ha una FFNN che, per ogni parola in input, calcola la multi-head
- attention per quella parola e poi calcola una funzione non-lineare (sempre
- per la stessa parola):
+Dopodichè si ha una 
+\series bold
+FFNN
+\series default
+ che, per ogni parola in input, calcola la 
+\series bold
+multi-head attention
+\series default
+ per quella parola e poi calcola una funzione non-lineare (sempre per la
+ stessa parola):
 \end_layout
 
 \begin_layout Standard
@@ -11951,9 +13000,20 @@ Vengono quindi ripetute le stesse operazioni sul decoder in modo tale da
 \begin_layout Standard
 \noindent
 Infine, per tenere traccia della posizione delle parole in input si aggiunge
- un encoding posizionale, che attacca una sorta di timestamp alle parole.
- Ci sono due tipi di encoding posizionale, cioè il learned positional embedding
- e la sinusoide.
+ un 
+\series bold
+encoding posizionale
+\series default
+, che assegna una sorta di timestamp alle parole.
+ Ci sono due tipi di encoding posizionale, cioè il 
+\series bold
+learned positional embedding
+\series default
+ e la 
+\series bold
+sinusoide
+\series default
+.
  Quest'ultima può essere:
 \end_layout
 
@@ -12000,15 +13060,23 @@ rappresentazioni locali
 
 \begin_deeper
 \begin_layout Itemize
-N-grammi
+
+\series bold
+N-gram
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 bag-of-words
 \end_layout
 
 \begin_layout Itemize
-codifica 1-di-N 
+
+\series bold
+codifica 1-di-N
+\series default
+ 
 \end_layout
 
 \end_deeper
@@ -12018,21 +13086,30 @@ rappresentazioni continue
 
 \begin_deeper
 \begin_layout Itemize
+
+\series bold
 Latent Semantic Analysis
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 Latent Dirichlet Allocation
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
 rappresentazioni distribuite
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-In particolare nella rappresentazione a N-grammi si cerca di determinare
- la probabilità 
+In particolare nella 
+\series bold
+rappresentazione N-gram
+\series default
+ si cerca di determinare la probabilità 
 \begin_inset Formula $P(s=w_{1},...,w_{k})$
 \end_inset
 
@@ -12050,9 +13127,12 @@ P(s_{k})=\prod_{i}^{k}P(w_{i}|w_{1},...,w_{i-1})
 
 \begin_layout Standard
 \noindent
-Dal momento che nei modelli di lingua tradizionali a n-grammi ''la probabilità
- di una parola dipende solo dal contesto delle n-1 parole precedenti'',
- la probabilità diventa
+Dal momento che nei modelli di lingua tradizionali n-gram ''
+\shape italic
+la probabilità di una parola dipende solo dal contesto delle n-1 parole
+ precedenti
+\shape default
+'', la probabilità diventa
 \end_layout
 
 \begin_layout Standard
@@ -12068,8 +13148,12 @@ Dal momento che nei modelli di lingua tradizionali a n-grammi ''la probabilità
 
 \begin_layout Standard
 \noindent
-Un processo tipico di apprendimento ML-smoothing effettua una levigazione
- della probabilità per evitare di avere probabilità pari a 0.
+Un processo tipico di apprendimento 
+\shape italic
+ML-smoothing
+\shape default
+ effettua una levigazione della probabilità per evitare di avere probabilità
+ pari a 0.
  Per fare ciò calcola la probabilità
 \end_layout
 
@@ -12085,14 +13169,241 @@ Un processo tipico di apprendimento ML-smoothing effettua una levigazione
 \end_layout
 
 \begin_layout Paragraph
+Autoencoder
+\end_layout
+
+\begin_layout Standard
+Un' 
+\series bold
+autoencoder
+\series default
+ è un tipo di rete neurale che nella sua formulazione più semplice cerca
+ di apprendere la 
+\series bold
+funzione identità
+\series default
+.
+ In altre parole impara a produrre una copia dell'input.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Autoencoder_schema.png
+	scale 110
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema generale di un autoencoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+È composto principalmente da due parti.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Encoder
+\series default
+, la cui funzione è mappare l'input in una rappresentazione latente di dimension
+e minore ed eventualmente con altri vincoli.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Decoder
+\series default
+ che mappa la rappresentazione latente nell'output.
+\end_layout
+
+\begin_layout Standard
+Formalmente possiamo descrivere un autoencoder attraverso tre funzioni matematic
+he:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \phi:{\mathcal{X}}\rightarrow{\mathcal{F}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \psi:{\mathcal{F}}\rightarrow{\mathcal{X}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \phi,\psi={\underset{\phi,\psi}{\operatorname{arg\,min}}}\,\|X-(\psi\circ\phi)X\|^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename autoencoder.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Autoencoder feedforward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Una rete autoencoder è usata quindi principalmente come algoritmo di 
+\series bold
+riduzione dimensionale
+\series default
+ (o compressione) con determinate proprietà:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Data specificità
+\series default
+: l'autoencoder è adatta a comprimere solo dati simili a quelli su cui è
+ allenata, o addirittura solo questi ultimi.
+ Apprende features specifiche, quindi un' autoencoder allenata a comprimere
+ immagini di caratteri scritti a mano non sarà adatta a comprimere foto
+ generiche.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lossy
+\series default
+: l'output non sarà esattamente identico all'input, si ha quindi una degradazion
+e.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Self-supervized
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Lo schema di un modello di autoencoder è abbastanza generale ed è quindi
+ implementabile tramite varie architetture come 
+\shape italic
+feedforward, convoluzionali, ricorrenti.
+\end_layout
+
+\begin_layout Standard
+Una caratteristica spesso cercata nella rappresentazione latente è la 
+\series bold
+sparsità.
+ 
+\series default
+Questa proprietà può essere raggiunta aggiungendo un termine di penalità
+ proporzionale alla rappresentazione latente.
+ Tipicamente viene utilizzata la norma L1.
+ Riprendendo la notazione formale precedente la loss function diventa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L=\|X-(\psi\circ\phi)X\|^{2}+\lambda\mathop{\sum_{i}|h_{i}|}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Minimizzando il secondo termine imponiamo che la rappresentazione latente
+ abbia la somma dei valori assoluti delle singole componenti minima ma contempor
+aneamente minimizzando il primo termine imponiamo che la rappresentazione
+ latente sia in grado di separare significativamente le features.
+ Idealmente, se non considerirassimo la dimensionalità, una rappresentazione
+ efficacie a minimizzare questa loss function sarebbe la 
+\shape italic
+one-hot encode.
+
+\shape default
+ Questa considerazione suggerisce che la rete tenderà comunque ad una rappresent
+azione in cui la maggior parte delle componenti 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ siano tendenti a zero e solo il minimo necessario di componenti siano con
+ modulo significativamente diversi da zero.
+\end_layout
+
+\begin_layout Paragraph
 Neural Net Language Model
 \end_layout
 
 \begin_layout Standard
 \noindent
-Si definisce embedding una tecnica che mappa una parola (o frase) dal suo
- spazio di input alto-dimensionale (il corpo di tutte le parole) a uno spazio
- vettoriale numerico di dimensione inferiore.
+Si definisce 
+\series bold
+embedding
+\series default
+ una tecnica che mappa una parola (o frase) dal suo spazio di input alto-dimensi
+onale (il corpo di tutte le parole) a uno spazio vettoriale numerico di
+ dimensione inferiore.
 \end_layout
 
 \begin_layout Standard
@@ -12147,7 +13458,15 @@ w
 
 ) viene quindi mappata in uno spazio m-dimensionale continuo (con dimensione
  tipicamente compresa nel range 100 < m < 500).
- Un modello tipico per il word embedding è il Neural Net Language Model.
+ Un modello tipico per il 
+\shape italic
+word embedding
+\shape default
+ è il
+\series bold
+ Neural Net Language Model
+\series default
+.
  Per ogni sequenza di training, si ha che l'input è costituito da una coppia
  <contesto, target> fatta così: <
 \begin_inset Formula $w_{t-n+1}...w_{t-1},w_{t}$
@@ -12205,12 +13524,19 @@ Neural Net Language Model
 
 \begin_layout Standard
 \noindent
-Il layer di proiezione contiene i vettori in 
+Il 
+\series bold
+layer di proiezione
+\series default
+ contiene i vettori in 
 \begin_inset Formula $C_{|V|,m}$
 \end_inset
 
 .
- La softmax è usata per produrre in output una distribuzione multinomiale
+ La softmax è usata per produrre in output una 
+\series bold
+distribuzione multinomiale
+\series default
  con probabilità
 \begin_inset Formula 
 \begin{equation}
@@ -12302,8 +13628,15 @@ L'idea è quella di ottenere una performance che consente il training di
 
 \begin_layout Standard
 \noindent
-Le due architetture possibili sono l'architettura skip-gram e l'architettura
- bag-of-words continua (vedi figura sotto).
+Le due architetture possibili sono l'
+\series bold
+architettura skip-gram
+\series default
+ e l'
+\series bold
+architettura bag-of-words continua
+\series default
+ (vedi figura sotto).
 \end_layout
 
 \begin_layout Standard
@@ -12341,9 +13674,12 @@ Architettura skip-gram (a sinistra) e architettura bag-of-words (a destra)
 
 \begin_layout Standard
 \noindent
-In particolare, nell'architettura bag-of-words continua (CBOW), per ogni
- sequenza di training, si ha che l'input è costituito da una coppia <contesto,
- target> fatta così: <
+In particolare, nell'architettura bag-of-words continua (
+\series bold
+CBOW
+\series default
+), per ogni sequenza di training, si ha che l'input è costituito da una
+ coppia <contesto, target> fatta così: <
 \begin_inset Formula $w_{t-n+1}...w_{t-1}w_{t+1}...w_{t+\frac{n}{2}},w_{t}$
 \end_inset
 
@@ -12351,7 +13687,7 @@ In particolare, nell'architettura bag-of-words continua (CBOW), per ogni
  L'obiettivo, inoltre, è quello di minimizzare la funzione di errore
 \begin_inset Formula 
 \begin{equation}
-E=-log\hat{P}\left(w_{t}|w_{t-n+1}...w_{t-1}w_{t+1}...w_{t+\frac{n}{2}}\right)
+E=-log\hat{P}\left(w_{t}|w_{t-\frac{n}{2}}...w_{t-1}w_{t+1}...w_{t+\frac{n}{2}}\right)
 \end{equation}
 
 \end_inset
@@ -12425,8 +13761,11 @@ In pratica, per ogni coppia <contesto, target> solo le parole di contesto
 
 \begin_layout Standard
 \noindent
-Applicazioni di word2vec riguardano la classificazione di documenti e l'analisi
- sentimentale.
+Applicazioni di 
+\series bold
+word2vec
+\series default
+ riguardano la classificazione di documenti e l'analisi sentimentale.
 \end_layout
 
 \begin_layout Paragraph
@@ -12434,11 +13773,21 @@ GloVe
 \end_layout
 
 \begin_layout Standard
-GloVe fa esplicitamente ciò che word2vec fa implicitamente, ovvero codifica
- il significato come vettore di offset in uno spazio di embedding.
+
+\series bold
+GloVe
+\series default
+ fa esplicitamente ciò che word2vec fa implicitamente, ovvero codifica il
+ significato come 
+\series bold
+vettore di offset
+\series default
+ in uno spazio di embedding.
  Tale significato viene codificato da dei rapporti di probabilità di co-occorren
 za.
- L'allenamento avviene con una least squares pesata
+ L'allenamento avviene con una 
+\shape italic
+least squares pesata
 \end_layout
 
 \begin_layout Standard
