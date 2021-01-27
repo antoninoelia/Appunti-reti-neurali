@@ -13169,229 +13169,6 @@ ML-smoothing
 \end_layout
 
 \begin_layout Paragraph
-Autoencoder
-\end_layout
-
-\begin_layout Standard
-Un' 
-\series bold
-autoencoder
-\series default
- è un tipo di rete neurale che nella sua formulazione più semplice cerca
- di apprendere la 
-\series bold
-funzione identità
-\series default
-.
- In altre parole impara a produrre una copia dell'input.
- 
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Autoencoder_schema.png
-	scale 110
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Schema generale di un autoencoder
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-È composto principalmente da due parti.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Encoder
-\series default
-, la cui funzione è mappare l'input in una rappresentazione latente di dimension
-e minore ed eventualmente con altri vincoli.
- 
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-Decoder
-\series default
- che mappa la rappresentazione latente nell'output.
-\end_layout
-
-\begin_layout Standard
-Formalmente possiamo descrivere un autoencoder attraverso tre funzioni matematic
-he:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-{\displaystyle \phi:{\mathcal{X}}\rightarrow{\mathcal{F}}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-{\displaystyle \psi:{\mathcal{F}}\rightarrow{\mathcal{X}}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-{\displaystyle \phi,\psi={\underset{\phi,\psi}{\operatorname{arg\,min}}}\,\|X-(\psi\circ\phi)X\|^{2}}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename autoencoder.png
-	scale 85
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Autoencoder feedforward
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-Una rete autoencoder è usata quindi principalmente come algoritmo di 
-\series bold
-riduzione dimensionale
-\series default
- (o compressione) con determinate proprietà:
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Data specificità
-\series default
-: l'autoencoder è adatta a comprimere solo dati simili a quelli su cui è
- allenata, o addirittura solo questi ultimi.
- Apprende features specifiche, quindi un' autoencoder allenata a comprimere
- immagini di caratteri scritti a mano non sarà adatta a comprimere foto
- generiche.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Lossy
-\series default
-: l'output non sarà esattamente identico all'input, si ha quindi una degradazion
-e.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-Self-supervized
-\series default
-.
-\end_layout
-
-\begin_layout Standard
-Lo schema di un modello di autoencoder è abbastanza generale ed è quindi
- implementabile tramite varie architetture come 
-\shape italic
-feedforward, convoluzionali, ricorrenti.
-\end_layout
-
-\begin_layout Standard
-Una caratteristica spesso cercata nella rappresentazione latente è la 
-\series bold
-sparsità.
- 
-\series default
-Questa proprietà può essere raggiunta aggiungendo un termine di penalità
- proporzionale alla rappresentazione latente.
- Tipicamente viene utilizzata la norma L1.
- Riprendendo la notazione formale precedente la loss function diventa:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-L=\|X-(\psi\circ\phi)X\|^{2}+\lambda\mathop{\sum_{i}|h_{i}|}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Minimizzando il secondo termine imponiamo che la rappresentazione latente
- abbia la somma dei valori assoluti delle singole componenti minima ma contempor
-aneamente minimizzando il primo termine imponiamo che la rappresentazione
- latente sia in grado di separare significativamente le features.
- Idealmente, se non considerirassimo la dimensionalità, una rappresentazione
- efficacie a minimizzare questa loss function sarebbe la 
-\shape italic
-one-hot encode.
-
-\shape default
- Questa considerazione suggerisce che la rete tenderà comunque ad una rappresent
-azione in cui la maggior parte delle componenti 
-\begin_inset Formula $h_{i}$
-\end_inset
-
- siano tendenti a zero e solo il minimo necessario di componenti siano con
- modulo significativamente diversi da zero.
-\end_layout
-
-\begin_layout Paragraph
 Neural Net Language Model
 \end_layout
 
@@ -13803,8 +13580,414 @@ J=\sum_{i,j=1}^{V}f\left(X_{ij}\right)\left(w_{i}^{T}\tilde{w_{j}}+b_{i}+\tilde{
 
 \begin_layout Standard
 \noindent
-In pratica questo metodo si basa sull'individuazione dei nearest neighbours
+In pratica questo metodo si basa sull'individuazione dei 
+\series bold
+nearest neighbours
+\series default
  di una certa parola.
+\end_layout
+
+\begin_layout Chapter
+Autoencoder
+\end_layout
+
+\begin_layout Section
+Struttura
+\end_layout
+
+\begin_layout Standard
+Un' 
+\series bold
+autoencoder
+\series default
+ è un tipo di rete neurale che nella sua formulazione più semplice cerca
+ di apprendere la 
+\series bold
+funzione identità
+\series default
+.
+ In altre parole impara a produrre una copia dell'input.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Autoencoder_schema.png
+	scale 110
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema generale di un autoencoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+È composto principalmente da due parti.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Encoder
+\series default
+, la cui funzione è mappare l'input in una rappresentazione latente di dimension
+e minore ed eventualmente con altri vincoli.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Decoder
+\series default
+ che mappa la rappresentazione latente nell'output.
+\end_layout
+
+\begin_layout Standard
+Formalmente possiamo descrivere un autoencoder attraverso tre funzioni matematic
+he:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \phi:{\mathcal{X}}\rightarrow{\mathcal{F}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \psi:{\mathcal{F}}\rightarrow{\mathcal{X}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \phi,\psi={\underset{\phi,\psi}{\operatorname{arg\,min}}}\,\|X-(\psi\circ\phi)X\|^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\in\mathbb{R}^{n}$
+\end_inset
+
+ e 
+\begin_inset Formula $F\in\mathbb{R}^{d}$
+\end_inset
+
+ con 
+\begin_inset Formula $d\ll n$
+\end_inset
+
+.
+ Le features 
+\begin_inset Formula $F$
+\end_inset
+
+ vengono solitamente chiamate 
+\series bold
+rappresentazione latente
+\series default
+.
+ Lo schema di un modello di autoencoder è abbastanza generale ed è quindi
+ implementabile tramite varie architetture come 
+\shape italic
+feedforward, convoluzionali, ricorrenti 
+\shape default
+e con varie profondità della rete, andando incontro al ben noto 
+\shape italic
+trade-off
+\shape default
+ tra capacità di approssimazione e sovradattamento.
+
+\shape italic
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename autoencoder.png
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Autoencoder feedforward
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Utilizzo delle reti autoencoder
+\end_layout
+
+\begin_layout Subsection
+Riduzione dimensionale
+\end_layout
+
+\begin_layout Standard
+Una rete autoencoder è usata principalmente come algoritmo di 
+\series bold
+riduzione dimensionale
+\series default
+ (o compressione) con determinate proprietà:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Data specificità
+\series default
+: l'autoencoder è adatta a comprimere solo dati simili a quelli su cui è
+ allenata, o addirittura solo questi ultimi.
+ Apprende features specifiche, quindi un' autoencoder allenata a comprimere
+ immagini di caratteri scritti a mano non sarà adatta a comprimere foto
+ generiche.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lossy
+\series default
+: l'output non sarà esattamente identico all'input, si ha quindi una degradazion
+e.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Self-supervized
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Una caratteristica spesso cercata nella rappresentazione latente è la 
+\series bold
+sparsità.
+ 
+\series default
+Questa proprietà può essere raggiunta aggiungendo un termine di penalità
+ proporzionale alla rappresentazione latente.
+ Tipicamente viene utilizzata la norma L1.
+ Riprendendo la notazione formale precedente la loss function diventa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L=\|X-(\psi\circ\phi)X\|^{2}+\lambda\mathop{\sum_{i}|f_{i}|}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Minimizzando il secondo termine imponiamo che la rappresentazione latente
+ abbia la somma dei valori assoluti delle singole componenti minima ma contempor
+aneamente minimizzando il primo termine imponiamo che la rappresentazione
+ latente sia in grado di separare significativamente le features.
+ Idealmente, se non considerirassimo la dimensionalità, una rappresentazione
+ efficacie a minimizzare questa loss function sarebbe la 
+\shape italic
+one-hot encode.
+
+\shape default
+ Questa considerazione suggerisce che la rete tenderà comunque ad una rappresent
+azione in cui la maggior parte delle componenti 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ siano tendenti a zero e solo il minimo necessario di componenti siano con
+ modulo significativamente diversi da zero.
+\end_layout
+
+\begin_layout Subsection
+Eliminazione del rumore
+\end_layout
+
+\begin_layout Standard
+È possibile usare le reti autoencoder per rimuovere e/o attenuare il rumore
+ nei dati.
+ Per far ciò, durante il training, ai dati di input viene aggiunto del rumore
+ e la rete tenterà di ricostruire l'input originale.
+ Oltre a poter utilizzare l'autoencoder per rimuovere il rumore da dei dati,
+ aggiungere del rumore in input permette alla rete di apprendere una 
+\series bold
+rappresentazione latente
+\series default
+ più robusta, in quanto è forzata ad estrarre features idealmente indipendenti
+ dalle fluttuazioni dovute al rumore.
+ Questo può migliorare le prestazioni anche negli altri casi d'uso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename denoising_autoencoder.png
+	scale 12
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema denoising autoencoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Inizializzatore di pesi
+\end_layout
+
+\begin_layout Standard
+Gli autoencoder possono essere utilizzate per inizializzare reti neurali
+ con altri compiti, come per esempio un classificatore.
+ In particolare quando si hanno pochi dati già classificati per il training.
+ Per far questo si procede in questo modo:
+\end_layout
+
+\begin_layout Enumerate
+si progetta la rete per classificare normalmente.
+ Ricordando la struttura delle reti CNN (senza perdere generalità) per la
+ classificazione ricordiamo che essa è strutturata in due parti.
+ La prima parte è incaricata di estrarre le features mentre la seconda usa
+ le features per classificare effettivamente.
+ Sostituiamo la seconda parte della rete con il simmetrico della prima parte.
+ In questo modo abbiamo una struttura che produce un output della stessa
+ dimensione dell'input.
+ Di fatto abbiamo ottenuto una rete autoencoder.
+ Alleniamo l'autoencoder ottenuto con i dati privi di etichette.
+\end_layout
+
+\begin_layout Enumerate
+Scartiamo il decoder e manteniamo l'encoder con i pesi ottenuti dall'allenamento.
+\end_layout
+
+\begin_layout Enumerate
+Connettiamo la parte precendentemente sostituita dal decoder (classificatore).
+\end_layout
+
+\begin_layout Enumerate
+Usiamo la tecnica del fine tuning per completare l'allenamento con i pochi
+ dati etichettati.
+\end_layout
+
+\begin_layout Standard
+Le reti autoencoder forniscono una buona inizializzazione, riducendo anche
+ il rischio di overfitting, perchè dovendo approssimare la funzione identità
+ apprendono una rappresentazione latente su dati simili ma non uguali a
+ quelli effettivamente usati nel training.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename classificatore_autoencoder.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Classificatore inizializzato con autoencoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Autoencoder generativi
 \end_layout
 
 \begin_layout Bibliography
