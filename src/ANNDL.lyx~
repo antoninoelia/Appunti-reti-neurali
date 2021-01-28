@@ -13615,6 +13615,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Autoencoder_schema.png
 	scale 110
@@ -13742,6 +13743,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename autoencoder.png
 	scale 85
@@ -13863,9 +13865,12 @@ Eliminazione del rumore
 \begin_layout Standard
 È possibile usare le reti autoencoder per rimuovere e/o attenuare il rumore
  nei dati.
- Per far ciò, durante il training, ai dati di input viene aggiunto del rumore
+ Per far ciò, durante il training, ai dati di input viene aggiunto del 
+\series bold
+rumore
+\series default
  e la rete tenterà di ricostruire l'input originale.
- Oltre a poter utilizzare l'autoencoder per rimuovere il rumore da dei dati,
+ Oltre a poter utilizzare l'autoencoder per rimuovere il rumore dai dati,
  aggiungere del rumore in input permette alla rete di apprendere una 
 \series bold
 rappresentazione latente
@@ -13892,6 +13897,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -13913,14 +13919,17 @@ Inizializzatore di pesi
 \end_layout
 
 \begin_layout Standard
-Gli autoencoder possono essere utilizzate per inizializzare reti neurali
- con altri compiti, come per esempio un classificatore.
+Gli autoencoder possono essere utilizzate per 
+\series bold
+inizializzare
+\series default
+ reti neurali con altri compiti, come per esempio un classificatore.
  In particolare quando si hanno pochi dati già classificati per il training.
  Per far questo si procede in questo modo:
 \end_layout
 
 \begin_layout Enumerate
-si progetta la rete per classificare normalmente.
+Si progetta la rete per classificare normalmente.
  Ricordando la struttura delle reti CNN (senza perdere generalità) per la
  classificazione ricordiamo che essa è strutturata in due parti.
  La prima parte è incaricata di estrarre le features mentre la seconda usa
@@ -13960,6 +13969,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename classificatore_autoencoder.png
 	scale 50
@@ -13988,6 +13998,124 @@ Classificatore inizializzato con autoencoder
 
 \begin_layout Subsection
 Autoencoder generativi
+\end_layout
+
+\begin_layout Standard
+I 
+\series bold
+Generative Models
+\series default
+ o modelli generativi permettono ai computer di creare dati come foto, film,
+ musica o testi.
+ È possibile tecnicamente usare autoencoder per generare nuovi dati, ma
+ non senza qualche criticità.
+ Un opzione per generare nuovi dati potrebbe essere la seguente:
+\end_layout
+
+\begin_layout Enumerate
+Alleniamo l'autoencoder su un insieme di dati 
+\begin_inset Formula $X$
+\end_inset
+
+ in modo da costruire una rappresentazione latente 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Scartiamo l'encoder
+\end_layout
+
+\begin_layout Enumerate
+Generiamo dei vettori casuali nello spazio 
+\begin_inset Formula $F$
+\end_inset
+
+ e li usiamo come input del decoder che produrra in output un nuovo dato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mentre i punti 1 e 2 non creano eccessivi problemi, il punto 3 è critico.
+ Non sappiamo nulla a priori della distibuzione che assume lo spazio latente
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ quindi non siamo in grado di generare con alta probabilità dei vettori
+ di input per il decoder che producano un output sensato.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename autoencoder_generativo.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di autoencoder 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+vcxbccx
 \end_layout
 
 \begin_layout Bibliography

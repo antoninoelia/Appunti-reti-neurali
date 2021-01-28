@@ -432,6 +432,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ml_vs_dl.png
 
@@ -567,8 +568,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename percettrone.png
+	scale 85
 
 \end_inset
 
@@ -779,6 +782,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename XOR_percettrone.png
 	scale 50
@@ -868,6 +872,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Grafico_relu.png
 	scale 50
@@ -957,6 +962,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grafico_sig.png
 	scale 50
@@ -1007,6 +1013,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename tangente-iperbolica.png
 	scale 50
@@ -13615,6 +13622,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Autoencoder_schema.png
 	scale 110
@@ -13698,15 +13706,15 @@ he:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $X\in\mathbb{R}^{n}$
+\begin_inset Formula $X\in\mathbb{R}^{d}$
 \end_inset
 
  e 
-\begin_inset Formula $F\in\mathbb{R}^{d}$
+\begin_inset Formula $F\in\mathbb{R}^{n}$
 \end_inset
 
  con 
-\begin_inset Formula $d\ll n$
+\begin_inset Formula $n\ll d$
 \end_inset
 
 .
@@ -13742,6 +13750,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename autoencoder.png
 	scale 85
@@ -13895,6 +13904,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -13966,6 +13976,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename classificatore_autoencoder.png
 	scale 50
@@ -13994,6 +14005,147 @@ Classificatore inizializzato con autoencoder
 
 \begin_layout Subsection
 Autoencoder generativi
+\end_layout
+
+\begin_layout Standard
+I 
+\series bold
+Generative Models
+\series default
+ o modelli generativi permettono di creare dati come foto, film, musica,
+ testi e usarli negli ambiti più diversi come 
+\series bold
+data augmentation
+\series default
+, simulazioni e pianificazioni.
+ È possibile tecnicamente usare autoencoder per generare nuovi dati, ma
+ non senza qualche criticità.
+ Un opzione per generare nuovi dati potrebbe essere la seguente:
+\end_layout
+
+\begin_layout Enumerate
+Alleniamo l'autoencoder su un insieme di dati 
+\begin_inset Formula $X$
+\end_inset
+
+ in modo da costruire una rappresentazione latente 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Scartiamo l'encoder
+\end_layout
+
+\begin_layout Enumerate
+Generiamo dei vettori casuali nello spazio 
+\begin_inset Formula $F$
+\end_inset
+
+ e li usiamo come input del decoder che produrra in output un nuovo dato.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Autoencoder_sampling.png
+	scale 45
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Generazione con autoencoder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mentre i punti 1 e 2 non creano eccessivi problemi, il punto 3 è critico.
+ Non sappiamo nulla a priori della distibuzione che assume lo spazio latente
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ quindi non siamo in grado di generare con alta probabilità dei vettori
+ di input per il decoder che producano un output sensato.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename autoencoder_generativo.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Spazio latente irregolare
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Osservando l'esempio qui sopra vediamo una rete autoencoder allenata a rappresen
+tare figure geometriche chiuse.
+ Nel momento in cui diamo in input un vettore casuale (punto viola) notiamo
+ che il decoder genera una figura senza significato per il contesto.
+ Questo avviene perchè non campioniamo con la funzione di probabilità costruita
+ dalla rete.
+ Questa distribuzione (
+\begin_inset Formula $\phi_{f}$
+\end_inset
+
+) è estremamente difficile da stimare a priori e devono essere applicate
+ tecniche sofisticate come i 
+\series bold
+variational autoencoder
+\series default
+.
 \end_layout
 
 \begin_layout Bibliography
