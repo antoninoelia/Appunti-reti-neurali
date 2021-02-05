@@ -4691,6 +4691,117 @@ Anche per la scelta degli iperparametri del modello è di aiuto la cross
  
 \end_layout
 
+\begin_layout Subsection
+Weight decay
+\end_layout
+
+\begin_layout Standard
+La regolarizzazione riguarda il vincolamento della “libertà” di un modello,
+ sulla base di un’assunzione a-priori sul modello stesso, per ridurre l’overfitt
+ing.
+ Finora abbiamo massimizzato la verosimiglianza dei dati
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{MLE}=argmax_{w}\hphantom{}P(D|w)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+questo approccio è detto frequentista.
+ Usando, invece, un approccio 
+\series bold
+Bayesiano
+\series default
+, possiamo ridurre la libertà del modello.
+ Usiamo, cioè, una 
+\series bold
+Maximum A-Posteriori verosimiglianza
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{MAP}=argmax_{w}P(w|D)\approx argmax_{w}P(D|w)·P(w)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\begin_inset Formula $P(w)$
+\end_inset
+
+ è la probabilità a-priori, che definisce lo spazio di ricerca dell’algoritmo.
+ Si è osservato che piccoli pesi migliorano la capacità di generalizzazione
+ delle reti neurali.
+ Weight decay in pratica aggiunge una penalità proporzionale alla norma
+ L2 dei pesi alla loss function, con il fine di imprimere una direzione
+ al gradiente che riduca la norma dei pesi.
+ Oltre all'evidenza empirica in taluni casi weigt decay è supportato dalla
+ teoria matematica usando 
+\series bold
+Maximum A-Posteriori verosimiglianza
+\series default
+.
+ Analiziamo il caso già visto della regressione, ma utilizzando 
+\shape italic
+MAP
+\shape default
+ e supponiamo che i pesi vengano inizializzati con una distribuzione 
+\begin_inset Formula $P(w)\approx N(0,\sigma_{w})$
+\end_inset
+
+ che come vedremo più avanti è assolutamente ragionevole come ipotesi.
+ 
+\begin_inset Formula 
+\[
+argmax_{w}P(D|w)·P(w)=\prod_{i=1}^{N}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(t_{i}-g(x_{i}|w))^{2}}{2\sigma^{2}}}*\prod_{q=1}^{Q}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(w_{q})^{2}}{2\sigma^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=argmin_{w}(\sum_{i=1}^{N}(t_{i}-g(x_{i}|w))^{2})+\sum_{q=1}^{Q}\frac{(w_{q})^{2}}{2\sigma^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+=argmin_{w}(\sum_{i=1}^{N}(t_{i}-g(x_{i}|w))^{2})+\gamma\sum_{q=1}^{Q}(w_{q})^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come scegliere il parametro gamma? Una possibile strategia è tramite cross-valid
+ation.
+\end_layout
+
 \begin_layout Section
 Altre tecniche di ottimizzazione
 \end_layout

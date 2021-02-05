@@ -432,6 +432,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename ml_vs_dl.png
 
@@ -567,8 +568,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename percettrone.png
+	scale 85
 
 \end_inset
 
@@ -779,6 +782,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename XOR_percettrone.png
 	scale 50
@@ -868,6 +872,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Grafico_relu.png
 	scale 50
@@ -957,6 +962,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grafico_sig.png
 	scale 50
@@ -1007,6 +1013,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename tangente-iperbolica.png
 	scale 50
@@ -13699,15 +13706,15 @@ he:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $X\in\mathbb{R}^{n}$
+\begin_inset Formula $X\in\mathbb{R}^{d}$
 \end_inset
 
  e 
-\begin_inset Formula $F\in\mathbb{R}^{d}$
+\begin_inset Formula $F\in\mathbb{R}^{n}$
 \end_inset
 
  con 
-\begin_inset Formula $d\ll n$
+\begin_inset Formula $n\ll d$
 \end_inset
 
 .
@@ -14005,8 +14012,12 @@ I
 \series bold
 Generative Models
 \series default
- o modelli generativi permettono ai computer di creare dati come foto, film,
- musica o testi.
+ o modelli generativi permettono di creare dati come foto, film, musica,
+ testi e usarli negli ambiti più diversi come 
+\series bold
+data augmentation
+\series default
+, simulazioni e pianificazioni.
  È possibile tecnicamente usare autoencoder per generare nuovi dati, ma
  non senza qualche criticità.
  Un opzione per generare nuovi dati potrebbe essere la seguente:
@@ -14043,10 +14054,17 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Graphics
+	filename Autoencoder_sampling.png
+	scale 45
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Generazione con autoencoder
 \end_layout
 
 \end_inset
@@ -14077,6 +14095,7 @@ Mentre i punti 1 e 2 non creano eccessivi problemi, il punto 3 è critico.
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status open
@@ -14097,15 +14116,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Esempio di autoencoder 
+Spazio latente irregolare
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -14115,7 +14130,22 @@ Esempio di autoencoder
 \end_layout
 
 \begin_layout Standard
-vcxbccx
+Osservando l'esempio qui sopra vediamo una rete autoencoder allenata a rappresen
+tare figure geometriche chiuse.
+ Nel momento in cui diamo in input un vettore casuale (punto viola) notiamo
+ che il decoder genera una figura senza significato per il contesto.
+ Questo avviene perchè non campioniamo con la funzione di probabilità costruita
+ dalla rete.
+ Questa distribuzione (
+\begin_inset Formula $\phi_{f}$
+\end_inset
+
+) è estremamente difficile da stimare a priori e devono essere applicate
+ tecniche sofisticate come i 
+\series bold
+variational autoencoder
+\series default
+.
 \end_layout
 
 \begin_layout Bibliography
