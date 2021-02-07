@@ -1784,9 +1784,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename neural_network_for_regression.png
-	scale 40
+	scale 30
 
 \end_inset
 
@@ -1983,6 +1984,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename sse.png
 	scale 30
@@ -2045,6 +2047,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename NN_classification.png
 	scale 30
@@ -2531,6 +2534,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename discesa_unidimesionale.png
 	scale 30
@@ -2569,6 +2573,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename 350px-Gradient_descent.svg.png
 	scale 50
@@ -2846,6 +2851,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Stogra.png
 
@@ -3065,6 +3071,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename SGD_momentum.png
 	scale 30
@@ -3173,6 +3180,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename NAG.png
 	scale 50
@@ -4007,6 +4015,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename confronto_discesa.png
 	scale 30
@@ -4138,6 +4147,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Rete_per_regressione.png
 	scale 30
@@ -4264,6 +4274,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename backprop.png
 	scale 30
@@ -4455,6 +4466,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Overfitting_svg.svg.png
 	scale 50
@@ -4536,6 +4548,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename kfoldvalidation.png
 	scale 30
@@ -4691,10 +4704,6 @@ Anche per la scelta degli iperparametri del modello è di aiuto la cross
  
 \end_layout
 
-\begin_layout Section
-Altre tecniche di ottimizzazione
-\end_layout
-
 \begin_layout Subsection
 Weight decay
 \end_layout
@@ -4770,9 +4779,9 @@ MAP
  che come vedremo più avanti è assolutamente ragionevole come ipotesi.
  
 \begin_inset Formula 
-\begin{equation}
+\[
 argmax_{w}P(D|w)·P(w)=\prod_{i=1}^{N}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(t_{i}-g(x_{i}|w))^{2}}{2\sigma^{2}}}*\prod_{q=1}^{Q}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(w_{q})^{2}}{2\sigma^{2}}}
-\end{equation}
+\]
 
 \end_inset
 
@@ -4793,12 +4802,21 @@ argmax_{w}P(D|w)·P(w)=\prod_{i=1}^{N}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(t_{i
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-=argmin_{w}(\sum_{i=1}^{N}(t_{i}-g(x_{i}|w))^{2})+\sum_{q=1}^{Q}(w_{q})^{2}
+=argmin_{w}(\sum_{i=1}^{N}(t_{i}-g(x_{i}|w))^{2})+\gamma\sum_{q=1}^{Q}(w_{q})^{2}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Come scegliere il parametro gamma? Una possibile strategia è tramite cross-valid
+ation.
+\end_layout
+
+\begin_layout Section
+Altre tecniche di ottimizzazione
 \end_layout
 
 \begin_layout Subsection
@@ -4850,6 +4868,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Dati_originali.png
 	scale 30
@@ -5014,6 +5033,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename preprocessing_data.png
 	scale 40
@@ -5281,6 +5301,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename earlystopping.png
 
@@ -5430,6 +5451,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Droout_.png
 	scale 30
@@ -5755,6 +5777,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Data_aug.png
 	scale 75
@@ -5805,6 +5828,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename grafico_sig.png
 	scale 50
@@ -5915,6 +5939,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename zigzag gradiente.png
 	scale 50
@@ -5978,6 +6003,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename tangente-iperbolica.png
 	scale 50
@@ -6037,6 +6063,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Grafico_relu.png
 	scale 50
@@ -6150,6 +6177,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Leaky_relu.png
 	scale 50
@@ -6199,18 +6227,12 @@ Randomized ReLU
 nte portata alla riduzione del sovradattamento.
 \end_layout
 
-\begin_layout Chapter
-Classificazioni di immagini
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Formalizzare i problemi
+\begin_layout Section
+Calcolo del numero di parametri allenabili
 \end_layout
 
-\end_inset
-
-
+\begin_layout Chapter
+Classificazioni di immagini
 \end_layout
 
 \begin_layout Standard
@@ -6292,6 +6314,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename esempio_classificazione.png
 	scale 50
@@ -6387,6 +6410,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Problem_image_class.png
 	scale 30
@@ -6453,6 +6477,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename cifar10.png
 	scale 50
@@ -6537,6 +6562,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename L1Distance.png
 	scale 30
@@ -6713,6 +6739,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename k-NN.png
 	scale 30
@@ -6793,9 +6820,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename distance_image.png
-	scale 50
+	scale 40
 
 \end_inset
 
@@ -6823,20 +6851,6 @@ si pone ora il problema di come scegliere il valore k, come scegliere il
 \series bold
 cross-validation.
  
-\begin_inset Marginal
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\shape italic
-\color red
-To-Do
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -6962,6 +6976,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Unrollpicture.png
 	scale 50
@@ -6993,6 +7008,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename linear_class.png
 	scale 30
@@ -7459,6 +7475,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename interpretazione_geometrica.png
 	scale 50
@@ -7642,6 +7659,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename convoluzione.png
 	scale 50
@@ -7680,6 +7698,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Conv_3d.png
 	scale 35
@@ -7814,6 +7833,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Layer_conv.png
 	scale 50
@@ -7931,6 +7951,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Stride1.png
 	scale 30
@@ -7962,6 +7983,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Stride2.png
 	scale 30
@@ -7993,6 +8015,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Padding.png
 	scale 30
@@ -8157,6 +8180,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename 96filtri.png
 	scale 45
@@ -8327,6 +8351,7 @@ status open
 
 \begin_layout Plain Layout
 \noindent
+\align center
 
 \size small
 \begin_inset Graphics
@@ -8341,6 +8366,7 @@ status open
 
 \begin_layout Plain Layout
 \noindent
+\align center
 
 \size small
 \begin_inset Graphics
@@ -8455,6 +8481,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Max_pooling.png
 	scale 40
@@ -8730,6 +8757,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename lenet.png
 	lyxscale 80
@@ -8761,6 +8789,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename alexnet.png
 	lyxscale 130
@@ -8792,6 +8821,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename vgg16.png
 	lyxscale 70
@@ -8827,6 +8857,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename GoogleNet.png
 	scale 50
@@ -8861,6 +8892,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Inception.png
 	lyxscale 60
@@ -9029,6 +9061,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename confusion matrix.png
 
@@ -9104,6 +9137,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename roc.png
 	lyxscale 50
@@ -9223,6 +9257,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename transf1.png
 	lyxscale 50
@@ -9274,6 +9309,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Segmentazione.png
 	scale 43
@@ -9405,6 +9441,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename heatmap.png
 	lyxscale 70
@@ -9416,6 +9453,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename heatmap_explan.png
 	lyxscale 60
@@ -9526,6 +9564,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename shift_and_stich.png
 	lyxscale 70
@@ -9569,6 +9608,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename semant_segment.png
 	lyxscale 70
@@ -9642,6 +9682,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename upsampling.png
 	scale 85
@@ -9690,6 +9731,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename maxUnpooling.png
 	scale 85
@@ -9733,6 +9775,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename transpose_conv.png
 
@@ -9742,6 +9785,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename transpose_conv(1).png
 	lyxscale 150
@@ -9790,6 +9834,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename skip_connections.png
 	scale 85
@@ -9941,6 +9986,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename UNet.png
 	scale 85
@@ -10152,6 +10198,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename GAP.png
 	scale 55
@@ -10264,6 +10311,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename CAM(1).png
 	scale 85
@@ -10380,6 +10428,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename CAM.png
 	scale 85
@@ -10459,6 +10508,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Grad-CAM.png
 	scale 60
@@ -10527,6 +10577,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename aug-grad-cam.png
 	scale 60
@@ -10627,6 +10678,546 @@ https://en.wikipedia.org/wiki/Subderivative#The_subgradient
 
 ) dato che la funzione è convessa e non-smooth (non differenziabile e discontinu
 a).
+\end_layout
+
+\begin_layout Section
+Localizzazione
+\end_layout
+
+\begin_layout Subsection
+R-CNN
+\end_layout
+
+\begin_layout Standard
+Per quanto riguarda il task del riconoscimento degli oggetti (
+\series bold
+object detection
+\series default
+), una possibile soluzione potrebbe essere quella di usare una finestra
+ scorrevole (
+\series bold
+sliding window
+\series default
+) che ha un’etichetta assegnata al pixel centrale e consente di analizzare
+ un’immagine di dimensioni variabili a piccoli pezzi di dimensioni fisse.
+ Tali “pezzi”, cioè regioni di immagine, vengono poi date in pasto a un
+ modello preallenato per effettuare predizioni sulle stesse.
+ Questo approccio ha, però, vari contro, tra cui il fatto che non riutilizza
+ features condivise fra regioni sovrapposte.
+ Una possibile idea per risolvere questo problema è usare un algoritmo a
+ proposta di regione (
+\series bold
+region proposal algorithm
+\series default
+), che classifica tramite una CNN l’immagine dentro ogni regione proposta.
+ Tale rete prende quindi il nome di R-CNN (dove R sta per 
+\series bold
+regioni
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename rcnn.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Funzionamento R-CNN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Lo step 4 viene performato da un regressore 
+\series bold
+Support Vector Machine (SVM)
+\series default
+, allenato per minimizzare l’errore di classificazione sulla regione di
+ interesse (Region of Interest, 
+\series bold
+ROI
+\series default
+) estratta e da un regressore 
+\series bold
+Bounding Box (BB)
+\series default
+, che rifinisce le regioni correggendo la stima del bounding box dall’algoritmo
+ di estrazione delle ROI.
+ La CNN pre allenata, invece, è fine-tunata sulle classi da rilevare inserendo
+ un FC layer dopo l’estrazione delle feature.
+ Per scartare le regioni che non corrispondono a nessun oggetto, inoltre,
+ va inclusa la classe di background.
+\end_layout
+
+\begin_layout Subsection
+Fast R-CNN
+\end_layout
+
+\begin_layout Standard
+Le R-CNN hanno delle limitazioni, fra cui la lentezza computazionale, perciò
+ sono state introdotte le Fast R-CNN, nelle quali:
+\end_layout
+
+\begin_layout Enumerate
+Le immagini intere sono date in pasto alla CNN che estrae le feature maps.
+\end_layout
+
+\begin_layout Enumerate
+Le proposte di regione sono identificate a partire dall’immagine e proiettate
+ nelle feature maps.
+ Inoltre, le regioni sono direttamente ritagliate dalle feature maps anziché
+ dall’immagine (si riusa la computazione convoluzionale).
+\end_layout
+
+\begin_layout Enumerate
+Una dimensione fissata è comunque richiesta per poter dare i dati in pasto
+ a un FC layer.
+ Dopodichè i layer di ROI pooling estraggono un vettore di feature di dimensione
+ fissa H x W da ogni regione proposta.
+ In pratica ogni ROI nelle feature maps è diviso in una griglia H x W su
+ cui viene fatto un maxpooling per ottenere il feature vector (vettore di
+ feature).
+\end_layout
+
+\begin_layout Enumerate
+I layer FC stimano sia le classi che la posizione dei bounding box (ovvero,
+ come nel regressore BB).
+ Viene poi usata una combinazione convessa (cioè una combinazione lineare
+ con termini aventi coefficienti non-negativi la cui somma è 1) dei due
+ come loss multitask da ottimizzare (come nelle R-CNN, ma senza l’uso di
+ regressori SVM).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fast-r-cnn.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Funzionamento Fast R-CNN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+In questa architettura è quindi possibile retro-propagare l’errore attraverso
+ l’intera rete, in modo che essa venga allenata in maniera end-to-end.
+ Dal momento che le convoluzioni non sono ripetute su aree sovrapposte,
+ la stragrande maggioranza del tempo di test è speso sull’estrazione delle
+ ROI.
+\end_layout
+
+\begin_layout Subsection
+Faster R-CNN
+\end_layout
+
+\begin_layout Standard
+Invece dell’algoritmo di estrazione delle ROI, le 
+\series bold
+Faster R-CNN
+\series default
+ allenano una 
+\series bold
+Region Proposal Network (RPN)
+\series default
+, la quale è una Fully-CNN.
+ La RPN opera sulle stesse feature maps usate per la classificazione, cioè
+ negli ultimi layer convoluzionali.
+ La RPN può quindi essere vista come un modulo aggiuntivo che migliora l’efficie
+nza e concentra la Fast R-CNN sulle regioni più promettenti per il riconosciment
+o degli oggetti.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename faster-r-cnn.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RPN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Il suo scopo è quello di associare a ogni locazione spaziale k box “ancora”,
+ ovvero ROI aventi scale e ratio differenti.
+ Tale rete produrrà in output delle ancore candidate di dimensione H x W
+ x k insieme a dei punteggi di stima per ogni ancora.
+ Il layer intermedio di una RPN è un layer convoluzionale standard che prende
+ come input l’ultimo layer della rete di estrazione delle feature e usa
+ un filtro di dimensione 
+\begin_inset Formula $3\times3\times256$
+\end_inset
+
+.
+ Tale layer è usato per ridurre la dimensionalità della feature map, cioè
+ mappa una certa regione a un vettore di dimensione inferiore 
+\begin_inset Formula $H\times W\times256$
+\end_inset
+
+.
+ Vi sono poi 2 layer, cioè:
+\end_layout
+
+\begin_layout Itemize
+La 
+\series bold
+rete di classificazione
+\series default
+: allenata per predire la 
+\series bold
+probabilità dell’oggetto
+\series default
+, cioè la probabilità che una certa ancora contenga un oggetto (dovrà quindi
+ produrre 2k punteggi in output, ovvero k coppie con probabilità <contiene,
+ non contiene>).
+ Essa è fatta da uno stack di layer convoluzionali di dimensione 1x1.
+ Ognuna delle k coppie di probabilità corrisponde a un’ancora specifica
+ ed esprime la probabilità che quell’ancora, in quella locazione spaziale,
+ contenga un oggetto.
+\end_layout
+
+\begin_layout Itemize
+La 
+\series bold
+rete di regressione
+\series default
+: allenata per aggiustare ognuna delle k ancore predette (deve quindi fare
+ 4k stime, ovvero una stima per ognuna delle 4 coordinate del bounding box
+ e per ogni bounding box).
+\end_layout
+
+\begin_layout Standard
+Abbiamo detto che la RPN restituisce in outut 
+\begin_inset Formula $H\times W\times k$
+\end_inset
+
+ proposte di regioni, quindi rimpiazza l’algoritmo di proposta di regioni
+ (
+\series bold
+selective search
+\series default
+).
+ Nelle Faster R-CNN, dopo la RPN vi è una soppressione dei non-massimi basata
+ su punteggi di oggettività.
+ Le proposte rimanenti sono quindi date in pasto al layer di ROI pooling
+ e infine classificate dall’architettura Fast R-CNN standard.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename faster-r-cnn_2.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Faster R-CNN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+La procedura di training è la seguente:
+\end_layout
+
+\begin_layout Enumerate
+Allenare la RPN mantenendo congelata la rete strutturale (Deep ConvNet)
+ e allenando solo i layer RPN.
+\end_layout
+
+\begin_layout Enumerate
+Si allena la Fast R-CNN usando le proposte di regioni restituite dalla RPN
+ allenata nello step precedente, cioè si fa fine-tuning dell’intera Fast
+ R-CNN includendo la Deep ConvNet.
+\end_layout
+
+\begin_layout Enumerate
+Si fa fine-tuning in cascata della RPN.
+\end_layout
+
+\begin_layout Enumerate
+Si congela la Deep ConvNet e si fa fine-tuning solo degli ultimi layer della
+ Faster R-CNN.
+\end_layout
+
+\begin_layout Section
+Altri esempi di architetture
+\end_layout
+
+\begin_layout Subsection
+YOLO (You Only Look Once)
+\end_layout
+
+\begin_layout Standard
+YOLO è un metodo 
+\shape italic
+region-free
+\shape default
+, in cui riformuliamo il riconoscimento degli oggetti come un problema di
+ regressione singolo che parte dai pixel dell’immagine alle coordinate dei
+ bounding box e alle probabilità delle classi.
+ Esso risolve questi problemi di regressione in una volta sola, tramite
+ una CNN larga.
+\end_layout
+
+\begin_layout Standard
+Gli step su cui si basa YOLO sono: 
+\end_layout
+
+\begin_layout Enumerate
+Dividere l’immagine in una griglia grossolana (di dimensione N x M).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Ogni griglia contiene B ancore (
+\series bold
+bounding box base
+\series default
+) associate.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Per ogni cella e per ogni ancora prediciamo:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+l’offset del bounding box base: (
+\shape italic
+dx, dy, dh, dw, punteggio dell’oggettività
+\shape default
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+il punteggio di classificazione del bounding box base sulle C categorie
+ considerate (includendo lo sfondo).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename yolo.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+L’output della rete avrà quindi dimensione: 
+\begin_inset Formula $N\times M\times B\times(5+C)$
+\end_inset
+
+.
+ L’intera predizione è fatta in un singolo passo di forward sull’immagine
+ e da una singola rete convoluzionale.
+ Ciò lo rende molto veloce, ma meno accurato rispetto alle R-CNN.
+\end_layout
+
+\begin_layout Subsection
+Mask R-CNN
+\end_layout
+
+\begin_layout Standard
+La segmentazione d’istanza combina le sfide di rilevamento degli oggetti
+ (istanze multiple presenti nell’immagine) e di segmentazione semantica
+ (etichette associate a ogni pixel).
+ Un’architettura che risolve tale problema è la Mask R-CNN.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename mask_rccn.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mask R-CNN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come nelle Fast R-CNN, viene classificata l’intera ROI e viene fatta una
+ regressione sul bounding box (possibilmente stimando la posa degli oggetti).
+ Dentro ogni ROI viene poi fatta, per ogni classe, una segmentazione semantica
+ tramite la stima di una maschera (vedi figura sotto).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename out_mask_rcnn.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Output mask R-CNN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
